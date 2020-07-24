@@ -1,0 +1,48 @@
+h1{
+    text-align: center;
+    font-size: 60px;
+    padding: 20px;
+    color: white;
+    background: blue;
+    text-transform: capitalize;
+}
+h2{
+    color: rgb(196, 230, 196);
+    background-color: darkslategray;
+    font-size: 22px;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+p{
+    color: rgb(111, 106, 150);;
+}
+#doan1{
+    color: blueviolet !important;
+}
+.pa1{
+    background-color:rgb(213, 251, 152);
+    color: red;
+}
+.pa2{
+    color:darkorange;
+    font-style: italic;
+}
+h3,h4{
+    color: dimgray;
+    text-align: right;
+}
+#container {
+    background-color:blue;
+    color: white;
+    width:70%;
+    height: 70px;
+    justify-content: space-around;
+    display: flex;
+    margin:auto;
+    padding: 10px;
+}
+#container a {
+    margin: auto;
+    text-transform: uppercase;
+    font-size: 20px;
+}
