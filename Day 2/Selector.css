@@ -1,0 +1,26 @@
+body{
+    margin-left: 150px;
+    margin-right: 150px;
+    line-height: 25px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: ; */
+    background-image: url('https://img2.thuthuatphanmem.vn/uploads/2018/12/30/mau-background-cuc-dep_110638631.jpg');
+}
+#begin{
+    text-align: center;
+    padding-bottom: 5px;
+}
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 35px;
+}
+#content{
+    text-align: justify;
+}
+#end{
+    margin-right: 30px;
+    margin-left: 65%;
+    text-align: center;
+    /* background-color: brown; */
+}
