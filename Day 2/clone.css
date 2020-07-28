@@ -1,0 +1,12 @@
+#menu {
+    background-color: rgb(6, 62, 83);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    padding:20px;
+    width:80%;
+    margin:auto;
+    display:flex;
+    justify-content: space-around;
+}
