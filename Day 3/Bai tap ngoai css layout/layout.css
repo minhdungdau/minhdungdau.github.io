@@ -1,0 +1,147 @@
+header{
+    height: 100px;
+    background-color: saddlebrown;
+}
+main{
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.bg-and-mg{
+    background-color: grey;
+    margin: 10px;
+}
+
+/* Part 1 */
+#larger1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 300px;
+}
+
+/* Part 2 */
+#larger2{
+    display: grid;
+    margin-top: 40px;
+    height: 300px;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: repeat(4,25%);
+}
+#small3{
+    grid-area:1/1/3/2;
+}
+#small4{
+    grid-area:1/2/2/3;
+}
+#small5{
+    grid-area:1/3/2/4;
+}
+#small6{
+    grid-area:2/2/3/2;
+}
+#small7{
+    grid-area:2/3/3/4;
+}
+#small8{
+    grid-area:1/4/3/5;
+}
+
+/* Part 3 */
+#tieu-de{
+    height: 50px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+/* Part 4 */
+#larger3{
+    margin-top: 40px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 20% 30% 50%;
+}
+
+/* Part 5 */
+#larger4{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+}
+.medium{
+    flex: 1;
+}
+.s1{
+    height: 150px;
+    flex-grow: 1;
+}
+#s2{
+    height: 180px;
+    flex-grow: 1;
+}
+#s3{
+    height: 250px;
+    flex-grow: 1;
+}
+#s4{
+    height: 100px;
+    flex-grow: 1;
+}
+#s5{
+    height: 200px;
+    flex-grow: 1;
+}
+#s6{
+    height: 230px;
+    flex-grow: 1;
+}
+
+/* Part 6 */
+#larger5{
+    margin-top: 100px !important;
+    margin: 0em;
+    height: 100px;
+    display: flex;
+}
+.mini{
+    flex:1;
+}
+#ap1{
+    background-color:wheat ;
+}
+#ap2{
+    background-color: violet ;
+}
+#ap3{
+    background-color:turquoise ;
+}
+#ap4{
+    background-color:thistle;
+}
+#ap5{
+    background-color:tan ;
+}
+#ap6{
+    background-color:skyblue ;
+}
+
+/* Part 7 */
+#larger6{
+    margin: 0em;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+#ap7{
+    background-color:sandybrown ;
+    grid-area: 1/2/2/4;
+}
+#ap8{
+    background-color:rebeccapurple ;
+    grid-area: 1/6/2/8;
+}
+#ap9{
+    background-color:palevioletred ;
+    grid-area: 1/10/2/12;
+}
