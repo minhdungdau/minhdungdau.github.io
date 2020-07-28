@@ -68,8 +68,10 @@ img{
 }
 .bigphoto{
     /* background-color: violet; */
-    width: 40%;
+    /* width: 40%; */
     text-align: center;
+    margin-right: 50px;
+    margin-left: 50px;
 }
 #chuthich{
     font-size: 18px;

@@ -1,0 +1,89 @@
+/* part 1 */
+#part1{
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+}
+#red1{
+    height: 400px;
+    width: 60%;
+    background-color: red;
+}
+#gb1{
+    flex-grow: 1;
+    /* width: 40%; */
+    height: 400px;
+}
+#blue1{
+    height:200px ;
+    background-color: blue;
+}
+#green1{
+    height: 200px;
+    background-color: green;
+}
+/* part 2 */
+#part2{
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+}
+#red2{
+    height: 400px;
+    width: 60%;
+    background-color: red;
+    margin-right: 15px;
+}
+#gb2{
+    /* width: 40%; */
+    flex-grow: 1;
+    height: 400px;
+}
+#blue2{
+    height:200px ;
+    background-color: blue;
+}
+#green2{
+    height: 200px;
+    background-color: green;
+}
+/* part 3 */
+#part3{
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+}
+#red3{
+    flex-grow: 1;
+    background-color: red;
+}
+#blue3{
+    flex-grow: 1 ;
+    background-color: blue;
+}
+#green3{
+    flex-grow: 1 ;
+    background-color: green;
+}
+/* part 4 */
+#part4{
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    margin-right: -15px;
+}
+#red4{
+    flex-grow: 1;
+    background-color: red;
+    margin-right: 15px;
+}
+#blue4{
+    flex-grow: 1;
+    background-color: blue;
+    margin-right: 15px;
+}
+#green4{
+    flex-grow: 1;
+    background-color: green;
+    margin-right: 15px;
+}
