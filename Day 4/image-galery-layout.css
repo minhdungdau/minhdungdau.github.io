@@ -1,0 +1,172 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* header */
+header{
+    margin-bottom: 20px ;
+    margin-top: 0px;
+    padding: 0px;
+    background-image: url('http://cdn30.us1.fansshare.com/image/paris/paris-portada-1467499234.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    color: white;
+    text-align: center;
+    line-height: 15px;
+}
+header h1{
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 36px;
+    text-decoration: underline;
+    padding-top: 40px;
+}
+header p{
+    font-size: 20px;
+}
+
+/* Navigation bar */
+#navigation-bar{
+    margin: 20px 80px 20px 150px;
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.bar-children{
+    padding:10px 20px 10px 20px ;
+    width: 100px;
+    height: 20px;
+    border: brown 2px solid;
+    box-shadow: 3px 3px 2px 2px brown;
+    text-align: center;
+}
+#navigation-bar a:hover{
+    color: red;
+}
+#logo{
+    width: 120px;
+    height: 120px;
+    margin-right: 120px;
+    margin-left: auto;
+    border: 1px solid pink;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+#logo-content{
+    background-image: url('https://scontent.fhan3-3.fna.fbcdn.net/v/t1.0-9/16406949_166627713830368_4043301397503789059_n.png?_nc_cat=101&_nc_sid=09cbfe&_nc_ohc=Hxx4z9EEm-QAX_y2ykI&_nc_ht=scontent.fhan3-3.fna&oh=d5c3205edfc81a5e2e7e5f24ab6156d7&oe=5F492A6F');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
+    align-self: center;
+}
+#logo a{
+    display: none;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 25px;
+    color: white;
+}
+#logo-content:hover{
+    transform: scale(1.1);
+    transition: 0.7s;
+    opacity: 0.8;
+}
+#logo:hover a{
+    display: block;
+}
+#logo a:hover{
+    color:tomato;
+}
+
+/* Products */
+.row-image{
+    display: flex;
+    margin: 0px;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.column{
+    width:30%;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid chocolate;
+    overflow: visible;
+    background-color: rgb(247, 247, 247);
+    position: relative;
+}
+.column img{
+    width: 275px; 
+    height: 275px;
+    margin-top: 20px;
+    align-self: center;
+}
+.column img:hover{
+    transform: scale(1.4);
+    border-radius: 50%;
+    border:tan 2px solid;
+    position: absolute;
+    justify-self: center;
+    z-index: 1;
+}
+.column p{
+    margin-top: auto;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+    align-self: center;
+}
+
+/* footer */
+footer{
+    display: flex;
+    margin-top: 40px;
+    background-color: lightgrey;
+    justify-content: space-between;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#info{
+    line-height: 40px;
+    margin-left: 300px;
+    margin-right: auto;
+    width: 60%;
+}
+#info h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+#chinh-sach{
+    margin-right: 300px;
+    margin-left: auto;
+    padding-left: 200px;
+    line-height: 24px;
+    width: 40%;
+}
+#chinh-sach h3{
+    line-height: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
