@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+    color: #999;
+    font-size: 13px;
+}
+.nav-bar{
+    display: flex;
+    margin-top: 50px;
+    padding-left: 30px;
+    width: 100%;
+    height: 344px;
+    background-color: #999;
+    line-height: 27px;
+}
+.nav-bar ul{
+    list-style-type: none;
+}
+
+.menu{
+    box-sizing: border-box;
+    width: 200px;
+    height: 100%;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.25);
+    background-color: #fff;
+    padding: 8px 0 10px;
+    position: relative;
+}
+.menu a{
+    display: block;
+    text-decoration: none;
+    color: #757575;
+    padding: 0 10px;
+}
+.menu li a:hover{
+    background: #eceff1;
+    text-decoration: none;
+    color: #f36d00;
+}
+.sub1{
+    position: absolute;
+    left:200px;
+    top: 0;
+}
+.sub2{
+    position: absolute;
+    left:200px;
+    top: 0;
+}
+#No1 > #No1-list,#No2 > #No2-list,#No3 > #No3-list{
+    display: none;
+}
+#s1-No1-1 > #No1-1-list,#s1-No1-2 > #No1-2-list,#s1-No1-3 > #No1-3-list, #s1-No1-4 > #No1-4-list{
+    display: none;
+}
+#No1:hover #No1-list,#No2:hover #No2-list,#No3:hover #No3-list{
+    display: block;
+}
+#s1-No1-1:hover #No1-1-list,#s1-No1-2:hover #No1-2-list,#s1-No1-3:hover #No1-3-list, #s1-No1-4:hover #No1-4-list{
+    display: block;
+}

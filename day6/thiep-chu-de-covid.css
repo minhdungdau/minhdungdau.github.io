@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:monospace;
+    font-size: 14px;
+    line-height: 30px;
+}
+img{
+    height: 100%;
+}
+.container{
+    width: 70%;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(https://images.pexels.com/photos/3786153/pexels-photo-3786153.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    box-shadow:  0 0 2px 0 rgba(0,0,0,.25);
+    position: relative;
+}
+.top{
+    display: flex;
+    margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.small-img{
+    width: auto;
+    height: 150px;
+}
+.border{
+    box-shadow:  0 0 5px darkgray;
+}
+.slogan{
+    padding:30px 5px 0 5px;
+    max-width: 50%;
+    flex: 1;
+}
+.slogan h2{
+    text-align: center;
+    text-transform: uppercase;
+    color: darkslategray;
+    transform: rotate(-2deg);
+}
+.middle{
+    margin-top: 20px;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    display: flex;
+}
+.say{
+    max-width: 45%;
+    align-self: center;
+    text-align: center;
+    margin-left: auto;
+    color: whitesmoke;
+    text-shadow: 1px 1px 2px rgb(105, 105, 105);
+    font-size: 18px !important;
+    line-height: 34px;
+}
+/* .say img{
+    background-color:   rgba(105, 105, 105,0.2);
+} */
+.say .text{
+    color: darkslategrey;
+    text-decoration: wavy underline darkorange;
+}
+@keyframes fly{
+    0%{transform:translate(-60px,-5px) scale(0.6) rotate(-10deg)}
+    33%{transform:translate(-30px,15px) scale(0.7) rotate(-3deg)}
+    66%{transform:translate(0px,10px) scale(0.6) rotate(2deg)}
+    100%{transform:translate(20px,0px) scale(0.75) rotate(6deg)}
+}
+.fly-ani{
+    animation: fly 4s linear infinite alternate;
+}
+.slide{
+    height: 80%;
+    width: 350px;
+    margin-right: 20px;
+    margin-left: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow:  0 0 5px rgb(65, 53, 53);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    animation: slide-img 20s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+@keyframes slide-img{
+    0%,25%{background-image: url(http://file1.dangcongsan.vn/data/0/images/2020/04/10/cuongpv/9conan-phutho.jpg);transform: translate(0) rotate(0deg) scale(1);opacity: 1}
+    35%{transform: translate(0, 0) rotate(-180deg) scale(0);}
+    45%,70%{background-image: url(https://vcdn-vnexpress.vnecdn.net/2020/03/05/nu-bac-si-TQ-2-9724-1583392224.jpg);transform: translate(0) rotate(0deg) scale(1); opacity: 1}
+    80%{transform: translate(0, 0) rotate(-180deg) scale(0);}
+    85%,100%{background-image: url(https://images.pexels.com/photos/3279197/pexels-photo-3279197.jpeg);transform: translate(0) rotate(0deg) scale(1);opacity: 1}
+}
+.slide:hover{
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    cursor: pointer;
+}
