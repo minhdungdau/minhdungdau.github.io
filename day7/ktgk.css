@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 16px;
+    font-family: serif;
+    line-height: 24px;
+    background-color: rgb(224, 214, 224);
+}
+header{
+    height: 400px;
+
+}
+header h1{
+    color: whitesmoke;
+    text-transform: uppercase;
+    padding-top: 60px;
+}
+.brand{
+    display: flex;
+    height: 300px;
+    align-content: center;
+    justify-content: center;
+    background-image: url(https://sa.tinhte.vn/2018/04/4286286_cover.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.thin-shadow{
+    text-shadow: 0 0 3px rgb(99, 98, 98);
+}
+.nav-bar{
+    display: flex;
+    margin: 30px 100px;
+}
+.menu{
+    padding: 12px 60px;
+    background-color: teal;
+}
+.menu a{
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+#content{
+    display:flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: white;
+}
+.row{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding: 5px 30px;
+    width: 100%;
+    margin: 20px;
+}
+.item{
+    margin: 10px;
+    max-width: 30%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border: 2px solid rgb(97, 78, 59);
+}
+.image{
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+img{
+    width: 300px;
+    height: 200px;
+}
+h2{
+    text-align: center;
+}
+.row a{
+    text-decoration: none;
+    color: darkcyan;
+}
+.image:hover img{
+    transform: scale(1.4) ;
+    opacity: 0.8;
+    transition: 1s;
+}
