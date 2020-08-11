@@ -1,0 +1,10 @@
+@keyframes slide{
+    0%{background-image: url(https://innotour.vn/wp-content/uploads/2018/10/du-lich-sapa-1-814x340.png)}
+    14%{background-image: url(https://innotour.vn/wp-content/uploads/2018/10/du-lich-sapa-1-814x340.png)}  
+    28%{background-image: url(https://ducvinhtravel.pro.vn/wp-content/uploads/2018/10/hinh-anh-sapa-thang-11.jpg)}
+    42%{background-image: url(https://ducvinhtravel.pro.vn/wp-content/uploads/2018/10/hinh-anh-sapa-thang-11.jpg)}
+    56%{background-image: url(https://www.chudu24.com/wp-content/uploads/2017/02/CongTroiThienMon.jpg)}
+    70%{background-image: url(https://www.chudu24.com/wp-content/uploads/2017/02/CongTroiThienMon.jpg)}
+    84%{background-image: url(https://mytourcdn.com/upload_images/Image/Location/23_4_2015/Thac-bac-sapa-mytour-1.jpg);}
+    100%{background-image: url(https://mytourcdn.com/upload_images/Image/Location/23_4_2015/Thac-bac-sapa-mytour-1.jpg);}
+}

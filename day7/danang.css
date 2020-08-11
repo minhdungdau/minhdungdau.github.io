@@ -1,0 +1,6 @@
+@keyframes slide{
+    0%{background-image: url(https://vcdn1-dulich.vnecdn.net/2020/07/01/shutterstock-783548422-4573-1593590417.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=ThQzMHmu0oAzOWAdNpivRQ);}
+    33%{background-image: url(https://baodanang.vn/dataimages/202001/original/images1541989_9_1__anh_dep_2.jpg)}
+    66%{background-image: url(https://danangfantasticity.com/wp-content/uploads/2020/03/da-nang-khong-to-chuc-le-ky-niem-45-nam-ngay-giai-phong.jpg)}
+    100%{background-image: url(https://danangsensetravel.com/view-800/at_gioi-thieu-ve-ba-na-hills_e7801426a1ba773d4ab032e36b110795.jpg);}
+}

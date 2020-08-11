@@ -1,0 +1,10 @@
+@keyframes slide{
+    0%{background-image: url(https://image.thanhnien.vn/800/uploaded/khanhhd/2019_04_12/h2_mmjj.jpg)}
+    14%{background-image: url(https://image.thanhnien.vn/800/uploaded/khanhhd/2019_04_12/h2_mmjj.jpg)}  
+    28%{background-image: url(https://eva-img.24hstatic.com/upload/2-2017/images/2017-06-17/den-voi-ninh-thuan-dung-bo-lo-nhung-diem-den-ly-tuong-nay-1-1497677313-width660height440.jpg)}
+    42%{background-image: url(https://eva-img.24hstatic.com/upload/2-2017/images/2017-06-17/den-voi-ninh-thuan-dung-bo-lo-nhung-diem-den-ly-tuong-nay-1-1497677313-width660height440.jpg)}
+    56%{background-image: url(https://blog.marry.vn/wp-content/uploads/2016/06/15/dia-diem-chup-anh-cuoi-vinh-vinh-hy-ninh-thuan.jpg)}
+    70%{background-image: url(https://blog.marry.vn/wp-content/uploads/2016/06/15/dia-diem-chup-anh-cuoi-vinh-vinh-hy-ninh-thuan.jpg)}
+    84%{background-image: url(https://www.evn.com.vn/userfile/User/thuhatcdl/images/2018/9/hongchuyendiengio.jpg);}
+    100%{background-image: url(https://www.evn.com.vn/userfile/User/thuhatcdl/images/2018/9/hongchuyendiengio.jpg);}
+}

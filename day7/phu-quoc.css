@@ -1,0 +1,10 @@
+@keyframes slide{
+    0%{background-image: url(https://statics.vntrip.vn/data-v2/data-guide/img_content/1470302452_anh-1.jpg)}
+    14%{background-image: url(https://statics.vntrip.vn/data-v2/data-guide/img_content/1470302452_anh-1.jpg)}  
+    28%{background-image: url(https://cdnmedia.baotintuc.vn/Upload/XjfgEPYM30O8z6jY3MHxSw/files/2019/10/1410/111.JPG)}
+    42%{background-image: url(https://cdnmedia.baotintuc.vn/Upload/XjfgEPYM30O8z6jY3MHxSw/files/2019/10/1410/111.JPG)}
+    56%{background-image: url(https://hotlinedatphong.com/wp-content/uploads/2019/06/PQ-3.jpg)}
+    70%{background-image: url(https://hotlinedatphong.com/wp-content/uploads/2019/06/PQ-3.jpg)}
+    84%{background-image: url(https://phuquocsensetravel.com/view/at_den-phu-quoc-cau-ca-lan-bien-ngam-san-ho_6c2fbbb42fd95d87065baecbfac6f1cb.jpg);}
+    100%{background-image: url(https://phuquocsensetravel.com/view/at_den-phu-quoc-cau-ca-lan-bien-ngam-san-ho_6c2fbbb42fd95d87065baecbfac6f1cb.jpg);}
+}

@@ -1,0 +1,10 @@
+@keyframes slide{
+    0%{background-image: url(https://wall.vn/wp-content/uploads/2020/04/hinh-anh-nha-trang-7.jpg)}
+    14%{background-image: url(https://wall.vn/wp-content/uploads/2020/04/hinh-anh-nha-trang-7.jpg)}  
+    28%{background-image: url(https://todata.vn/view-850/at_hon-tam-nha-trang_041f343590657e605187c1ea7aba4cf1.jpg)}
+    42%{background-image: url(https://todata.vn/view-850/at_hon-tam-nha-trang_041f343590657e605187c1ea7aba4cf1.jpg)}
+    56%{background-image: url(https://statics.vntrip.vn/data-v2/data-guide/img_content/1462761174_diem-chup-anh-cuoi-nha-trang-1.jpg)}
+    70%{background-image: url(https://statics.vntrip.vn/data-v2/data-guide/img_content/1462761174_diem-chup-anh-cuoi-nha-trang-1.jpg)}
+    84%{background-image: url(https://thuexekhatran.com/wp-content/uploads/2019/01/dao-hon-chong-nha-trang.jpg);}
+    100%{background-image: url(https://thuexekhatran.com/wp-content/uploads/2019/01/dao-hon-chong-nha-trang.jpg);}
+}
