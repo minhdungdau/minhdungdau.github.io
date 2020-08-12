@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Bài tập string
+        //Bài 1. Viết 1 function kiểm tra 1 chuỗi có nằm trong chuỗi còn lại hay không. Nếu có trả về true, nếu không trả về false
+        //- Đầu vào có 2 tham số : Tham số 1 là chuỗi ban đầu, tham số 2 là chuỗi cần kiểm tra
+        function strCheck (str1,str2){
+            var str = str1.indexOf(str2)
+            return str != -1
+        }
+
+        //Bài 2. Viết hàm rút ngắn chuỗi bằng cách cắt ra 8 ký tự đầu của 1 chuỗi và thêm dấu ba chấm ở cuối chuỗi. 
+        function strShorten(str){
+            str = str.substr(0, 8) + "..."
+            return str
+        }
+
+        //Bài 3. Viết hàm có tác dụng biến 1 chuỗi thành chỉ viết hoa từ đầu tiên. 
+        function strCapitalize(str){
+            var arr = str.split(" ")
+            var newArr=[]
+            for (i of arr){
+                i = i.toLowerCase()
+                var strFirstLetter = i[0]
+                var strRest = i.slice(1)
+                strFirstLetter = strFirstLetter.toUpperCase()
+                newArr.push(strFirstLetter + strRest)
+            }
+            var newStr = newArr.join(" ")
+            return newStr
+        }
+
+        //Bài 4. Cho 1 chuỗi, hãy viết hàm có tác dụng sao chép đó chuỗi lên 10 lần.
+        function repeatx10(str){
+            var i = 0
+            var arr=[]
+            while (i < 10){
+                arr.push(str)
+                i++
+            }
+            var newStr = arr.join('')
+            return newStr
+        }
+
+        //Bài 5. Cho 1 chuỗi, hãy viết hàm có tác dụng sao chép đó chuỗi lên 10 lần, ngăn cách nhau bởi dấu gạch ngang.
+        function repeatx10(str){
+            var i = 0
+            var arr=[]
+            while (i < 10){
+                arr.push(str)
+                i++
+            }
+            var newStr = arr.join('-')
+            return newStr
+        } 
+
+        //Bài 6. Cho 1 chuỗi và 1 số nguyên n > 1, hãy viết hàm có tác dụng sao chép đó chuỗi lên n lần, ngăn cách nhau bởi dấu gạch ngang.
+        function repeatxN(str,n){
+            var i = 0
+            var arr = []
+            while (i < n){
+                arr.push(str)
+                i++
+            }
+            var newStr = arr.join('-')
+            return newStr
+        }
+
+        //Bài 7. Viết hàm đảo ngược chuỗi. Viết function với đầu vào là 1 chuỗi string. Trả về chuỗi đảo ngược của chuỗi đó
+        //Ví dụ: reverseString('Hello') => Kết quả trả về là 'olleH'
+        function reverseString(str){
+            var newStr = ""
+            for (var a of str){
+                newStr = a + newStr
+            }
+            return newStr
+        }
+
+        //Bài 8. Cho 1 chuỗi, kiểm tra xem chuỗi đó có phải chuỗi đối xứng hay không (đọc xuôi hay ngược đều như nhau, không tính khoảng trắng, không phân biệt hoa thường), kết quả trả về true hoặc
+        function reverseString(str){
+            var newStr = ""
+            for (var a of str){
+                newStr = a + newStr
+            }
+            return newStr == str
+        }
+
+        // Bài tập phần Array
+        //Bài 9. Viết hàm tìm ra số nhỏ nhất trong mảng các số.
+        function minArr(arr_input){
+           var min = arr_input[0];
+           for (i = 0; i < arr_input.length; i++){
+                if (min > arr_input[i]){
+                    min = arr_input[i]
+                }
+           }
+           return min
+        }
+
+        //Bài 10. Viết hàm tìm ra số lớn thứ nhì trong mảng các số. Ví dụ:
+        function max2Arr(arr_input){
+           var x
+           for (i = 0; i < (arr_input.length-1); i++){
+               for (j = i + 1; j < arr_input.length; j++)
+                if (arr_input[i] < arr_input[j]){
+                    x = arr_input[i]
+                    arr_input[i] = arr_input[j]
+                    arr_input[j] = x
+                }
+           }
+           return arr_input[1]
+        }
+
+        //Bài 11. Viết hàm truyền vào 1 mảng tên học viên, sắp xếp lại mảng này theo chiều ngược của bảng chữ cái.
+        function sortStudents(students){
+            var sortedStudents = students.sort().reverse()
+            return sortedStudents
+        }
+
+        //Bài 12. Tính tổng các số chia hết cho 5 từ 0 -> 100
+        function sumNum(){
+            var sum = 0
+            for (i = 0; i <= 100; i++){
+                if (i % 5 == 0){
+                    sum += i
+                }
+            }
+            return sum
+        }
+
+        //Bài 13. Viết hàm cho phép truyền vào 1 mảng các số, kết quả trả về là 1 mảng mới với các số là số dư tương ứng khi chia mảng cũ cho 2
+        function arrDiv2(arr_input){
+            var newArr = arr_input.map(x => x % 2)
+            return newArr
+        }
+
+        //Bài 14. Cho 1 mảng các chuỗi. Viết hàm lọc ra các phần tử có độ dài lớn nhất. Ví dụ với tham số
+        function longStr(arr_str){
+            var arrLength = arr_str.map(x => x.length)
+            var maxLength = arrLength[0]
+            for (i = 0; i < arrLength; i++){
+                if (maxLength < arrLength[i]){
+                    maxLength = arrLength[i]
+                }
+            }
+            var strMaxLength = arr_str.filter((x) => x.length == maxLength)
+        }
+    </script>
+</body>
+
+</html>
