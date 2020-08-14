@@ -19,14 +19,22 @@ function key(obj){
 
 //bài 8. Viết hàm kiểm tra key có tồn tại trong Object không
 
+// function keyCheck(obj,keyy){
+//     var TG = 0
+//     for (let x in obj){
+//         if (keyy == x){
+//             TG = 1
+//         }
+//     }
+//     return TG == 1
+// }
 function keyCheck(obj,keyy){
-    var TG = 0
     for (let x in obj){
         if (keyy == x){
-            TG = 1
+           return true
         }
     }
-    return TG == 1
+    return false
 }
 
 //bài 9. Viết hàm kiểm tra Object có độ dài bao nhiêu

@@ -19,43 +19,41 @@ function sumIn(int1,int2){
 
 //Bài 3: Cho 1 số, kiểm tra xem số đó có phải là số nguyên tố hay không, kết quả trả về true hoặc false. 
 
+// function prime(num){
+//     if (num > 1 && Number.isInteger(num)){
+//         for (var i = 2; i < num; i++){
+//             if (num % i == 0){
+//                 return false
+//             }
+//         }
+//       return true
+//     } return false
+// }
 function prime(num){
-    if (num > 0 && Number.isInteger(num)){
-        var x = 1
-        for (var i = 2; i < num; i++){
-            if (num % i == 0){
-                x = 0
-            }
-        }
-        if (x == 1){
-            return true
-        } else {
-            return false
-        }
-    } else {
+    if (num < 2 || !Number.isInteger(num)){
         return false
     }
+    for (var i = 2; i < num; i++){
+        if (num % i == 0){
+            return false
+        }
+    }
+    return true
 }
 
 //Bài 4: Cho 1 số nguyên dương bất kỳ. Tính tổng tất cả các số nguyên tố mà nhỏ hơn hoặc bằng tham 
 //số truyền vào.
 
 function prime(num){
-    if (num > 0 && Number.isInteger(num)){
-        var x = 1
-        for (var i = 2; i < num; i++){
-            if (num % i == 0){
-                x = 0
-            }
-        }
-        if (x == 1){
-            return true
-        } else {
-            return false
-        }
-    } else {
+    if (num < 2 || !Number.isInteger(num)){
         return false
     }
+    for (var i = 2; i < num; i++){
+        if (num % i == 0){
+            return false
+        }
+    }
+    return true
 }
 
 function sumPrime(num){
