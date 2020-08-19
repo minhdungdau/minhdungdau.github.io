@@ -35,6 +35,7 @@ header{
     padding-left: 80px;
 }
 main{
+    position: relative;
     height: auto;
     flex-direction: column;
     margin-top:0;
@@ -81,8 +82,8 @@ details li{
     width: 150px;
     height: 300px;
     position: absolute;
-    top: 146px;
-    left: 33px;
+    top: -163px;
+    left: -150px;
     background-color:white;
     background-image: url(https://lh4.googleusercontent.com/-qWG1KMc_0Js/VpZa2atVEXI/AAAAAAAAQic/51YauN6Bq0g/s320/Anh-dong-gif-phao-hoa-nam-moi-%252810%2529.gif);
 }
