@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đưa bóng chạy quanh màn hình</title>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas')
+        canvas.width = innerWidth * 0.9;
+        canvas.height = innerHeight * 0.9;
+        canvas.style.border = '1px solid black'
+
+        const ctx = canvas.getContext('2d')
+
+        class Circle {
+            constructor(radius, color) {
+                this.x = radius
+                this.y = radius
+                this.radius = radius
+                this.color = color
+                this.dx = 5
+                this.dy = 5
+            }
+            draw() {
+                ctx.beginPath()
+                ctx.fillStyle = this.color
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
+                ctx.fill()
+            }
+            move() {
+                if (this.x < canvas.width - this.radius && this.y == this.radius) {
+                    this.x += this.dx
+                    this.color = '#FF2E6C'
+                } if (this.x >= canvas.width - this.radius) {
+                    this.x = canvas.width - this.radius
+                    this.y += this.dy
+                    this.color= '#198FFF'
+                } if (this.y >= canvas.height - this.radius) {
+                    this.x -= this.dx
+                    this.y = canvas.height - this.radius
+                    this.color = 'black'
+                } if (this.x <= this.radius) {
+                    this.y -= this.dy
+                    this.x = this.radius
+                    this.color = 'orange'
+                }
+                this.draw();
+            }
+            pause() {
+                this.draw()
+            }
+        }
+
+        let c = new Circle(30, 'red')
+        c.draw()
+        let count = 0
+        document.addEventListener('keydown', function (event) {
+            console.log(count)
+            if (event.keyCode == 32) {
+                count += 1
+            }
+        })
+
+        function animate() {
+            console.log('animate');
+            requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            if (count % 2 == 1) {
+                c.move()
+            } else {
+                c.pause()
+            }
+        } 
+
+        animate()
+        
+    </script>
+</body>
+
+</html>
