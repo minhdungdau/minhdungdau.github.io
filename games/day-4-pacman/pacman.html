@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pacman phiên bản lỗi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="./pacman.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div id="start">
+        <div class="container">
+            <h1>Pac-man</h1>
+            <div class="start-box">
+                <input id="userName" type="text" required placeholder="Tên nhân vật">
+                <button id="btn-start">Bắt đầu</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="playing">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <div id="end">
+        <div id="gameover-box">
+            <span class="scalex">G</span>
+            <span class="scalex">A</span>
+            <span class="scalex">M</span>
+            <span class="scalex">E</span>
+            <span class="scalex"></span>
+            <span class="scalex">O</span>
+            <span class="scalex">V</span>
+            <span class="scalex">E</span>
+            <span class="scalex">R</span>
+        </div>
+        <div id="gameover-btn">
+            <button id="reset"><i class="fas fa-redo-alt"></i>Chơi lại</button>
+            <button id="out"><i class="fas fa-hand-middle-finger"></i>Thoát game</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="./toastr-config.js"></script>
+
+    <script src="./pacman-window.js"></script>
+    <script src="./pacman.js"></script>
+</body>
+
+</html>

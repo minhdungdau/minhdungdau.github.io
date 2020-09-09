@@ -1,0 +1,118 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background:black
+}
+
+canvas{
+    display:block;
+    margin: 20px auto;
+}
+
+button{
+    outline: none;
+}
+
+#start, #end{
+    width:100vw;
+    height: 100vh;
+    background:black;
+    color:white;
+}
+.container{
+    width:70%;
+    height: 70%;
+    margin: 0 auto;
+    background-image: url('./pac-man.png');
+    background-position-y: -80px;
+}
+#start h1{
+    text-align: center;
+    font-size: 80px;
+    font-family: monospace;
+    text-transform: uppercase;
+    padding-top: 80px;
+}
+.start-box{
+    display:flex;
+    justify-content: center;
+    margin-top:200px;
+}
+#userName{
+    font-size: 30px;
+    margin-right: 30px;
+}
+#btn-start{
+    padding: 0 30px;
+    font-weight: 800;
+    color: orange
+}
+
+#playing{
+    display:none
+}
+
+#end{
+    display:none;
+    padding: 80px;
+}
+
+#gameover-box{
+    display:flex;
+    justify-content: center
+}
+
+.scalex{
+    display: block;
+    width:100px;
+    height: 200px;
+    font-size: 100px;
+    text-align: center;
+}
+
+#gameover-btn{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#gameover-btn button{
+    position: relative;
+    padding: 20px 30px;
+    width:500px;
+    font-size: 36px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    color:#FF5500;
+}
+
+i{  
+    font-size: 1.4em;
+    position: absolute;
+    left: 80px;
+    top: 15px;
+    color:#FF5500;
+    transition-delay:0.3s;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+#reset:hover i{
+    transform: scale(1.1) rotate(360deg)
+}
+
+@keyframes fak{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-5px)}
+    100%{transform:translateY(5px)}
+} 
+
+#out:hover i{
+    animation: fak linear 2 alternate 0.7s;
+    animation-delay: 0.3s;
+}
