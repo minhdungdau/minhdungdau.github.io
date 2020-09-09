@@ -15,6 +15,7 @@ class Circle {
         this.dx = 0
         this.dy = 0
         this.score = 0
+        this.second = 30
     }
 
     //vẽ bóng
@@ -42,6 +43,14 @@ class Circle {
         ctx.font = '40pt calibri'
         ctx.fillText(this.score, 50, canvas.height - 50)
     }
+
+    time() {
+        ctx.beginPath()
+        ctx.fillStyle = 'white'
+        ctx.font = '40pt calibri'
+        ctx.fillText(this.second, canvas.width - 100, 50)
+    }
+
     move() {
         this.x += this.dx
         this.y += this.dy
@@ -77,44 +86,72 @@ function random(min, max) {
 function rgb() {
     color = 'rgb(';
     for (var i = 0; i < 3; i++) {
-      color += Math.floor(Math.random() * 255) + ',';
+        color += Math.floor(Math.random() * 255) + ',';
     }
     return color.replace(/\,$/, ')');
-  }
+}
 
 //Khai báo bóng boss
 let radiusBoss = 40
 let boss = new Circle(radiusBoss, radiusBoss, radiusBoss, 'orange')
 
 //Tạo mảng chứa n quả bóng xuất hiện ngẫu nhiên để bắn
-let n = 30          //số lượng bóng
-let radius = 17    //bán kính của bóng
-
+let n = 30          //số lượng bóng   
 let balls = []
-for (let i = 0; i < n; i++) {
-    let ball = new Circle(random(radius, canvas.width - radius), random(radius, canvas.height - radius), radius, rgb())
-    balls.push(ball)
+function generateBall(n) {
+    let radius = 17     //bán kính của bóng nhỏ
+    for (let i = 0; i < n; i++) {
+        let ball = new Circle(random(radius, canvas.width - radius), random(radius, canvas.height - radius), radius, rgb())
+        balls.push(ball)
+    }
+}
+generateBall(n)
+
+//Khai báo thời gian
+var time = 30
+function timedown() {
+    timeInterval = setInterval(function () {
+        time -= 1
+        console.log(time)
+        boss.second = time
+    }, 1000)
 }
 
 //Hàm sự kiện
 document.addEventListener('keydown', function (event) {
+    let distance = 4
     if (event.keyCode == 39) {
-        boss.dx = 2
+        boss.dx = distance
         boss.dy = 0
     }
     if (event.keyCode == 37) {
-        boss.dx = -2
+        boss.dx = -distance
         boss.dy = 0
     }
     if (event.keyCode == 40) {
         boss.dx = 0
-        boss.dy = 2
+        boss.dy = distance
     }
     if (event.keyCode == 38) {
         boss.dx = 0
-        boss.dy = -2
+        boss.dy = -distance
     }
 })
+
+//reset game
+
+function reset() {
+    boss.x = radiusBoss
+    boss.y = radiusBoss
+    boss.radius = radiusBoss
+    boss.dx = 0
+    boss.dy = 0
+    boss.score = 0
+    balls = []
+    generateBall(n)
+    clearInterval(timeInterval)
+    boss.second = 30
+}
 
 //animation
 function animate() {
@@ -125,6 +162,20 @@ function animate() {
     boss.move()
     boss.drawBoss(userName.value)
     boss.drawScore()
+    boss.time()
+
+    //time out
+    if (boss.second === 0) {
+        toastr["success"]("Bạn thua rồi!!")
+        boss.second = '0'
+        setTimeout(function () {
+            playingGame.style.display = 'none'
+            endGame.style.display = 'block'
+            reset()
+        }, 1000)
+    }
+
+    //all done
     for (let i = 0; i < balls.length; i++) {
         if (balls[i].eat(boss) == true) {
             balls.splice(i, 1)
@@ -139,22 +190,10 @@ function animate() {
                     playingGame.style.display = 'none'
                     endGame.style.display = 'block'
                     //reset giá trị
-                    boss.x = radiusBoss
-                    boss.y = radiusBoss
-                    boss.radius = radiusBoss
-                    boss.dx = 0
-                    boss.dy = 0
-                    boss.score = 0
-                    balls = []
-                    for (let i = 0; i < n; i++) {
-                        let ball = new Circle(random(radius, canvas.width - radius), random(radius, canvas.height - radius), radius, rgb())
-                        balls.push(ball)
-                    boss.drawBoss(userName.value)
-                    }
+                    reset()
                 }, 2000)
             }
         }
     }
 }
-
 animate()
