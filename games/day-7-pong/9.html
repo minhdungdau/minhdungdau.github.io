@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brick</title>
+    <link rel="stylesheet" href="pong.css">
+</head>
+
+<body>
+    <div class="title">
+        <h2>Vẽ quả bóng chính giữa màn hình</h2>
+    </div>
+
+    <div class="main">
+        <div class="content">
+            <p><a href="1.html">Bước 1: Vẽ quả bóng chính giữa màn hình</a></p>
+            <p><a href="2.html">Bước 2: Vẽ phần đệm người chơi + máy</a></p>
+            <p><a href="3.html">Bước 3: Vẽ lưới trang trí</a></p>
+            <p><a href="4.html">Bước 4: Vẽ điểm của người chơi + máy</a></p>
+            <p><a href="5.html">Bước 5: Di chuyển thanh đệm của người chơi</a></p>
+            <p><a href="6.html">Bước 6: Cho bóng di chuyển và va đập với canvas</a></p>
+            <p><a href="7.html">Bước 7: Cho thanh đệm của máy di chuyển dựa theo vị trí của quả bóng</a>
+            </p>
+            <p><a href="8.html">Bước 8: Kiểm tra nếu bóng va chạm vào 2 thành trái phải thì reset
+                    game</a></p>
+            <p><a href="9.html" class="active">Bước 9: Hoàn thành game</a></p>
+        </div>
+        <canvas id="canvas"></canvas>
+    </div>
+    <script>
+        const canvas = document.getElementById("canvas");
+        canvas.width = 600;
+        canvas.height = 400;
+        canvas.style.background = '#000';
+        const ctx = canvas.getContext('2d');
+
+        class Circle {
+            constructor(x, y, radius, color) {
+                this.x = x
+                this.y = y
+                this.radius = radius
+                this.color = color
+                this.dx = 4
+                this.dy = -4
+            }
+
+            draw() {
+                ctx.beginPath()
+                ctx.fillStyle = this.color
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
+                ctx.fill()
+            }
+            //Add hàm di chuyển bóng
+            move() {
+                this.x += this.dx
+                this.y += this.dy
+
+                if (this.y >= canvas.height - this.radius) {
+                    this.dy = -Math.abs(this.dy)
+                }
+                if (this.y <= this.radius) {
+                    this.dy = Math.abs(this.dy)
+                }
+            }
+        }
+
+        //Tạo bóng
+        let ball = new Circle(canvas.width / 2, canvas.height / 2, 12, 'white')
+
+        //Tạo class rect
+        class Rect {
+            constructor(x, y, width, height, color) {
+                this.x = x
+                this.y = y
+                this.color = color
+                this.width = width
+                this.height = height
+            }
+
+            draw() {
+                ctx.beginPath()
+                ctx.fillStyle = this.color
+                ctx.rect(this.x, this.y, this.width, this.height)
+                ctx.fill()
+                ctx.closePath()
+            }
+
+            //Tính đổi chiều khi va chạm
+            dirchange(ball) {
+                let delta = Math.abs(ball.y - (this.y + this.height / 2))
+                let sinA = (this.y + this.height / 2 - ball.y) / Math.sqrt(Math.pow(this.height / 2, 2) + Math.pow(this.y + this.height / 2 - ball.y, 2))
+                console.log(sinA)
+                if (ball.x < canvas.width / 2) {
+                    ball.dy = ball.dx * sinA
+                } else {
+                    ball.dy = -ball.dx * sinA
+                }
+                ball.dx = -ball.dx
+            }
+        }
+
+        //tạo đệm người chơi và máy
+        let hbrick = 120
+        let wBrick = 15
+        let userbrick = new Rect(5, (canvas.height - hbrick) / 2, wBrick, hbrick, 'white')
+        let combrick = new Rect(canvas.width - 5 - wBrick, (canvas.height - hbrick) / 2, wBrick, hbrick, 'white')
+
+        //Vẽ lưới
+        function grid() {
+            ctx.beginPath()
+            ctx.strokeStyle = 'white'
+            ctx.moveTo(canvas.width / 2, 0)
+            ctx.lineTo(canvas.width / 2, canvas.height)
+            ctx.moveTo(0, canvas.height / 2)
+            ctx.lineTo(canvas.width, canvas.height / 2)
+            ctx.stroke()
+        }
+        //Vẽ điểm
+        let userPoint = 0
+        let comPoint = 0
+        function score(user, com) {
+            ctx.beginPath()
+            ctx.font = '30pt arial'
+            ctx.fillStyle = 'white'
+            ctx.fillText(user, 120, 80)
+            ctx.fillText(com, canvas.width - 130, 80)
+            ctx.fill()
+        }
+
+
+        //di chuyển thanh đệm
+        //Add sự kiện lắng nghe chuột
+
+        document.addEventListener('mousemove', function (event) {
+            userbrick.y = event.offsetY - hbrick / 2
+            if (userbrick.y <= -userbrick.height / 2) {
+                userbrick.y = -userbrick.height / 2
+            }
+            if (userbrick.y >= canvas.height - userbrick.height / 2) {
+                userbrick.y = canvas.height - userbrick.height / 2
+            }
+        })
+
+        //reset game
+        function reset() {
+            if (ball.x >= canvas.width - ball.radius) {
+                ball.x = canvas.width / 2;
+                ball.y = canvas.height / 2;
+                ball.dx = -ball.dx
+                userPoint += 1
+            }
+            if (ball.x <= ball.radius) {
+                ball.x = canvas.width / 2;
+                ball.y = canvas.height / 2;
+                ball.dx = -ball.dx
+                comPoint += 1
+            }
+        }
+
+        //Xét điều kiện va chạm
+        function collision(b, p) {
+            p.top = p.y;
+            p.bottom = p.y + p.height;
+            p.left = p.x;
+            p.right = p.x + p.width;
+
+            b.top = b.y - b.radius;
+            b.bottom = b.y + b.radius;
+            b.left = b.x - b.radius;
+            b.right = b.x + b.radius;
+
+            return p.left < b.right && p.top < b.bottom && p.right > b.left && p.bottom > b.top;
+        }
+
+
+
+        //animate
+        function animate() {
+            console.log('animate');
+            requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            if (collision(ball, userbrick)) {
+                userbrick.dirchange(ball)
+            }
+            if (collision(ball, combrick)) {
+                combrick.dirchange(ball)
+            }
+            userbrick.draw()
+            combrick.y = (ball.y - hbrick / 2) * 0.7  //Cho thanh đệm của máy di chuyển dựa theo vị trí của quả bóng
+            combrick.draw()
+            ball.move()
+            reset()
+            ball.draw()
+            score(userPoint, comPoint)
+            grid()
+        }
+
+        animate()
+    </script>
+</body>
+
+</html>
