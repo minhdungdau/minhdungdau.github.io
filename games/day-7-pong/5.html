@@ -107,7 +107,7 @@
         //Add sự kiện lắng nghe chuột
 
         document.addEventListener('mousemove', function (event) {
-            userbrick.y = event.offsetY - wbrick / 2
+            userbrick.y = event.clientY - 155 - wbrick / 2
         })
         function animate() {
             console.log('animate');

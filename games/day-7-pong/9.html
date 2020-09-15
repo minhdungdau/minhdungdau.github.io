@@ -134,7 +134,8 @@
         //Add sự kiện lắng nghe chuột
 
         document.addEventListener('mousemove', function (event) {
-            userbrick.y = event.offsetY - hbrick / 2
+            console.log(event)
+            userbrick.y = event.clientY - 155 - hbrick / 2
             if (userbrick.y <= -userbrick.height / 2) {
                 userbrick.y = -userbrick.height / 2
             }
