@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh
+        }
+
+        h1 {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            width: 400px;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .form-input {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        input {
+            border: 1px solid #ccc;
+            height: 36px;
+            line-height: 36px;
+            padding-left: 10px;
+            width: 100%;
+        }
+
+        .error {
+            display: inline-block;
+            color: orangered;
+        }
+
+        .success {
+            border: 1px solid green;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-input button {
+            content: "";
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            border: none;
+            background-color: transparent;
+
+        }
+
+        .form-input button:hover {
+            text-decoration: underline;
+            color: #3171E5;
+        }
+
+        #btnSubmit {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #3171E5;
+            color: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form id="registrationForm" method="get">
+            <div class="form-input">
+                <input id="username" type="text">
+            </div>
+            <div class="form-input">
+                <input id="password" type="password">
+                <button id="btn1">Show</button>
+            </div>
+            <div class="form-input">
+                <input id="confirmPassword" type="password">
+                <button id="btn2">Show</button>
+            </div>
+            <button type="submit" id="btnSubmit" disabled>Register</button>
+        </form>
+    </div>
+
+    <script>
+        const usernameInput = document.getElementById('username')
+        const passwordInput = document.getElementById('password')
+        const confirmPasswordInput = document.getElementById('confirmPassword')
+
+        // Bài 1: Thêm label cho các trường username, password, confirm password
+        const usernameLabel = document.createElement('label')
+        usernameLabel.innerText = 'Username'
+
+        const label1st = document.querySelector('.form-input')
+        label1st.insertBefore(usernameLabel, username)
+
+        const passwordLabel = document.createElement('label')
+        passwordLabel.innerText = 'Password'
+
+        const label2nd = document.querySelector('.form-input:nth-child(2)')
+        label2nd.insertBefore(passwordLabel, password)
+
+        const confirmPasswordLabel = document.createElement('label')
+        confirmPasswordLabel.innerText = 'Confirm password'
+
+        const label3rd = document.querySelector('.form-input:nth-child(3)')
+        label3rd.insertBefore(confirmPasswordLabel, confirmPassword)
+
+        //Bài 2 : Thêm icon để ẩn hiện password + confirm password
+        const btnShow1 = document.getElementById('btn1')
+        const btnShow2 = document.getElementById('btn2')
+        function showPass(btn, input) {
+            btn.onmousedown = function (e) {
+                e.preventDefault()
+                input.type = 'text'
+            }
+            btn.onmouseup = function (e) {
+                e.preventDefault()
+                input.type = 'password'
+            }
+
+            btn.onclick = function (e) {
+                e.preventDefault()
+            }
+        }
+        showPass(btnShow1, passwordInput)
+        showPass(btnShow2, confirmPasswordInput)
+
+        //Bài 3: Kiểm tra xem password và confirm pass có trùng nhau hay không
+        const checkPass = () => {return }
+
+        confirmPasswordInput.onblur = function () {
+            (passwordInput.value != confirmPasswordInput.value || passwordInput.value == '') ? alert('Mật khẩu không trùng') : ''
+        }
+        //Bài 3: Đảm bảo nút ‘Đăng ký’ bị disable cho đến khi người dùng nhập dữ liệu hợp lệ vào tất cả các trường đầu vào. Sau khi nhập đầy đủ thì ‘Đăng ký’ được enable.
+        const btnSubmit = document.getElementById('btnSubmit')
+        document.onkeyup = function(){
+            if(passwordInput.value == confirmPasswordInput.value && passwordInput.value != '' && usernameInput.value!=''){
+                btnSubmit.removeAttribute('disabled')
+            } else if(!btnSubmit.hasAttribute('disabled')){btnSubmit.setAttribute('disabled','')}
+            console.log(btnSubmit)
+        }
+
+        // Bài 4: Khi user nhập đủ thông tin và bấm vào nút submit thì tạo 1 hộp thoại thông báo đăng ký thành công
+        btnSubmit.onclick = function(){
+                alert('Đăng kí thành công')
+        }
+
+    </script>
+</body>
+
+</html>
