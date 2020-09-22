@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            display: block;
+            background-color: #f3f3f3;
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            float: left;
+            margin: 5px;
+        }
+
+        .box:hover {
+            transform: scale(.9);
+            transition-duration: .5s;
+            opacity: .8;
+            cursor: pointer;
+        }
+
+        .box:active {
+            transform: scale(1.5);
+            transition-duration: .5s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <div class="wrap">
+            <h1> JS DOM</h1>
+            <button id="btn">More boxes</button>
+            <h4 id="score"> Total box:<span class="points"></span></h4>
+
+            <div class="boxes">
+            </div>
+        </div>
+    </body>
+
+    <script>
+        let colors = [
+            '#3498db',
+            '#9b59b6',
+            '#e74c3c',
+            '#2c3e50',
+            '#d35400',
+        ]
+
+        // - Render số box = số lượng màu ra ngoài màn hình bằng js (5 box)
+        // - box được tạo bởi thẻ div, có class="box", background tương ứng với từng mã màu
+
+        let boxes = document.querySelector('.boxes')
+        function addBox() {
+            for (let i = 0; i < colors.length; i++) {
+                let box = document.createElement('div')
+                box.classList.add('box')
+                box.style.background = colors[i]
+                boxes.append(box)
+            }
+        }
+        addBox()
+
+        // - Cập nhật số lượng total box trong thẻ < span > có class "points"
+
+        const number = document.querySelector('.points')
+        let boxNode = document.querySelectorAll('.box')
+        number.innerText = boxNode.length
+
+        // - Khi bấm vào box bất kỳ thì box đó biến mất, đồng thời số lượng total box giảm đi 1
+        function removeBox() {
+            boxNode.forEach(ele => ele.onclick = function () {
+                ele.remove()
+                boxNode = boxes.querySelectorAll('.box')
+                number.innerText = boxNode.length
+            })
+        }
+        removeBox()
+
+        // - Khi click vào nút "more box" thì số lượng box tăng lên 5(tương ứng với 5 màu trong mảng colors), đồng thời số lượng total box cũng tăng lên 5
+
+        const btn = document.getElementById('btn')
+        btn.onclick = function () {
+            addBox()
+            boxNode = boxes.querySelectorAll('.box')
+            number.innerText = boxNode.length
+            removeBox()
+        }
+
+    </script>
+</body>
+
+</html>
