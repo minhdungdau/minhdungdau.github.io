@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #74B9FF;
+            display: flex;
+        }
+
+        .main {
+            background-color: white;
+            width: 600px;
+            margin: auto;
+            padding: 0 50px 30px 50px;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            background-color: #0984E3;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            font-size: 20px;
+            font-weight: 800;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .number {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            padding: 30px 0;
+            border: 2px solid #0984E3;
+        }
+
+        .calculation {
+            padding: 30px 0px;
+        }
+
+        .contains-btn {
+            display: flex;
+            align-items: center;
+        }
+
+        input {
+            vertical-align: baseline;
+            width: 90px;
+            display: inline-block;
+            border: 1px dashed dimgray;
+            font-size: inherit;
+            color: red;
+            font-family: inherit;
+            font-weight: inherit;
+            text-align: center;
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+            color: white;
+            background-color: #0984E3;
+            border: none;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='container'>
+        <div class="main">
+            <h3>Thử tài tính toán nào bạn ơi!</h3>
+            <div class="content">
+                <div class="number" id="no1"></div>
+                <div class="calculation"></div>
+                <div class="number" id="no2"></div>
+                <div class="calculation">=</div>
+                <div class="number kq"><input type="text"></div>
+                <div class="contains-btn"><button id="btn">Kiểm tra</button></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const mathSign = ['+', '-', '*', '/', '%', '^']
+
+        function randomNum(range) {
+            return Math.floor(Math.random() * range)
+        }
+
+        function randomSign() {
+            let randomSign = mathSign[Math.floor(Math.random() * mathSign.length)]
+            return randomSign
+        }
+
+        function result(a, b, randomSign) {
+            a = Number(a)
+            b = Number(b)
+            switch (randomSign) {
+                case '+':
+                    return a + b
+                    break;
+                case '-':
+                    return a - b
+                    break;
+                case '*':
+                    return a * b
+                    break;
+                case '/':
+                    return Math.floor(a / b)
+                    break;
+                case '%':
+                    return a % b
+                    break;
+                case '^':
+                    return a ** b
+                    break;
+            }
+        }
+
+        const no1 = document.getElementById('no1')
+        const no2 = document.getElementById('no2')
+        const sigh = document.querySelector('.calculation')
+        const kq = document.querySelector('input')
+        const btn_check = document.getElementById('btn')
+
+        function run() {
+            no1.textContent = randomNum(10)
+            no2.textContent = randomNum(10)
+            sigh.textContent = randomSign()
+        }
+        run()
+
+        btn_check.onclick = function () {
+            if (kq.value == result(no1.textContent, no2.textContent, sigh.textContent)) {
+                alert('Chúc mừng! Bạn thông mình bằng học sinh lớp 5 rồi.')
+            } else alert(`Sai rồi bạn ơi. Đáp án là: ${result(no1.textContent, no2.textContent, sigh.textContent)}`
+            )
+            run()
+            kq.value = ''
+        }
+    </script>
+</body>
+
+</html>
