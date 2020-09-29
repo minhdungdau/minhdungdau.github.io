@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 40px;
+            color: white;
+            font-family: 'Roboto', sans-serif
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 800px;
+            height: 500px;
+            margin: 50px auto;
+            background-color: #FF9F4A;
+        }
+
+        .sub-container {
+            height: 80%;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            text-align: center;
+            padding: 60px;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font-weight: 400;
+            margin: 30px
+        }
+
+        p {
+            margin: 10px
+        }
+
+        .btn {
+            width: 180px;
+            height: 80px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid white;
+            color: inherit;
+            background: transparent;
+            font-size: 24px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .btn:active {
+            border: 4px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sub-container">
+            <h2>Đồng hồ bấm giờ</h2>
+            <p>00:00</p>
+            <button class="btn" id="start">Bắt đầu</button>
+            <button class="btn" id="pause">Dừng</button>
+            <button class="btn" id="reset">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        const btn_start = document.getElementById('start')
+        const btn_pause = document.getElementById('pause')
+        const btn_reset = document.getElementById('reset')
+        const time_down = document.querySelector('p')
+        let time = '00:00'
+        let t = 0
+        let myInterval
+
+        function count_down() {
+            t += 1
+            let secondx10 = Math.floor(t / 1000);
+            let second = Math.floor((t - secondx10 * 1000) / 100)
+            let miliSecondx100 = Math.floor((t - secondx10 * 1000 - second * 100) / 10)
+            let miliSecondx10 = t - secondx10 * 1000 - second * 100 - miliSecondx100 * 10
+            time = `${secondx10}${second}:${miliSecondx100}${miliSecondx10}`
+            time_down.innerText = time
+        }
+
+        btn_start.onclick = function () {
+            myInterval = setInterval(count_down, 10)
+            btn_start.setAttribute('disabled','')
+        }
+
+        btn_pause.onclick = function () {
+            clearInterval(myInterval)
+            btn_start.removeAttribute('disabled')
+        }
+
+        btn_reset.onclick = function() {
+            t = 0
+            time = '00:00'
+            time_down.innerText = time
+            clearInterval(myInterval)
+            btn_start.removeAttribute('disabled')
+        }
+
+    </script>
+</body>
+
+</html>
