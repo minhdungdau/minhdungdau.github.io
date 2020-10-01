@@ -1,0 +1,22 @@
+body
+    |-- div.wrapper
+    |-- div.player-0-panel.active
+        |-- div.player-name#name-0
+        |-- div.player-score#score-0
+        |-- div.player-current-box
+            |-- div.player-current-label
+            |-- div.player-current-score#current-0
+
+    |-- player-1-panel
+        |-- div.player-name#name-1
+        |-- div.player-score#score-1
+        |-- div.player-current-box
+            |-- div.player-current-label
+            |-- div.player-current-score#current-1
+
+    |-- button.btn-new
+    |-- button.btn-roll
+    |-- button.btn-hold
+    |-- input.final-score
+    |-- img.dice#dice-1
+    |-- img.dice#dice-2
