@@ -82,6 +82,8 @@ function hide_calc(button) {
                 break;
         }
     }
+
+    //đổi sang công thức tính
     switch (button.innerText) {
         case "÷":
             calculation += "/"
@@ -117,9 +119,6 @@ function btn_AC(button) {
         calc.innerText = show_calculation
         result.innerText = '0'
     }
-    btn[3].innerText = "CE"
-    btn[3].classList.add('ce')
-    btn[3].classList.remove('ac')
 }
 
 //Nút CE để backspace
@@ -223,6 +222,9 @@ function preventWrong(button) {
             break;
         default:
             logic = true
+            btn[3].innerText = "CE"
+            btn[3].classList.add('ce')
+            btn[3].classList.remove('ac')
             break;
     }
     console.log(logic)
