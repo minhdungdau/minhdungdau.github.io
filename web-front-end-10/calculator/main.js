@@ -154,10 +154,9 @@ function preventWrong(button) {
             }
             break;
 
-        //Xử lý nút "(": chỉ xuất hiện sau dấu phép tính hay số hoặc khi bắt đầu phép tính mới hoặc chính dấu '('
+        //Xử lý nút "(": chỉ xuất hiện sau dấu phép tính hoặc khi bắt đầu phép tính mới hoặc chính dấu '('
         case ('('):
-            if (numbers.includes(show_calculation.charAt(show_calculation.length - 1))
-                || equations.includes(show_calculation.charAt(show_calculation.length - 1))
+            if (equations.includes(show_calculation.charAt(show_calculation.length - 1))
                 || show_calculation.charAt(show_calculation.length - 1) == "("
                 || show_calculation == "") {
                 logic = true
