@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="1">Lorem 1 ipsum dolor sit amet consectetur adipisicing elit. Ipsam quas eligendi autem id laborum dolores
+        dolorem quos quisquam! Minus at, dolorem maxime in corrupti nulla rem asperiores consequatur quam perspiciatis?
+    </p>
+    <p id="2">Lorem 2 ipsum dolor sit amet consectetur adipisicing elit. Ipsam quas eligendi autem id laborum dolores
+        dolorem quos quisquam! Minus at, dolorem maxime in corrupti nulla rem asperiores consequatur quam perspiciatis?
+    </p>
+    <p id="3">Lorem 3 ipsum dolor sit amet consectetur adipisicing elit. Ipsam quas eligendi autem id laborum dolores
+        dolorem quos quisquam! Minus at, dolorem maxime in corrupti nulla rem asperiores consequatur quam perspiciatis?
+    </p>
+
+    <script>
+        const para = Array.from(document.querySelectorAll('p'))
+
+        // Đổi màu chữ của 3 đoạn văn theo thứ tự xanh, vàng, đỏ
+        function changeColor() {
+            para[0].style.color = '#2ecc71'
+            para[1].style.color = '#f1c40f'
+            para[2].style.color = '#e74c3c'
+        }
+
+        changeColor()
+
+        // Thay đổi màu nền của trang thành màu color
+        function changeBgColor(color) {
+            document.body.style.background = color
+        }
+
+        changeBgColor('#000')
+
+        // Thay đổi nội dung của đoạn văn paragraph1 thành giống nội dung của đoạn văn paragraph2 (tham số truyền vào là id của 2 đoạn văn hoặc thứ tự của đoạn văn)
+        function copyContent(paragraph1, paragraph2) {
+            [para[paragraph1 - 1].innerText, para[paragraph2 - 1].innerText] = [para[paragraph2 - 1].innerText, para[paragraph1 - 1].innerText]
+        }
+
+        // copyContent(1,3)
+
+        // Thay đổi kích thước font chữ của cả 3 đoạn văn thành x pixels (x là một số nguyên)
+        function changeFontSize(x) {
+            para.forEach(ele => ele.style.fontSize = `${x}px`)
+        }
+
+        changeFontSize(20)
+
+        // function increaseFontSize(paragraph): Tăng kích thước font chữ của đoạn văn mong muốn (tham số truyền vào là id đoạn văn hoặc thứ tự đoạn văn) lên 1 pixel so với kích thước hiện tại, kích thước tăng lên không được vượt quá 30 pixels (Sử dụng sau khi gọi hàm changeFontSize() hoặc dùng window.getComputedStyle)
+
+        function increaseFontSize(paragraph) {
+            //lấy font size bao gồm cả đơn vị px
+            let fontRecentToUp = window.getComputedStyle(para[paragraph]).getPropertyValue('font-size')
+            //tách giá trị khỏi đơn vị px và tăng lên 1
+            let sizeUp = Number(fontRecentToUp[0] + fontRecentToUp[1])
+            if (sizeUp <30) {
+                sizeUp+=1
+            }
+            console.log(sizeUp)
+            //thay đổi giá trị của para
+            para[paragraph].style.fontSize = `${sizeUp}px`
+        }
+
+        increaseFontSize(1)
+
+        //Giảm kích thước font chữ của đoạn văn mong muốn (tham số truyền vào là id đoạn văn hoặc thứ tự đoạn văn) xuống 1 pixels so với kích thước hiện tại, kích thước giảm xuống không vượt quá 10 pixels
+
+        function decreaseFontSize(paragraph) {
+            let fontRecentToDown = window.getComputedStyle(para[paragraph]).getPropertyValue('font-size')
+            let sizeDown = Number(fontRecentToDown[0] + fontRecentToDown[1])
+            if (sizeDown >10) {
+                sizeDown-=1
+            }
+            para[paragraph].style.fontSize = `${sizeDown}px`
+        }
+
+        decreaseFontSize(2)
+
+    </script>
+</body>
+
+</html>

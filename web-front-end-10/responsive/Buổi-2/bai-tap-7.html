@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 60px;
+            display: flex;
+            padding: 15px;
+            background-color: rgb(178, 233, 178);
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            background-color: antiquewhite;
+            width: 200px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            height: 36px;
+            width: 500px;
+            background-color: cadetblue;
+            align-items: center;
+            padding: 5px;
+        }
+
+        li {
+            text-align: center;
+            border-left: 1px solid white;
+            flex-grow: 1;
+            order: 2;
+            color: white;
+            cursor: pointer;
+        }
+
+        li:first-child {
+            padding-left: 0;
+            border: none;
+        }
+
+        .user {
+            display: flex;
+            padding: 10px;
+            height: 32px;
+            background-color: darksalmon;
+            font-weight: 800;
+            align-items: center;
+        }
+
+        .sign {
+            padding: 0 10px;
+            cursor: pointer;
+        }
+
+        .sign:first-child {
+            border-right: 1px solid #000;
+        }
+
+        .container {
+            padding: 15px;
+            background-color: rgb(224, 137, 75)
+        }
+
+        .container::after {
+            clear: both;
+            content: "";
+            display: table
+        }
+
+        .content,
+        .help {
+            background: blue;
+            height: 500px;
+            float: left;
+        }
+
+        .content {
+            width: calc(70% - 10px);
+            margin-right: 10px;
+        }
+
+        .help {
+            width: 30%;
+        }
+
+        @media (max-width: 576px) {
+            header {
+                height: auto;
+                display: block;
+            }
+
+            .logo-box {
+                display:flex;
+            }
+
+            .hamburger {
+                display: block;
+                height: 40px;
+                width: 50px;
+                line-height: 20px;
+                cursor: pointer;
+                margin-right: 20%;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                background-color: white
+            }
+
+            ul,.user {
+                display: none;
+                position: absolute;
+                flex-direction: column;
+                height: auto;
+                width: calc(100% - 30px);
+                padding: 0;
+                margin-top: 10px;
+            }
+
+            li,
+            li:first-child {
+                border: 1px solid #000;
+                border-top: none;
+                width: 100%;
+                padding: 8px;
+            }
+
+            .user{
+                top:176px;
+                margin:0;
+                text-align: center;
+            }
+
+            .sign{
+                border: 1px solid #000;
+                border-top: none;
+                width: 100%;
+                padding: 8px;
+                background-color: cadetblue;
+                color:white;
+                font-weight: 400;
+            }
+
+            .container {
+                margin-top: 0;
+            }
+
+            .content, .help{
+                width: 100%;
+            }
+
+            .content{
+                margin-bottom: 10px;
+            }
+
+            .d-on {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-box">
+            <div class="hamburger" onclick="drop_menu()">
+                <img src="menu.svg">
+            </div>
+            <div class="logo">LOGO</div>
+        </div>
+        
+        <ul>
+            <li>Menu 1</li>
+            <li>Menu 2</li>
+            <li>Menu 3</li>
+        </ul>
+        <div class="user">
+            <div class="sign">Login</div>
+            <div class="sign">Register</div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content"></div>
+        <div class="help"></div>
+    </div>
+
+    <script>
+        const menu = document.querySelector('ul')
+        const user = document.querySelector('.user')
+        const hamburger = document.querySelector('.hamburger')
+        function drop_menu() {
+            menu.classList.toggle("d-on")
+            user.classList.toggle("d-on")
+        }
+
+        window.addEventListener("click", function (e) {
+            if (!menu.contains(e.target) && !user.contains(e.target) && !hamburger.contains(e.target)) {
+                // Clicked outside the menu or hamburger
+                menu.classList.remove("d-on")
+                user.classList.remove("d-on")
+            }
+        })
+
+    </script>
+</body>
+
+</html>

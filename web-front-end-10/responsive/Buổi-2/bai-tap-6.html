@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 60px;
+            display: flex;
+            padding: 15px;
+            background-color: rgb(178, 233, 178);
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            background-color: antiquewhite;
+            width: 200px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            height: 36px;
+            width: 500px;
+            background-color: cadetblue;
+            align-items: center;
+            padding: 5px;
+        }
+
+        li {
+            text-align: center;
+            border-left: 1px solid white;
+            flex-grow: 1;
+            order: 2;
+            color: white;
+            cursor: pointer;
+        }
+
+        li:first-child {
+            padding-left: 0;
+            border: none;
+        }
+
+        li:last-child {
+            display: none;
+        }
+
+        .container {
+            margin: 15px;
+            background-color: blue;
+            height: 500px;
+        }
+
+        @media (max-width: 576px) {
+            header {
+                height: auto;
+                display: block;
+            }
+
+            .logo {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+                height: 40px;
+                width: 50px;
+                line-height: 20px;
+                cursor: pointer;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                background-color: white
+            }
+
+            ul {
+                display:none;
+                position: absolute;
+                flex-direction: column;
+                height: auto;
+                width: calc(100% - 30px);
+                padding: 0;
+                margin-top: 10px;
+            }
+
+            li,
+            li:first-child {
+                border: 1px solid #000;
+                border-top: none;
+                width: 100%;
+                padding: 8px;
+            }
+
+            li:last-child {
+                display: block;
+                order: 1;
+                border-top: 1px solid #000;
+            }
+
+            .container {
+                margin-top: 0;
+            }
+
+            .d-on {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">LOGO</div>
+        <div class="hamburger" onclick="drop_menu()">
+            <img src="menu.svg">
+        </div>
+        <ul>
+            <li>Menu 1</li>
+            <li>Menu 2</li>
+            <li>Menu 3</li>
+            <li>Trang chủ</li>
+        </ul>
+    </header>
+    <div class="container">
+
+    </div>
+
+    <script>
+        const menu = document.querySelector('ul')
+        const hamburger = document.querySelector('.hamburger')
+        function drop_menu() {
+            menu.classList.toggle("d-on")
+        }
+
+        window.addEventListener("click", function (e) {
+            if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+                // Clicked outside the menu or hamburger
+                menu.classList.remove("d-on")
+            }
+        })
+
+    </script>
+</body>
+
+</html>

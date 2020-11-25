@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header,
+        footer {
+            width: 100%;
+            height: 30px;
+            background-color: darkgrey
+        }
+
+        .container-box {
+            padding: 20px;
+            background-color: peachpuff;
+            display: flex;
+        }
+
+        .box1 {
+            background-color: rgb(144, 247, 144);
+            width: 70%;
+            height: 100%;
+        }
+
+        .box1-child{
+            display: flex;
+            width: 100%;
+        }
+
+        .box1-child:first-child{
+            margin-bottom: 15px;
+        }
+
+        .items {
+            background-color: royalblue;
+            width: 50%;
+            height: 150px;
+            margin-left: 15px;
+        }
+
+        .items:first-child {
+            margin-left: 0px;
+        }
+
+        .box2 {
+            background-color: blue;
+            height: 500px;
+            width: 30%;
+            margin-left: 20px;
+        }
+
+        @media (max-width: 1024px) {
+            .container-box{
+                flex-wrap: wrap;
+                padding: 15px;
+            }
+            
+            .box1, .box2{
+                width: 100%;
+            }
+
+            .box2{
+                margin: 20px 0 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <div class="container-box">
+        <div class="box1">
+            <div class="box1-child">
+                <div class="items"></div>
+                <div class="items"></div>
+            </div>
+            <div class="box1-child">
+                <div class="items"></div>
+                <div class="items"></div>
+            </div>
+        </div>
+
+        <div class="box2"></div>
+    </div>
+</body>
+
+</html>
