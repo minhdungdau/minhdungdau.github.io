@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+        #header {
+            background-color: #34465c;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
+        }
+
+        #header a {
+            font-size: .9rem !important;
+        }
+
+        .body {
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            color: #464646;
+        }
+
+        .container {
+            max-width: 1250px;
+        }
+
+        .form-search {
+            padding: 10px 15px;
+            position: relative;
+        }
+
+        .form-search label {
+            font-size: 1.2rem;
+            color: #5e5e5e70;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        #keyword {
+            padding-left: 2.5rem;
+            border: none;
+            outline: 0;
+            min-height: 2rem;
+            line-height: 2rem;
+            vertical-align: middle;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .card-img-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+        }
+
+        .post-thumbnail {
+            overflow: hidden;
+            width: 100%;
+            padding-top: 66%;
+            position: relative;
+        }
+
+        @media (max-width:768px) {
+            #filter {
+                display:none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid" id="header">
+        <div class="nav-bar">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#">
+                    <img src="https://techmaster.vn/resources/image/new_logo.png" alt="logo" style="width:100px">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color: white"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto text-uppercase">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Lộ trình
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Lập trình căn bản</a>
+                                <a class="dropdown-item" href="#">Front end + react</a>
+                                <a class="dropdown-item" href="#">Di động react native</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">phòng lab</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">trực tuyến</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">sản phẩm học viên</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="body-part">
+        <div class="container pt-5">
+            <div class="row border border-secondary">
+                <div class="col-10">
+                    <form method="get">
+                        <div class="form-search">
+                            <label for="keyword"><i class="fas fa-search"></i></label>
+                            <input type="text" name="keyword" id="keyword" placeholder="Gõ từ khóa tìm kiếm...">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-2 d-flex align-item-center text-align-center">
+                    <button class="btn btn-outline-secondary m-2" id="filter">
+                        <span class="btn-text">Lọc danh mục</span>
+                    </button>
+                </div>
+            </div>
+            <div class="row my-4">
+                <div class="col-xl-3 col-md-4 col-sm-6 p-2">
+                    <div class="card shadow-sm">
+                        <div class="post-thumbnail"><img
+                                src="https://techmaster.vn/media/static/bn95ibf0k7qnbj6f7lt0/buuvdbc51co41h2qd0q0"
+                                class="card-img-top" alt="Java Getter và Setter"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Java Getter và Setter</h5>
+                            <p class="card-text">Getter và setter được sử dụng rất phổ biến trong Java, 2 phương thức
+                                thoạt&nbsp;...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 p-2">
+                    <div class="card shadow-sm">
+                        <div class="post-thumbnail"><img
+                                src="https://techmaster.vn/media/static/8187/buukp5k51cofsqis997g" class="card-img-top"
+                                alt="10 kiểu người khó làm việc nhóm trong ngành IT"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">10 kiểu người khó làm việc nhóm trong ngành IT</h5>
+                            <p class="card-text">Làm việc nhóm tốt giúp công việc chung của cả team và bản thân trở lên
+                                hiệ...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 p-2">
+                    <div class="card shadow-sm">
+                        <div class="post-thumbnail"><img
+                                src="https://techmaster.vn/media/static/bub3enc51co7s932dsk0/bur2tmk51co41h2qd0f0"
+                                class="card-img-top" alt="Người mới bắt đầu có nên học Frontend hay không?"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Người mới bắt đầu có nên học Frontend hay không? 
+                            </h5>
+                            <p class="card-text">Dân ngoại đạo, chuyển sang ngành lập trình thì nên học gì cho ngưòi...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 p-2">
+                    <div class="card shadow-sm">
+                        <div class="post-thumbnail"><img
+                                src="https://techmaster.vn/media/static/8103/buudtsc51co41h2qd0ng" class="card-img-top"
+                                alt="[CodeceptJS] Phần 1: CodeceptJS là gì? Cài đặt như thế nào?"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">[CodeceptJS] Phần 1: CodeceptJS là gì? Cài đặt như thế nào?</h5>
+                            <p class="card-text"><strong>CodecepJS</strong> là&nbsp;một thư viện kiểm thử tự động End to End Testing.&nbsp;...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 p-2">
+                    <div class="card shadow-sm">
+                        <div class="post-thumbnail"><img
+                                src="https://techmaster.vn/media/static/buqua2k51codbee0kio0/busa2is51co41h2qd0k0"
+                                class="card-img-top" alt="Chương trình trải nghiệm văn hóa Nhật Bản dành cho TOP GUN"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Chương trình trải nghiệm văn hóa Nhật Bản dành cho TOP GUN</h5>
+                            <p class="card-text">Chương trình dành cho các bạn đạt điểm cao tại kỳ thi chuẩn kỹ sư CNTT Nh�...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 p-2">
+                    <div class="card shadow-sm">
+                        <div class="post-thumbnail"><img
+                                src="https://techmaster.vn/media/static/buqua2k51codbee0kio0/bur4n9c51cofsqis9930"
+                                class="card-img-top" alt="Giải đề thi mùa xuân chứng chỉ chuẩn kỹ sư CNTT Nhật Bản "></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Giải đề thi mùa xuân chứng chỉ chuẩn kỹ sư CNTT Nhật Bản </h5>
+                            <p class="card-text">Giải đề thi chuẩn kỹ sư CNTT Nhật Bản mùa xuân 2019</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 p-2">
+                    <div class="card shadow-sm">
+                        <div class="post-thumbnail"><img
+                                src="https://techmaster.vn/media/static/buqua2k51codbee0kio0/bur2v7s51co41h2qd0h0"
+                                class="card-img-top" alt="Chuyên nghiệp hơn bằng chứng chỉ chuẩn kỹ sư CNTT Nhật Bản (FE)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Chuyên nghiệp hơn bằng chứng chỉ chuẩn kỹ sư CNTT Nhật Bản (FE)</h5>
+                            <p class="card-text">Chứng minh năng lực bản thân bằng chứng chỉ chuẩn kỹ sư CNTT - FE (Fundamental...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 p-2">
+                    <div class="card shadow-sm">
+                        <div class="post-thumbnail"><img
+                                src="https://techmaster.vn/media/static/buqua2k51codbee0kio0/bur324s51co41h2qd0i0"
+                                class="card-img-top" alt="Kinh nghiệm luyện thi chứng chỉ FE - chuẩn kỹ sư CNTT Nhật Bản"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Kinh nghiệm luyện thi chứng chỉ FE - chuẩn kỹ sư CNTT Nhật Bản</h5>
+                            <p class="card-text">Chứng chỉ FE (Fundamentals of Engineering Certification) là chứng chỉ CNTT được xây dựng dựa trên ...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
