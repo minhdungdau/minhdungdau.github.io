@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Font -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        html {
+            font-size: 14px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: white;
+        }
+
+        .navbar {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        #navbarNav ul {
+            width: 41rem;
+            margin-left: auto;
+            justify-content: space-between;
+        }
+
+        .navbar-brand {
+            font-family: Inconsolata, Arial, sans-serif;
+            font-weight: normal;
+            font-size: 2.14rem;
+        }
+
+        .nav-link {
+            text-transform: uppercase;
+            font-family: "Playfair display";
+        }
+
+        #banner {
+            margin-bottom: 7.14rem;
+        }
+
+        .homepage {
+            padding: 0 5.71rem;
+        }
+
+        .card-type,
+        #comment {
+            font-size: 1rem;
+            font-family: Ubuntu, Arial, sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: #B4AD9E;
+        }
+
+        .first-post .card-type {
+            margin-bottom: 2.86rem;
+        }
+
+        .card-type {
+            margin-bottom: 2.14rem;
+        }
+
+        .card-title,
+        .card-text {
+            font-family: "Playfair display", Arial, sans-serif;
+            font-weight: 400;
+            color: #626262;
+        }
+
+        .card-title {
+            font-size: 2.14rem;
+            margin-bottom: 2.85rem;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            line-height: 1.71rem;
+            margin-bottom: 0;
+        }
+
+        #comment {
+            margin-top: 3.43rem;
+            margin-bottom: 9.43rem;
+            padding: 0;
+            border: none;
+            height: auto;
+            line-height: auto;
+            color: #000;
+        }
+
+        .row {
+            justify-content: space-between;
+            margin-bottom: 9.43rem;
+            flex-wrap: nowrap;
+        }
+
+        .column {
+            max-width: 30rem;
+        }
+
+        .column-none {
+            min-width: 5rem;
+        }
+
+        .card-img-top {
+            max-width: 100%;
+        }
+
+        .card-body {
+            padding: 2.28rem 0 0;
+        }
+
+        .card {
+            border: none;
+        }
+
+        .container-fluid {
+            background-color: #F0F0F0;
+            margin-top: -10px;
+            height: 20.5rem;
+            margin-bottom: 7.28rem;
+            padding: 0
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .label-sign {
+            display: block;
+            font-family: "Playfair display", Arial, sans-serif;
+            font-weight: 400;
+            font-size: 2.14rem;
+            margin-bottom: 5.71rem;
+        }
+
+        .email-input {
+            display: flex;
+            width: 400px;
+            font-family: "Playfair display", Arial, sans-serif;
+            font-weight: 400;
+        }
+
+        #staticEmail {
+            border: none;
+            background-color: transparent;
+            flex-grow: 1;
+            padding: 0;
+            padding-left: 3px;
+        }
+
+        #btn-send {
+            padding: 0 0 0 5px;
+        }
+
+        .row-0 {
+            border-bottom: 1px solid grey;
+            width: 400px;
+        }
+
+        .btn-load {
+            display: block;
+            color: #626262;
+            width: 164px;
+            height: 60px;
+            border: 1px solid #626262;
+            border-radius: 0px;
+            font-family: "Playfair display", Arial, sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            margin: 12rem auto 3rem;
+        }
+
+        #footer {
+            background-color: #F0F0F0;
+            height: 7rem;
+            margin-bottom: 2px;
+            display: flex;
+        }
+
+        #footer a {
+            color: inherit;
+
+        }
+
+        .terms,
+        .social-link {
+            display: flex;
+            align-items: center;
+            font-family: "Playfair display", Arial, sans-serif;
+            font-weight: 400;
+        }
+
+        .terms {
+            margin-left: 11rem;
+            width: 14rem;
+            justify-content: space-between;
+        }
+
+        .social-link {
+            margin-right: 5rem;
+            margin-left: auto;
+            width: 10rem;
+        }
+
+        .follow {
+            margin-right: 20px
+        }
+
+        .icons {
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        @media (max-width: 1200px) {
+            .navbar {
+                margin: 0 2.14rem 0 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            html {
+                font-size: 13px;
+            }
+
+            #navbarNav ul {
+                width: 70%;
+            }
+
+            .row {
+                flex-direction: column;
+                align-items: center
+            }
+
+            .column-none {
+                height: 6rem;
+            }
+
+        }
+
+        @media (max-width: 576px) {
+            html {
+                font-size: 12px;
+            }
+
+            .email-input {
+                width: 240px;
+            }
+
+            .terms{
+                margin-left: 2rem;
+            }
+
+            .social-link{
+                margin-right: 2rem;
+            }
+        }
+
+        @media(min-width: 1200px) {
+            .container {
+                max-width: 1062px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container px-0">
+        <div id="header">
+            <nav class="navbar navbar-expand-md navbar-light px-0">
+                <a class="navbar-brand text-uppercase" href="#">minimø</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link px-0" href="#">lifestyle <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-0" href="#">photodiary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-0 " href="#">music</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-0" href="#">travel</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <img src="minimo-image/banner.jpg" class="img-fluid" alt="Banner" id="banner">
+        <div class="homepage">
+            <div class="first-post">
+                <div class="card-type">photodiary</div>
+                <h5 class="card-title">The perfect weekend getaway</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde
+                    omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+                    ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                    enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+                    dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
+                    dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+                    labore et dolore magnam aliquam quaerat voluptatem.</p>
+                <input class="form-control" type="text" placeholder="LEAVE A COMMENT" id="comment">
+            </div>
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <img src="minimo-image/image-left-1.jpg" class="card-img-top" alt="anh-1">
+                        <div class="card-body">
+                            <div class="card-type">lifestyle</div>
+                            <h5 class="card-title">More than just a music festival</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-none"></div>
+                <div class="column">
+                    <div class="card">
+                        <img src="minimo-image/image-right-1.jpg" class="card-img-top" alt="anh-2">
+                        <div class="card-body">
+                            <div class="card-type">lifestyle</div>
+                            <h5 class="card-title">Life tastes better with coffee</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <img src="minimo-image/image-left-2.jpg" class="card-img-top" alt="anh-3">
+                        <div class="card-body">
+                            <div class="card-type">photodiary</div>
+                            <h5 class="card-title">American dream</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-none"></div>
+                <div class="column">
+                    <div class="card">
+                        <img src="minimo-image/image-right-2.jpg" class="card-img-top" alt="anh-4">
+                        <div class="card-body">
+                            <div class="card-type">photodiary</div>
+                            <h5 class="card-title">A day exploring the Alps</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <form class="form" method="GET">
+            <label for="staticEmail" class="label-sign">Sign up for our newsletter!</label>
+            <div class="email-input">
+                <input type="text" class="form-control" id="staticEmail" placeholder="Enter a valid email address">
+                <button type="submit" class="btn" id="btn-send"><img src="minimo-image/send-icon-2.png"
+                        alt="Send"></button>
+            </div>
+            <div class="row-0"></div>
+        </form>
+    </div>
+    <div class="container px-0">
+        <div class="homepage">
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <img src="minimo-image/image-left-3.jpg" class="card-img-top" alt="anh-5">
+                        <div class="card-body">
+                            <div class="card-type">lifestyle</div>
+                            <h5 class="card-title">Top 10 song for running</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-none"></div>
+                <div class="column">
+                    <div class="card">
+                        <img src="minimo-image/image-right-3.jpg" class="card-img-top" alt="anh-6">
+                        <div class="card-body">
+                            <div class="card-type">lifestyle</div>
+                            <h5 class="card-title">Cold winter days</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-outline-light btn-load">Load more</button>
+    <div class="container-fluid" id="footer">
+        <div class="terms">
+            <a href="#"><span>Terms and conditions</span></a>
+            <a href="#"><span>Privacy</span></a>
+        </div>
+        <div class="social-link">
+            <a href="#"><span class="follow">Follow</span></a>
+            <div class="icons">
+                <a href="#"><img src="minimo-image/facebook.png" alt="fb"></a>
+                <a href="#"><img src="minimo-image/twitter.png" alt="twitter"></a>
+                <a href="#"><img src="minimo-image/insta.png" alt="insta"></a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
