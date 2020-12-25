@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #202529;
+        }
+
+        .container {
+            padding-top: 50px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 750px;
+            padding:10px;
+            margin: auto;
+            font-weight: 500;
+        }
+
+        .btn-row{
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .require{
+            color: #EA2B48;
+        }
+
+        input{
+            width: 600px;
+            padding: 7px;
+            outline: none;
+            border: 1px solid #CDD4DA;
+            border-radius: 3px;
+        }
+
+        button{
+            outline:none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn{
+            padding: 10px;
+            font-weight: 600;
+            color:white;
+            border-radius: 3px;
+        }
+        
+        .back-btn{
+            background-color: #6B767D;
+        }
+
+        .back-btn:hover{
+            background-color: #555e64;
+        }
+
+        .save-btn{
+            background-color: #00A751;
+        }
+
+        .save-btn:hover{
+            background-color: #01803e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Thêm mới học viên</h1>
+        <form method="get" class="form-add">
+            <div class="row">
+                <label for="name">Họ tên <span class="require">*</span></label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="row">
+                <label for="year">Năm sinh</label>
+                <input type="text" id="year">
+            </div>
+            <div class="row">
+                <label for="email">Email <span class="require">*</span></label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="row">
+                <label for="phone">Phone <span class="require">*</span></label>
+                <input type="text" id="phone" required>
+            </div>
+            <div class="btn-row">
+                <a href="index.html"><button class="btn back-btn" type="button"><i class="fas fa-chevron-left"></i> Quay lại</button></a>
+                <button class="btn save-btn" type="submit"><i class="fas fa-save"></i> Lưu</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
