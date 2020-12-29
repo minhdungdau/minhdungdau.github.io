@@ -240,16 +240,17 @@
                     <button class="choice yes">Có</button> <button class="choice no">Không</button>
                     </div>`)
             $('.yes').click(function () {
+                $('.success').addClass('hide')
                 $.ajax({
                     url: `https://minherratic.herokuapp.com/users/${id}`,
                     type: 'DELETE',
                     success: function () {
-                        $('.success').addClass('hide')
                         for (let i = 0; i < users.length; i++) {
                             if (users[i].id == id) {
                                 $('tr').eq(i+1).css('display', 'none')
                             }
                         }
+                        $('.success').remove()
                     }
                 });
             })
