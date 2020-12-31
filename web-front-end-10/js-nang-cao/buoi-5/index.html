@@ -139,6 +139,10 @@
             background-color: #F2F2F2;
         }
 
+        .light {
+            background-color: white;
+        }
+
         .loading {
             margin-top: 50px;
             margin-left: 50%;
@@ -173,7 +177,7 @@
             margin-right: 50px;
         }
 
-        .hide{
+        .hide {
             animation: fade .5s ease-in-out forwards;
             animation-delay: 0.2s;
         }
@@ -207,6 +211,7 @@
     <script>
         let users = []
         function render() {
+            //Insert loading icon before request server
             $('.list-table').after($(`<img src="giphy.gif" class="loading"/>`))
             $.get("https://minherratic.herokuapp.com/users")
                 .done(function (data) {
@@ -247,14 +252,21 @@
                     success: function () {
                         for (let i = 0; i < users.length; i++) {
                             if (users[i].id == id) {
-                                $('tr').eq(i+1).css('display', 'none')
+                                $('tr').eq(i + 1).remove()
+                            }
+                        }
+                        for (let i = 0; i < users.length-1; i++) {
+                            if (i % 2 == 0) {
+                                $('tr').eq(i + 1).addClass('dark')
+                            } else {
+                                $('tr').eq(i + 1).addClass('light')
                             }
                         }
                         $('.success').remove()
                     }
                 });
             })
-            $('.no').click(function(){
+            $('.no').click(function () {
                 $('.success').remove()
             })
         }
