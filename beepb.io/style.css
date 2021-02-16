@@ -1,0 +1,979 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Work Sans';
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-family: 'Work Sans';
+}
+
+button:hover {
+    background-color: #ececec;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    margin: auto;
+}
+
+.wide {
+    max-width: 1410px;
+    margin: auto;
+    position: relative;
+}
+
+.first-page {
+    background-color: #292D3A;
+    padding-top: 60px;
+    color: white;
+    background: url('images/bg-1st-page.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 2px;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 48px;
+    height: auto;
+}
+
+.brand {
+    margin-left: 5px;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.nav-bar, .menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu>li {
+    margin-right: 40px;
+}
+
+.menu li>a {
+    padding: 8px;
+    text-decoration: none;
+}
+
+.menu a:after {
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.menu a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.drop-down {
+    display: flex;
+    position: relative;
+}
+
+.drop-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 140%;
+    padding-top: 2.5rem;
+}
+
+.drop-menu li {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem .5rem;
+    border-radius: 2px;
+}
+
+.drop-menu li:hover {
+    background-color: #fff;
+    color: #1C1F28;
+    transition: background-color .3s linear;
+}
+
+.drop-down:hover .drop-menu {
+    display: block;
+}
+
+.down-arrow {
+    transform: rotate(90deg);
+    display: inline-block;
+}
+
+.green-btn {
+    background: #14B45C;
+    color: #FFFFFF;
+}
+
+.green-btn:hover {
+    background: #17cf6a;
+}
+
+.btn-get-started {
+    padding: 10px 30px 10px;
+    font-weight: 600;
+    font-size: 13px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.introduce {
+    display: flex;
+    margin-top: 6.5rem;
+    padding-bottom: 10rem;
+}
+
+.img-1 {
+    max-width: 500px;
+    margin-left: 40px;
+}
+
+.info {
+    margin-left: 7%;
+    align-self: center;
+    max-width: 494px;
+}
+
+.info .title {
+    font-size: 40px;
+    margin-bottom: 30px;
+    line-height: 50px;
+    font-weight: 300;
+    text-align: left;
+    color: #fff;
+}
+
+.info .content, .info .action, .btn-download-app {
+    font-size: 16px;
+}
+
+.info .content {
+    color: #A1A4AC;
+    margin-bottom: 40px;
+}
+
+.action {
+    align-items: center;
+}
+
+.btn-download-app {
+    padding: 16px 30px 17px;
+    box-shadow: 0px 5px 30px rgba(50, 54, 67, 0.2);
+    border-radius: 16px;
+    font-weight: 600;
+}
+
+.btn-watch {
+    height: 30px;
+    background-color: inherit;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-watch img {
+    height: 100%;
+    width: auto;
+    margin-right: 10px;
+}
+
+.row {
+    display: flex;
+}
+
+.second-page {
+    margin-top: 120px;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.43rem;
+}
+
+.benefit {
+    margin-top: 5.71rem;
+    justify-content: space-between;
+}
+
+.benefit-item {
+    width: 30rem;
+    height: 30rem;
+    text-align: center;
+    padding: 80px 50px 70px 50px;
+    border-radius: 40px;
+}
+
+.benefit-item:hover, .card-item:hover, .detail-actived {
+    box-shadow: 0 1px 6px #A1A4AC !important;
+}
+
+.benefit-icon {
+    height: 80px;
+    width: fit-content;
+    margin: 0 auto 3.07rem;
+}
+
+.name {
+    font-weight: normal;
+    font-size: 24px;
+    color: #1C1F28;
+}
+
+.benefit-name {
+    margin-bottom: 24px;
+}
+
+.benefit-content {
+    font-size: 16px;
+    text-align: center;
+    color: #A1A4AC;
+}
+
+.third-page {
+    margin-top: 11.43rem;
+    max-height: 1225px;
+    padding-bottom: 17.7rem;
+    text-align: center;
+    background: url('images/bg-3rd-page.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.detail-box {
+    display: flex;
+    padding-top: 140px;
+    padding-bottom: 100px;
+}
+
+.detail-sub-box {
+    display: flex;
+    max-width: 420px;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    margin-top: 86px;
+}
+
+.detail-sub-box:first-child {
+    margin-left: 2rem;
+}
+
+.detail-sub-box:last-child {
+    margin-right: 2.29rem;
+}
+
+.detail {
+    height: 252px;
+    padding: 40px 80px 35px 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 50px rgba(7, 42, 68, 0.04);
+    border-radius: 15px;
+    text-align: left;
+}
+
+.detail-top {
+    margin-bottom: 19%;
+}
+
+.detail-icon {
+    width: 80px;
+    height: auto;
+}
+
+.detail-name {
+    margin-bottom: 2.93rem;
+    white-space: nowrap
+}
+
+.detail-content, .introduce, .card-content {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 133%;
+    color: #7A7C82;
+}
+
+.sample {
+    filter: drop-shadow(0px 10px 60px rgba(0, 0, 0, 0.1));
+}
+
+.btn-download {
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0px 5px 30px rgba(50, 54, 67, 0.2);
+    border-radius: 16px;
+    padding: 16px 47px 17px 45px;
+}
+
+.fourth-page {
+    text-align: center;
+    margin-top: 19.43rem;
+}
+
+.fourth-page-introduce {
+    margin-top: 1.43rem;
+    margin-bottom: 5.71rem;
+}
+
+.row-card {
+    justify-content: space-between;
+}
+
+.row-card a:hover {
+    text-decoration: none;
+}
+
+.card-item {
+    width: 420px;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 30px 60px;
+}
+
+.card-title {
+    margin-bottom: 10px;
+}
+
+.card-content {
+    color: #A1A4AC;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-learn {
+    background: #FFFFFF;
+    border: 1px solid #1C1F28;
+    border-radius: 16px;
+    color: #1C1F28;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px 57px 17px 56px;
+    margin-top: 4.28rem;
+}
+
+.fifth-page {
+    text-align: center;
+    padding: 20rem 8%;
+}
+
+.fifth-page .title {
+    margin-bottom: 2.86rem;
+}
+
+.carousel-box {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+}
+
+.arrow {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #FFFFFF;
+    box-shadow: 10px 20px 60px rgba(0, 0, 0, 0.06);
+}
+
+.arrow img {
+    width: 15px;
+}
+
+.comment-box {
+    max-width: 900px;
+    overflow: hidden;
+}
+
+.comment {
+    font-size: 24px;
+    text-align: center;
+    color: #A1A4AC;
+    margin-bottom: 2.86rem;
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-self: center;
+}
+
+.user-ava {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.user-ava:nth-child(1) {
+    background-image: url(images/user-ava-2.jpg);
+    background-position-y: -360px;
+    background-position-x: 445px;
+}
+
+.user-name {
+    font-weight: 500;
+    font-size: 20px;
+    color: #323643;
+    margin-bottom: 17px;
+    text-align: left;
+}
+
+.user-rating {
+    display: flex;
+    width: 120px;
+    justify-content: space-between;
+}
+
+.user-rating img {
+    height: 20px;
+    width: auto;
+}
+
+.prev-arrow {
+    left: -28.33%;
+    top: 0;
+}
+
+.next-arrow {
+    right: -28.33%;
+    top: 0
+}
+
+.sixth-page {
+    background: url('images/bg-footer.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 100px;
+}
+
+.get-started-box {
+    max-width: 1140px;
+    padding: 92px 310px;
+    text-align: center;
+    background-color: #FFFFFF;
+    box-shadow: 10px 20px 60px rgba(0, 0, 0, 0.06);
+    border-radius: 15px;
+    border-top: #14B45C 4px solid;
+}
+
+.get-started-container {
+    max-width: 520px
+}
+
+.get-started-box .content {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #A1A4AC;
+}
+
+.download-mobile-app {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    height: 40px;
+}
+
+.download-app:first-child {
+    margin-right: 40px;
+}
+
+.download-app img {
+    height: 100%;
+    width: auto;
+}
+
+.footer {
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.footer-menu {
+    max-width: 1260px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 6.35% auto 7.94%;
+}
+
+.footer-menu-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name {
+    font-weight: 600;
+    margin-bottom: 2.14rem;
+    text-transform: uppercase;
+}
+
+.item-list {
+    flex-direction: column;
+    font-weight: 300;
+    line-height: 143%;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+    font-family: 'Work Sans';
+}
+
+.footer-info, .social-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.author {
+    font-size: 12px;
+}
+
+.social-links {
+    width: 10rem;
+}
+
+.social-icon {
+    width: 20px;
+}
+
+.hamburger {
+    display: none;
+}
+
+@media(max-width: 1440px) {
+    .wide {
+        margin: 0 100px;
+    }
+    .first-page {
+        padding-top: 2rem;
+    }
+    .introduce {
+        margin-top: 3rem;
+        padding-bottom: 60px;
+    }
+    .img-1 {
+        max-width: 460px;
+        margin-left: 40px;
+    }
+    .info {
+        margin-left: 3%;
+        width: 35%;
+    }
+    .info .title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        line-height: 2.5rem;
+    }
+    .info .content, .info .action, .btn-download-app {
+        font-size: 1rem;
+    }
+    .info .content {
+        margin-bottom: 1.5rem;
+    }
+    .btn-watch {
+        margin-left: 30px;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .benefit {
+        justify-content: space-around
+    }
+    .benefit-item {
+        width: 352px;
+        height: fit-content;
+    }
+    .name {
+        font-size: 20px;
+    }
+    .benefit-content {
+        font-size: 13px;
+    }
+    .detail-sub-box {
+        margin-top: unset;
+        align-self: center;
+        width: 352px;
+    }
+    .detail {
+        height: fit-content;
+    }
+    .detail-icon {
+        width: 25%;
+    }
+    .detail-name {
+        margin-bottom: 2rem;
+    }
+    .detail-content, .introduce, .card-content {
+        font-size: 1rem;
+        line-height: 133%;
+    }
+    .sample {
+        width: 25%;
+    }
+    .detail-sub-box:first-child {
+        margin-left: auto;
+    }
+    .detail-sub-box:last-child {
+        margin-right: auto;
+    }
+    .btn-download {
+        font-size: 1rem;
+        border-radius: 1rem;
+    }
+    .row-card {
+        justify-content: space-around;
+    }
+    .card-item {
+        width: 352px;
+    }
+    .card-img {
+        height: auto;
+    }
+    .btn-learn {
+        border-radius: 1rem;
+        font-size: 1rem;
+    }
+    .arrow, .user-ava {
+        width: 80px;
+        height: 80px;
+    }
+    .arrow img {
+        width: 1rem;
+    }
+    .prev-arrow {
+        left: -22%;
+    }
+    .next-arrow {
+        right: -22%;
+    }
+    .comment {
+        font-size: 18px;
+    }
+    .user-ava:nth-child(1) {
+        background-image: url(images/user-ava-2.jpg);
+        background-position-y: -364px;
+        background-position-x: 430px;
+    }
+    .get-started-box {
+        max-width: 70%;
+        padding: 80px 10%;
+    }
+    .footer-menu {
+        margin: 64px 72px;
+    }
+}
+
+@media(max-width: 768px) {
+    html {
+        font-size: 13px;
+    }
+    .wide {
+        margin: 0 48px;
+    }
+    .first-page {
+        padding-top: 16px;
+    }
+    .info .title {
+        font-size: 2rem;
+    }
+    .btn-get-started, .btn-download-app {
+        padding: 10px 20px;
+        border-radius: 1rem;
+    }
+    .menu>li {
+        margin-right: 20px;
+    }
+    .img-1 {
+        max-width: 40%;
+        margin-left: 40px;
+    }
+    .info {
+        width: 50%;
+    }
+    .btn-watch {
+        margin-left: 15px;
+    }
+    .btn-watch img {
+        margin-right: 6px;
+    }
+    .third-page {
+        max-height: fit-content;
+    }
+    .benefit-item {
+        padding: 36px 20px;
+    }
+    .benefit {
+        flex-direction: column;
+        align-items: center;
+    }
+    .third-page {
+        margin-top: 10%;
+        padding-bottom: 10%;
+    }
+    .detail-box {
+        flex-wrap: wrap;
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+    .detail-sub-box {
+        padding: 40px 12px;
+        width: 45%;
+    }
+    .detail {
+        padding: 16px 40px 16px 24px;
+    }
+    .detail-top {
+        margin-bottom: 24px;
+    }
+    .name {
+        font-size: 18px;
+    }
+    .detail-name {
+        white-space: normal;
+        height: 2rem;
+        margin-bottom: 2rem;
+    }
+    .sample {
+        width: 45%;
+        order: 1;
+        margin-top: 16px;
+    }
+    .row-card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-item {
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    .card-body {
+        padding: 16px 0;
+    }
+    .btn-learn {
+        padding: 16px 57px 17px 56px;
+        margin-top: 0;
+    }
+    .carousel-box {
+        max-width: 75%;
+        margin: auto;
+        position: relative;
+    }
+    .arrow, .user-ava {
+        width: 60px;
+        height: 60px;
+    }
+    .get-started-box {
+        max-width: 70%;
+        padding: 32px 10%;
+    }
+    .get-started-box .content {
+        margin-top: 12px;
+        margin-bottom: 20px;
+    }
+    .footer-menu {
+        margin: 28px 12px;
+    }
+    .social-links {
+        width: 15%;
+    }
+}
+
+@media(max-width: 375px) {
+    html {
+        font-size: 12px;
+    }
+    .drop-down:hover .drop-menu {
+        display: none;
+    }
+    .drop-down{
+        display: block;
+    }
+    .wide {
+        margin: 0 16px;
+    }
+    .hamburger {
+        display: block;
+        width: 30px;
+        cursor: pointer;
+        margin-left: auto;
+    }
+    .header {
+        position: relative;
+    }
+    .menu {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        padding: 8px 16px;
+        margin-top: 40px;
+        background: #14B45C;
+        border-radius: 12px;
+        line-height: 20px;
+    }
+    @keyframes show {
+        from {
+            width: 0;
+            height: 0;
+            color: #14B45C;
+            font-size: 0;
+        }
+        to {
+            width: 120px;
+            height: 156px;
+        }
+    }
+    .d-on {
+        display: flex;
+        overflow: hidden;
+        animation: show 0.5s forwards ease-out;
+    }
+    .menu>li {
+        margin-right: 0;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+    .btn-get-started, .down-arrow {
+        display: none
+    }
+    .introduce, .benefit, .detail-box {
+        flex-direction: column;
+    }
+    .img-1 {
+        margin: auto;
+        max-width: 70%;
+    }
+    .info {
+        width: 90%;
+        margin: 3rem auto;
+    }
+    .action {
+        flex-direction: column;
+    }
+    .btn-watch {
+        margin-top: 1.5rem;
+        margin-left: 0;
+    }
+    .benefit-item {
+        padding: 32px 20px;
+        width: 100%;
+    }
+    .benefit-icon, .benefit-name {
+        margin-bottom: 1rem;
+    }
+    .third-page {
+        height: fit-content;
+        max-height: none;
+    }
+    .sample {
+        width: 70%;
+    }
+    .sample {
+        order: 1;
+        margin-top: 16px;
+    }
+    .detail-sub-box {
+        margin: 0 auto 16px;
+        padding: 0 20px;
+        width: 100%;
+    }
+    .card-item {
+        width: 100%;
+    }
+    .download-mobile-app {
+        flex-direction: column;
+        height: auto;
+    }
+    .download-app img {
+        width: 100%;
+        height: 40px;
+    }
+    .download-app:first-child {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+    .footer {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    .footer-menu {
+        flex-wrap: wrap;
+    }
+    .footer-menu-item {
+        margin-right: 1rem;
+        margin-bottom: 40px;
+    }
+    #item-download {
+        order: 1;
+    }
+    .social-links {
+        width: 40%;
+    }
+}
