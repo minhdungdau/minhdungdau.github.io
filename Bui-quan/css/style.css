@@ -230,7 +230,7 @@ a:hover, a:focus {
 }
 
 .banner {
-    background: url('/img/banner-1.png');
+    background: url('../img/banner-1.png');
     min-width: 100%;
     height: 100%;
     background-repeat: no-repeat;
