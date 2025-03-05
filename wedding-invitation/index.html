@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Minh & Thảo Ly Wedding Invitation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <!-- <header class="fixed top-0">
+        <nav>
+            <div class="container">
+                <div class="itim-regular text-lg h-[50px] flex items-center ">
+                   <em>m</em> <span class="inline-block w-[24px] h-[24px]"><img src="/assets/hearts.png"></span> <em>l</em>
+                </div>
+            </div>
+        </nav>
+    </header> -->
+    <!-- <div class="fixed w-screen h-screen overflow-hidden">
+        <div class="watermark"></div>
+    </div> -->
+    <div class="container" id="frame">
+        <div class="slider">
+            <div class="watermark"></div>
+            <div class="slider-image"></div>
+            <div class="flex-1 relative" style="height: 100%;">
+                <div class="info">
+                    <p class="fraunces text-center small-text">with joy
+
+                        <br> you are warmly invited
+
+                        <br> to the wedding of
+                    </p>
+                    <em class="owner-name mirage-regular larger-text">Minh</em>
+                    <span class="aerotis-regular medium-text">and</span>
+                    <em class="owner-name mirage-regular larger-text">Ly</em>
+                    <p class="fraunces small-text text-center">sunday, june twentieth
+
+                        two thousand twenty five
+
+                        four o'clock in the afternoon
+
+                        saint michael's cathedral
+
+                        358 second street
+
+                        madison, wisconsin
+                        <br>
+                        <br><span class="italic">reception to follow</span>
+                    </p>
+                </div>
+            </div>
+            <div class="h-full overflow-hidden" style="margin-left: auto; width: 60%; opacity: 0.8;">
+                <div class="banner">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function scaleFrame() {
+            const frame = document.getElementById("frame");
+            const width = frame.clientWidth; // Lấy chiều rộng
+            const calcHeight = width * 0.75; // Tính chiều cao
+            const screenHeight = window.innerHeight;
+            if (calcHeight > screenHeight) {
+                console.log("calcHeight", calcHeight, "screenHeight", screenHeight);
+                frame.style.height = screenHeight + "px";
+                frame.style.width = screenHeight * 1.6 + "px";
+                frame.style.fontSize = (screenHeight * 0.04) + "px";
+            } else {
+                frame.style.height = calcHeight + "px";
+                frame.style.fontSize = (width * 0.025) + "px";
+            }
+        }
+
+        window.addEventListener("resize", scaleFrame); // Cập nhật khi thay đổi kích thước
+        scaleFrame(); // Gọi lần đầu khi tải trang
+    </script>
+
+</body>
+
+</html>
