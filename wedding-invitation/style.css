@@ -7,7 +7,7 @@ img {
 
 @font-face {
   font-family: "Aerotis";
-  src: url("/assets/fonts/AerotisRegular.ttf") format("truetype");
+  src: url("./assets/fonts/AerotisRegular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -25,7 +25,7 @@ img {
 
 @font-face {
   font-family: "Mirage";
-  src: url("/assets/fonts/Mirage-Regular.woff2") format("woff2");
+  src: url("./assets/fonts/Mirage-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -43,7 +43,7 @@ img {
 
 @font-face {
   font-family: "Fraunces";
-  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  src: url("./assets/fonts/Fraunces.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -107,7 +107,7 @@ body {
   left: 15px;
   right: 0;
   bottom: 0;
-  background-image: url("/assets/noelchristmastown_3.png");
+  background-image: url("./assets/noelchristmastown_3.png");
   background-size: cover;
   background-position: center;
   background-position-x: 60%;
@@ -123,7 +123,7 @@ body {
 }
 
 .banner {
-  background-image: url("/assets/image2.jpg");
+  background-image: url("./assets/image2.jpg");
   background-position: center;
   background-size: cover;
   background-clip: border-box;
@@ -168,7 +168,7 @@ html {
   right: 0;
   width: 100%;
   height: 100%;
-  background-image: url(/assets/watermark-3.png);
+  background-image: url("./assets/watermark-3.png");
   z-index: 999;
   background-repeat: repeat;
   background-size: auto;
