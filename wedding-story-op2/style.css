@@ -141,13 +141,13 @@ img {
 
 .great-vibes {
   font-family: "Great Vibes", sans-serif;
-  font-feature-settings: "kern" off;
+  /* font-feature-settings: "kern" off;
   font-kerning: none;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-user-select: text;
   -moz-user-select: text;
-  user-select: text;
+  user-select: text; */
 }
 
 @font-face {
@@ -378,8 +378,8 @@ section {
       rgba(69, 67, 68, 0.5) 0%,
       rgba(69, 67, 68, 0.5) 100%
     ),
-    url("./assets/album/end/z6551098428732_bf88f05a91255148a1cd1264f976e255.jpg") center/cover no-repeat;
-    background-position-x:52% ;
+    url("./assets/album/end/z6549862926311_06da76f52dddba41612a3aca333b6dff.jpg") center/cover no-repeat;
+    background-position-x:68% ;
 }
 
 .social-icons {
@@ -484,4 +484,15 @@ html {
  display: inline-block;
  border-radius: 8px;
  overflow: hidden;
+}
+
+
+body {
+  max-width: 800px;
+  margin: auto;
+  background-color: white;
+}
+
+html {
+  background-color: rgb(245, 245, 245)
 }

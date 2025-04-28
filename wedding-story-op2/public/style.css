@@ -141,13 +141,13 @@ img {
 
 .great-vibes {
   font-family: "Great Vibes", sans-serif;
-  font-feature-settings: "kern" off;
+  /* font-feature-settings: "kern" off;
   font-kerning: none;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-user-select: text;
   -moz-user-select: text;
-  user-select: text;
+  user-select: text; */
 }
 
 @font-face {
@@ -203,7 +203,7 @@ img {
       rgba(0, 0, 0, 0.3) 30%,
       rgba(255, 255, 255, 0.1) 70%
     ),
-    url("./assets/image1.png") center/cover no-repeat;
+    url("./assets/album/end/z6549862926050_16fe1a3a67182565fedc6485fa668335.jpg") center/cover no-repeat;
   color: white;
   /* text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8); */
 }
@@ -230,8 +230,8 @@ section {
 }
 
 .img-with-shadow {
-  box-shadow: rgba(0, 0, 0, 0.8) 0px -80px 40px -12px inset;
-  height: 7rem;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px -80px 40px -12px inset;
+  height: 8rem;
   /* transition: all 0.5s ease-out; */
   /* transform: translateY(0); */
   display: flex;
@@ -332,10 +332,10 @@ section {
 }
 
 .address-1-img {
-  background: url("./assets/bg2.webp") center/cover no-repeat;
+  background: url("./assets/album/end/z6549862933473_fb38658b52a86b2c021c3a178db6e526.jpg") center/cover no-repeat;
 }
 .address-2-img {
-  background: url("./assets/bg2.webp") center/cover no-repeat;
+  background: url("./assets/album/end/z6550748460619_1132258c3cd5c2a5d7954a548457d62b.jpg") top/cover no-repeat;
 }
 
 .map-icon {
@@ -378,7 +378,8 @@ section {
       rgba(69, 67, 68, 0.5) 0%,
       rgba(69, 67, 68, 0.5) 100%
     ),
-    url("./assets/bg2.webp") center/cover no-repeat;
+    url("./assets/album/end/z6549862926311_06da76f52dddba41612a3aca333b6dff.jpg") center/cover no-repeat;
+    background-position-x:68% ;
 }
 
 .social-icons {
@@ -469,7 +470,7 @@ html {
     rgba(69, 67, 68, 0.5) 0%,
     rgba(69, 67, 68, 0.5) 100%
   ),
-  url("./assets/bg2.webp") center/cover no-repeat;
+  url("./assets/album/end/z6549862945123_973069504612d98a28904a042230b659.jpg") center/cover no-repeat;
 }
 
 .cd-timeline__content {
@@ -483,4 +484,15 @@ html {
  display: inline-block;
  border-radius: 8px;
  overflow: hidden;
+}
+
+
+body {
+  max-width: 800px;
+  margin: auto;
+  background-color: white;
+}
+
+html {
+  background-color: rgb(245, 245, 245)
 }
