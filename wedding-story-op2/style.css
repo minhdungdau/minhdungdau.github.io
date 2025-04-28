@@ -190,7 +190,7 @@ img {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.5rem;
   font-family: "Montserrat", sans-serif;
   /* line-height: 1.2; */
 }
@@ -203,7 +203,7 @@ img {
       rgba(0, 0, 0, 0.3) 30%,
       rgba(255, 255, 255, 0.1) 70%
     ),
-    url("./assets/image1.png") center/cover no-repeat;
+    url("./assets/album/end/z6549862926050_16fe1a3a67182565fedc6485fa668335.jpg") center/cover no-repeat;
   color: white;
   /* text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8); */
 }
@@ -230,13 +230,13 @@ section {
 }
 
 .img-with-shadow {
-  box-shadow: rgba(0, 0, 0, 0.8) 0px -80px 40px -12px inset;
-  height: 100px;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px -80px 40px -12px inset;
+  height: 8rem;
   /* transition: all 0.5s ease-out; */
   /* transform: translateY(0); */
   display: flex;
   align-items: flex-end;
-  padding-bottom: 20px;
+  padding-bottom: 1.5rem;
 }
 .img-wrap:hover .img-with-shadow {
   /* transform: translateY(-100px); */
@@ -245,8 +245,8 @@ section {
 
 .date-container {
   display: flex;
-  justify-content: space-around;
-  gap: 24px;
+  justify-content: center;
+  gap: 1.8rem;
   /* margin: 8px auto; */
 }
 
@@ -260,7 +260,7 @@ section {
   font-size: 16px;
   border-top: 1px rgba(255, 255, 255, 0.5) solid;
   border-bottom: 1px rgba(255, 255, 255, 0.5) solid;
-  border-color: rgba(0, 0, 0, 0.6);
+  border-color: rgba(0, 0, 0, 0.5);
 }
 .date-container *:nth-child(2) {
   line-height: 1;
@@ -332,10 +332,10 @@ section {
 }
 
 .address-1-img {
-  background: url("./assets/bg2.webp") center/cover no-repeat;
+  background: url("./assets/album/end/z6549862933473_fb38658b52a86b2c021c3a178db6e526.jpg") center/cover no-repeat;
 }
 .address-2-img {
-  background: url("./assets/bg2.webp") center/cover no-repeat;
+  background: url("./assets/album/end/z6550748460619_1132258c3cd5c2a5d7954a548457d62b.jpg") top/cover no-repeat;
 }
 
 .map-icon {
@@ -370,7 +370,7 @@ section {
 }
 
 #thank-you .container {
-  margin-top: 60px;
+  margin-top: 5rem;
   /* height: 300px; */
   height: 100vh;
   background: linear-gradient(
@@ -378,7 +378,8 @@ section {
       rgba(69, 67, 68, 0.5) 0%,
       rgba(69, 67, 68, 0.5) 100%
     ),
-    url("./assets/bg2.webp") center/cover no-repeat;
+    url("./assets/album/end/z6551098428732_bf88f05a91255148a1cd1264f976e255.jpg") center/cover no-repeat;
+    background-position-x:52% ;
 }
 
 .social-icons {
@@ -404,19 +405,28 @@ section {
 }
 
 .text-32 {
-  font-size: 32px;
+  font-size: 2.2rem;
 }
 .text-28 {
-  font-size: 28px;
+  font-size: 2rem;
 }
 .text-24 {
-  font-size: 24px;
+  font-size: 1.8rem;
 }
 .text-18 {
-  font-size: 18px;
+  font-size: 1.3rem;
 }
 
-@media (max-width: 1200px) {
+#thank-you .container,#wedding-info .container {
+  max-width: none;
+}
+html {
+  font-size: 14px;
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -450,7 +460,7 @@ section {
 }
 
 html {
-  --swiper-navigation-size: 20px !important;
+  --swiper-navigation-size: 1.6rem !important;
   --swiper-navigation-color: white;
 }
 
@@ -460,7 +470,7 @@ html {
     rgba(69, 67, 68, 0.5) 0%,
     rgba(69, 67, 68, 0.5) 100%
   ),
-  url("./assets/bg2.webp") center/cover no-repeat;
+  url("./assets/album/end/z6549862945123_973069504612d98a28904a042230b659.jpg") center/cover no-repeat;
 }
 
 .cd-timeline__content {
