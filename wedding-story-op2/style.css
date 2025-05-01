@@ -203,7 +203,8 @@ img {
       rgba(0, 0, 0, 0.3) 30%,
       rgba(255, 255, 255, 0.1) 70%
     ),
-    url("./assets/album/end/z6549862926050_16fe1a3a67182565fedc6485fa668335.jpg") center/cover no-repeat;
+    url("./assets/album/end/z6549862926050_16fe1a3a67182565fedc6485fa668335.jpg")
+      center/cover no-repeat;
   color: white;
   /* text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8); */
 }
@@ -332,10 +333,12 @@ section {
 }
 
 .address-1-img {
-  background: url("./assets/album/end/z6549862933473_fb38658b52a86b2c021c3a178db6e526.jpg") center/cover no-repeat;
+  background: url("./assets/album/end/z6549862933473_fb38658b52a86b2c021c3a178db6e526.jpg")
+    center/cover no-repeat;
 }
 .address-2-img {
-  background: url("./assets/album/end/z6550748460619_1132258c3cd5c2a5d7954a548457d62b.jpg") top/cover no-repeat;
+  background: url("./assets/album/end/z6550748460619_1132258c3cd5c2a5d7954a548457d62b.jpg")
+    top/cover no-repeat;
 }
 
 .map-icon {
@@ -378,8 +381,9 @@ section {
       rgba(69, 67, 68, 0.5) 0%,
       rgba(69, 67, 68, 0.5) 100%
     ),
-    url("./assets/album/end/z6549862926311_06da76f52dddba41612a3aca333b6dff.jpg") center/cover no-repeat;
-    background-position-x:68% ;
+    url("./assets/album/end/z6549862926311_06da76f52dddba41612a3aca333b6dff.jpg")
+      center/cover no-repeat;
+  background-position-x: 68%;
 }
 
 .social-icons {
@@ -417,7 +421,8 @@ section {
   font-size: 1.3rem;
 }
 
-#thank-you .container,#wedding-info .container {
+#thank-you .container,
+#wedding-info .container {
   max-width: none;
 }
 html {
@@ -438,7 +443,6 @@ html {
   }
 }
 
-
 .swiper {
   width: 100%;
   padding-top: 50px;
@@ -449,7 +453,7 @@ html {
   background-position: center;
   background-size: cover;
   width: 50% !important;
-  height:50%!important;
+  height: 50% !important;
   max-width: 500px;
   max-height: 500px;
 }
@@ -466,26 +470,26 @@ html {
 
 #timeline {
   background: linear-gradient(
-    0deg,
-    rgba(69, 67, 68, 0.5) 0%,
-    rgba(69, 67, 68, 0.5) 100%
-  ),
-  url("./assets/album/end/z6549862945123_973069504612d98a28904a042230b659.jpg") center/cover no-repeat;
+      0deg,
+      rgba(69, 67, 68, 0.5) 0%,
+      rgba(69, 67, 68, 0.5) 100%
+    ),
+    url("./assets/album/end/z6549862945123_973069504612d98a28904a042230b659.jpg")
+      center/cover no-repeat;
 }
 
 .cd-timeline__content {
   /* background: transparent; */
   /* color: white;
   padding: 1.25rem 0 */
-  border-radius: 8px
+  border-radius: 8px;
 }
 .cd-timeline__content a {
- margin: 10px 0;
- display: inline-block;
- border-radius: 8px;
- overflow: hidden;
+  margin: 10px 0;
+  display: inline-block;
+  border-radius: 8px;
+  overflow: hidden;
 }
-
 
 body {
   max-width: 800px;
@@ -494,5 +498,46 @@ body {
 }
 
 html {
-  background-color: rgb(245, 245, 245)
+  background-color: rgb(245, 245, 245);
+}
+
+@media (min-width: 768px) {
+  .swiper-slide {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  #wedding-info .container {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.3) 30%,
+        rgba(255, 255, 255, 0.1) 70%
+      ),
+      url("./assets/album/end/z6549862926050_16fe1a3a67182565fedc6485fa668335.jpg")
+        center/cover no-repeat;
+  }
+
+  .container {
+    padding: 0 60px;
+  }
+
+  .countdown-item {
+    height: 120px;
+    justify-content: center;
+  }
+
+  #thank-you .container {
+    background-position-x: 68%;
+    background-position-y: 30%;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 40% !important;
+    height: 40% !important;
+    max-width: 500px;
+    max-height: 500px;
+  }
 }
