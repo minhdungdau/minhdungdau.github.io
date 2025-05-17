@@ -85,11 +85,10 @@ body:before {
       rgba(255, 255, 255, 0.2),
       rgba(255, 255, 255, 0.2)
     ),
-    url("./assets/image5.jpg");
-  background-position-x: 0;
-  background-position-y: 60%;
+    url("./assets/image5.webp");
+  background-position-x: 11%;
+  background-position-y: 32%;
   background-repeat: no-repeat;
-  background-size: cover;
   filter: blur(3px);
   position: absolute;
   pointer-events: none;
@@ -183,6 +182,11 @@ html {
   font-size: 2.2em;
 }
 
+.smallest-text {
+  font-size: 8px;
+}
+
+.smallest-text,
 .small-text,
 .medium-text,
 .larger-text {
@@ -208,12 +212,21 @@ html {
 @media (max-width: 992px) {
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .small-text {
     font-size: 0.8em;
   }
 
+  .smallest-text {
+    font-size: 6px;
+  }
+
   body:before {
+    background-image: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+    ),
+    url("./assets/image5.jpg");
     background-position-x: -154px;
     background-position-y: -255px;
   }
