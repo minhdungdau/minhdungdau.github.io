@@ -174,7 +174,7 @@ html {
 }
 
 .medium-text {
-  font-size: 1.9em;
+  font-size: 1.6em;
   line-height: 0.8;
 }
 
@@ -218,7 +218,7 @@ html {
   }
 
   .smallest-text {
-    font-size: 6px;
+    font-size: 7px;
   }
 
   body:before {
@@ -228,7 +228,7 @@ html {
     ),
     url("./assets/image5.jpg");
     background-position-x: -154px;
-    background-position-y: 53%;
+    background-position-y: 43%;
   }
 
   .banner {
