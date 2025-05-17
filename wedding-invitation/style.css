@@ -69,16 +69,11 @@ img {
   -moz-user-select: text;
   user-select: text;
   letter-spacing: 0.06em;
-  font-weight: 400;
-  margin-top: 2px;
-  display: inline-block;
-  line-height: 1.4;
 }
 
 /* End Font */
 
 body {
-  overflow: hidden;
   display: flex;
   height: calc(var(--vh, 1vh) * 100) !important;
   /* align-items: center; */
@@ -165,13 +160,9 @@ body:before {
   transform: translateY(-25%);
   position: relative;
   z-index: 1; */
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.1)
-    ),
-    url("./assets/image2.webp");
+  background-image: url("./assets/image2.webp");
   background-position-x: -20px;
-  background-position-y: -130px;
+  background-position-y: -78px;
   background-size: cover, cover;
   /* background-clip: border-box; */
   /* background-repeat: no-repeat; */
@@ -236,6 +227,6 @@ html {
 
   .banner { 
     transform: none;
-    background-position-y: -112px;
+    background-position-y: -92px;
   }
 }
