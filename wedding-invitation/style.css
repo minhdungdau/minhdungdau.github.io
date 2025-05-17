@@ -124,14 +124,14 @@ body:before {
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-57%);
-  width: clamp(75%, 150px, 90%);
+  width: clamp(75%, 150px, 80%);
 }
 
 .slider-image {
   position: absolute;
   z-index: 2;
   top: 0;
-  left: 15px;
+  left: 30px;
   right: 0;
   bottom: 0;
   background-image: url("./assets/noelchristmastown_3.webp");
@@ -152,7 +152,7 @@ body:before {
 .banner {
   background-image: url("./assets/image2.webp");
   background-position-x: -20px;
-  background-position-y: -78px;
+  background-position-y: -60px;
   background-size: cover, cover;
   height: 130%;
   width: 130%;
