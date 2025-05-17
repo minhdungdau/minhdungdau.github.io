@@ -53,13 +53,18 @@
                     </p>
                 </div>
             </div>
-            <div class="h-full overflow-hidden" style="margin-left: auto; width: 60%; opacity: 0.8;">
+            <div class="h-full overflow-hidden" style="margin-left: auto; width: 60%; opacity: 1;">
                 <div class="banner">
                 </div>
             </div>
         </div>
     </div>
     <script>
+        document.documentElement.style.setProperty(
+            "--vh",
+            window.innerHeight * 0.01 + "px",
+            "important"
+        );
         function scaleFrame() {
             const frame = document.getElementById("frame");
             const width = frame.clientWidth; // Lấy chiều rộng
