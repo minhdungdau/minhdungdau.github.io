@@ -137,7 +137,7 @@ body:before {
   left: 15px;
   right: 0;
   bottom: 0;
-  background-image: url("./assets/noelchristmastown_3.png");
+  background-image: url("./assets/noelchristmastown_3.webp");
   background-size: cover;
   background-position: center;
   background-position-x: 60%;
@@ -169,7 +169,7 @@ body:before {
       rgba(255, 255, 255, 0.1),
       rgba(255, 255, 255, 0.1)
     ),
-    url("./assets/image2.jpg");
+    url("./assets/image2.webp");
   background-position-x: -20px;
   background-position-y: -130px;
   background-size: cover, cover;
