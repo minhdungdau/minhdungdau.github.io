@@ -28,28 +28,32 @@
             <div class="slider-image"></div>
             <div class="flex-1 relative" style="height: 100%;">
                 <div class="info">
-                    <p class="fraunces text-center small-text">with joy
+                    <p class="fraunces text-center small-text italic">
+                        Trân trọng kính mời Quý khách
 
-                        <br> you are warmly invited
+                        <br> đến dự tiệc báo hỉ
+                        <br>cùng gia đình chúng tôi
 
-                        <br> to the wedding of
                     </p>
                     <em class="owner-name mirage-regular larger-text">Minh</em>
-                    <span class="aerotis-regular medium-text">and</span>
+                    <span class="aerotis-regular medium-text">&</span>
                     <em class="owner-name mirage-regular larger-text">Ly</em>
-                    <p class="fraunces small-text text-center">sunday, june twentieth
+                    <p class="fraunces small-text text-center">
 
-                        two thousand twenty five
+                        <b style="font-weight: 800;">18h00 Chủ nhật, 24/07/2025</b> <br>
 
-                        four o'clock in the afternoon
-
-                        saint michael's cathedral
-
-                        358 second street
-
-                        madison, wisconsin
+                        <span class="reddit-sans">
+                            <b style="font-weight: 500;">Nhà hàng Cửu Long Quán </b><br>
+                            3V4G+VHC, Đ. Lý Sơn, Thượng Thanh, <br>
+                            Long Biên, Hà Nội
+                        </span>
                         <br>
-                        <br><span class="italic">reception to follow</span>
+                        <a style="display: inline-block; width: 14px; margin-top: 4px;" target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.google.com/maps?q=3V4G+VHC+C%E1%BB%ADu+Long+Qu%C3%A1n,+%C4%90.+L%C3%BD+S%C6%A1n,+Th%C6%B0%E1%BB%A3ng+Thanh,+Long+Bi%C3%AAn,+H%C3%A0+N%E1%BB%99i&ftid=0x3135a9006856c2b1:0xfabe9f0b9376cc96&entry=gps&lucs=,94224825,94227247,94227248,94231188,47071704,47069508,94218641,94203019,47084304,94208458,94208447&g_ep=CAISEjI1LjE5LjEuNzU0OTg3NTEyMBgAINeCAypjLDk0MjI0ODI1LDk0MjI3MjQ3LDk0MjI3MjQ4LDk0MjMxMTg4LDQ3MDcxNzA0LDQ3MDY5NTA4LDk0MjE4NjQxLDk0MjAzMDE5LDQ3MDg0MzA0LDk0MjA4NDU4LDk0MjA4NDQ3QgJWTg%3D%3D&skid=d83ee158-ab25-47a3-9e20-d584a1394f81&g_st=ifm">
+                            <img src="./assets/maps-and-flags.png">
+                        </a>
+                        <br>
                     </p>
                 </div>
             </div>
@@ -60,11 +64,16 @@
         </div>
     </div>
     <script>
-        document.documentElement.style.setProperty(
-            "--vh",
-            window.innerHeight * 0.01 + "px",
-            "important"
-        );
+        function setVHUnit() {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+
+        // Gọi khi load trang
+        setVHUnit();
+
+        // Gọi lại khi resize hoặc xoay màn hình
+        window.addEventListener('resize', setVHUnit);
         function scaleFrame() {
             const frame = document.getElementById("frame");
             const width = frame.clientWidth; // Lấy chiều rộng

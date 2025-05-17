@@ -58,6 +58,22 @@ img {
   -moz-user-select: text;
   user-select: text;
 }
+@font-face {
+  font-family: "RedditSans";
+  src: url("./assets/fonts/RedditSans-VariableFont_wght.ttf") format("truetype");
+}
+
+.reddit-sans {
+  font-family: "RedditSans", sans-serif;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  user-select: text;
+  letter-spacing: 0.06em;
+  font-weight: 400;
+  margin-top: 2px;
+  display: inline-block;
+  line-height: 1.4;
+}
 
 /* End Font */
 
@@ -111,7 +127,7 @@ body:before {
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-57%);
-  width: clamp(70%, 150px, 75%);
+  width: clamp(75%, 150px, 90%);
 }
 
 .slider-image {
@@ -176,7 +192,7 @@ html {
   font-size: 0.52em;
   font-weight: 300;
   text-shadow: 0 0 1px rgba(255, 255, 255, 1);
-  max-width: 80%;
+  padding: 4px;
 }
 
 .medium-text {
@@ -215,10 +231,11 @@ html {
 
 @media (max-width: 768px) {
   .small-text {
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
 
   .banner { 
     transform: none;
+    background-position-y: -112px;
   }
 }
