@@ -1,0 +1,251 @@
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("assets/fonts/BeVietnamPro/BeVietnamPro-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("assets/fonts/BeVietnamPro/BeVietnamPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BeVietnamPro";
+  src: url("assets/fonts/BeVietnamPro/BeVietnamPro-Italic.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+body {
+  font-family: "BeVietnamPro", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #654104;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "BeVietnamPro", sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+a:hover {
+  /* text-decoration: none; */
+  opacity: 0.5;
+}
+
+.button-ant-style {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.button-ant-style::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: currentColor; /* sử dụng màu chữ hiện tại */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.button-ant-style:hover::after {
+  opacity: 0.1; /* hiệu ứng sáng nhẹ */
+}
+
+.button-ant-style span {
+  position: relative;
+  z-index: 1;
+}
+
+.container-2 {
+  width: calc(100% - 20px);
+  margin: auto;
+  min-height: 400px;
+  height: auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .container-2 {
+    width: calc(100% - 60px);
+    min-height: 600px;
+    padding: 40px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-2 {
+    width: calc(100% - 100px);
+    height: 768px;
+    padding: 0;
+  }
+}
+
+.border-custom {
+  border: 2px solid #654104;
+  border-radius: 10px;
+  background-color: #f5f5f5; /* Màu nền nhẹ */
+  padding: 4px 8px;
+  min-height: 40px;
+}
+
+/* Tất cả button sẽ có width bằng cái rộng nhất */
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: fit-content;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .button-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+}
+
+.discover-card {
+  border-radius: 10px;
+  overflow: hidden;
+  flex: 1;
+}
+.discover-card .img-wrapper {
+  height: 150px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .discover-card .img-wrapper {
+    height: 188px;
+    background-size: auto;
+  }
+}
+
+.google-map {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.testimonials-card {
+  display: flex !important;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 10px;
+  padding: 16px 20px;
+  flex: 1;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.55);
+  color: #654104;
+}
+.slick-track {
+  display: flex;
+  gap: 50px;
+  justify-content: flex-start;
+}
+
+.slick-track:before {
+  display: none;
+}
+
+.slick-list {
+  margin-left: 0; /* đảm bảo sát trái */
+}
+
+.parner-card {
+  flex: 1;
+  aspect-ratio: 1 / 1;
+}
+
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  padding: 0 30px 0 50px;
+}
+.contact-input {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 20px 14px;
+  border: 2px solid #8d6b2b;
+  border-radius: 10px;
+  margin-bottom: 0;
+  background: #fff;
+  color: #3c2d0f;
+  outline: none;
+  transition: border 0.14s;
+  font-family: inherit;
+}
+.contact-input:focus {
+  border: 2px solid #3c2d0f;
+}
+.contact-textarea {
+  min-height: 78px;
+  resize: vertical;
+}
+
+.half-border {
+  position: relative;
+}
+
+.half-border::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0; /* hoặc right: 0 nếu muốn ở bên phải */
+  width: 50%; /* chỉ 1 nửa */
+  height: 4px; /* độ dày border */
+  background-color: white; /* màu border */
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 0 20px;
+  }
+}
