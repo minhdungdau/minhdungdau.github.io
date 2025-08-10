@@ -101,7 +101,7 @@ a:hover {
 
 @media (min-width: 768px) {
   .container-2 {
-    width: calc(100% - 60px);
+    width: calc(100% - 80px);
     min-height: 600px;
     padding: 40px 0;
   }
@@ -241,11 +241,5 @@ a:hover {
 @media (max-width: 768px) {
   .contact-form {
     padding: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-form {
-    padding: 0 20px;
   }
 }
