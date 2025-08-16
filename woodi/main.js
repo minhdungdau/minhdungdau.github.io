@@ -58,6 +58,7 @@ featureCards.forEach((card) => {
   });
 });
 
+// testimonials
 $(document).ready(function () {
   $(".testimonials-slide").slick({
     slidesToShow: 3.5,
@@ -92,3 +93,34 @@ $(document).ready(function () {
     ]
   });
 });
+
+//
+function toggleMobileDropdown(button) {
+  const submenu = button.nextElementSibling;
+  const isActive = submenu.classList.contains('active');
+  
+  // Đóng tất cả dropdown khác
+  document.querySelectorAll('.mobile-submenu.active').forEach(menu => {
+      if (menu !== submenu) {
+          menu.classList.remove('active');
+          menu.previousElementSibling.classList.remove('active');
+      }
+  });
+  
+  // Toggle dropdown hiện tại
+  if (isActive) {
+      submenu.classList.remove('active');
+      button.classList.remove('active');
+  } else {
+      submenu.classList.add('active');
+      button.classList.add('active');
+  }
+  
+  document.addEventListener('click', function handleClickOutside(e) {
+    if (!button.contains(e.target) && !submenu.contains(e.target)) {
+      submenu.classList.remove('active');
+      button.classList.remove('active');
+      document.removeEventListener('click', handleClickOutside); // gỡ listener sau khi chạy
+    }
+  });
+}

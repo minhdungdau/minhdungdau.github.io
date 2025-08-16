@@ -14,13 +14,13 @@
 
 <body class="bg-gray-50">
   <header class="relative min-h-[400px] h-[100vh] max-h-[768px] overflow-hidden">
-    <video class="absolute top-0 left-0 w-full h-full object-cover z-0" autoplay muted loop playsinline>
+    <video class="absolute top-0 left-0 w-full h-full object-cover z-0" muted playsinline>
       <source src="assets/IMG_0409.MOV" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div class="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.4)] z-1">
     </div>
-    <div class="absolute top-0 left-0 w-full h-full text-white p-4 md:p-8 lg:p-12 flex flex-col justify-between">
+    <div class="absolute top-0 left-0 w-full h-full text-white p-4 md:p-8 lg:p-12 flex flex-col">
       <div class="flex justify-between items-center text-lg md:text-xl">
         <div class="flex gap-3 items-center">
           <img src="assets/logo.png" alt="WoodiD" class="w-12 h-12 md:w-15 md:h-15">
@@ -32,16 +32,25 @@
           <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl">
             <i class="fas fa-bars"></i>
           </button>
-          
+
           <!-- Language switcher -->
-          <a href="" class="hidden lg:block">ENG</a>
+          <a href="" class="block absolute lg:right-12 right-16 ">ENG</a>
         </div>
       </div>
 
       <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex justify-center lg:justify-between text-lg lg:text-2xl flex-wrap gap-4">
+      <nav class="hidden lg:flex lg:mt-20 justify-center lg:justify-between text-lg lg:text-2xl flex-wrap gap-4">
         <a href="" class="hover:opacity-75 transition-opacity">HOME</a>
-        <a href="" class="hover:opacity-75 transition-opacity">ABOUT WoodiD</a>
+        <div class="relative main-menu">
+          <a href="/wood/get?category=0" class="hover:opacity-75 transition-opacity pb-3 flex items-center">
+            ABOUT WoodiD
+          </a>
+          <ul class="submenu">
+            <li><a href="/wood/get?category=1">26 loài gỗ nhập khẩu từ Châu Phi</a></li>
+            <li><a href="/wood/get?category=2">400 loài gỗ phổ biến trên thế giới</a></li>
+            <li><a href="/wood/get?category=14">260 loài gỗ phổ biến nhập khẩu vào Việt Nam</a></li>
+          </ul>
+        </div>
         <a href="" class="hover:opacity-75 transition-opacity">WOOD DATABASE</a>
         <a href="" class="hover:opacity-75 transition-opacity">LIBRARY</a>
         <a href="" class="hover:opacity-75 transition-opacity">FAQ</a>
@@ -49,17 +58,27 @@
       </nav>
 
       <!-- Mobile Navigation -->
-      <nav id="mobile-menu" class="hidden lg:hidden absolute top-16 left-0 right-0 bg-black bg-opacity-90 p-4 flex flex-col gap-4 text-lg z-50">
+      <nav id="mobile-menu"
+        class="hidden lg:hidden absolute top-16 left-0 right-0 bg-black bg-opacity-90 p-4 flex flex-col gap-4 text-lg z-50">
         <a href="" class="hover:opacity-75 transition-opacity">HOME</a>
-        <a href="" class="hover:opacity-75 transition-opacity">ABOUT WoodiD</a>
+        <div>
+          <button class="mobile-dropdown-toggle" onclick="toggleMobileDropdown(this)">
+            ABOUT WoodiD
+          </button>
+          <div class="mobile-submenu">
+            <a href="/wood/get?category=1">26 loài gỗ nhập khẩu từ Châu Phi</a>
+            <a href="/wood/get?category=2">400 loài gỗ phổ biến trên thế giới</a>
+            <a href="/wood/get?category=14">260 loài gỗ phổ biến nhập khẩu vào Việt Nam</a>
+          </div>
+        </div>
         <a href="" class="hover:opacity-75 transition-opacity">WOOD DATABASE</a>
         <a href="" class="hover:opacity-75 transition-opacity">LIBRARY</a>
         <a href="" class="hover:opacity-75 transition-opacity">FAQ</a>
         <a href="" class="hover:opacity-75 transition-opacity">CONTACT</a>
-        <a href="" class="hover:opacity-75 transition-opacity">ENG</a>
       </nav>
 
-      <div class="flex flex-col gap-4 md:gap-6 max-w-full md:max-w-[70%] lg:max-w-[50%] relative top-[-40%] lg:top-0">
+      <div
+        class="flex flex-col gap-4 md:gap-6 max-w-full md:max-w-[70%] lg:max-w-[50%] relative top-[-40%] lg:top-0 mt-auto">
         <div class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight">
           Identify <span class="font-bold">400+ Wood Species</span> in Seconds.
         </div>
@@ -69,7 +88,8 @@
       </div>
     </div>
 
-    <div class="absolute left-4 md:left-[unset] md:translate-x-0 md:right-8 lg:right-12 bottom-8 md:bottom-12 lg:bottom-20 flex flex-col gap-3 md:gap-[14px] md:w-full max-w-xs md:max-w-none md:w-auto">
+    <div
+      class="absolute left-4 md:left-[unset] md:translate-x-0 md:right-8 lg:right-12 bottom-8 md:bottom-12 lg:bottom-20 flex flex-col gap-3 md:gap-[14px] max-w-xs md:max-w-none md:w-auto">
       <button class="button-ant-style bg-[#654104] text-white text-sm md:text-base">
         <span>DOWNLOAD THE APP →</span>
       </button>
@@ -86,9 +106,10 @@
       <div class="uppercase text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 lg:mb-10 text-center">HOW DOES IT WORK?</div>
       <div class="flex flex-col md:flex-row items-center relative gap-4 lg:gap-0">
         <div class="flex flex-col justify-between items-center">
-          <div class="size-20 md:size-24 lg:size-32 border-[2px] border-[#654104] flex items-center justify-center rounded-full">
-            <svg class="size-12 md:size-16 lg:size-[84px]" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960"
-              width="48px" fill="#654104">
+          <div
+            class="size-20 md:size-24 lg:size-32 border-[2px] border-[#654104] flex items-center justify-center rounded-full">
+            <svg class="size-12 md:size-16 lg:size-[84px]" xmlns="http://www.w3.org/2000/svg" height="48px"
+              viewBox="0 -960 960 960" width="48px" fill="#654104">
               <path
                 d="M480-267q72 0 121-49t49-121q0-73-49-121.5T480-607q-73 0-121.5 48.5T310-437q0 72 48.5 121T480-267Zm0-60q-48 0-79-31.5T370-437q0-48 31-79t79-31q47 0 78.5 31t31.5 79q0 47-31.5 78.5T480-327ZM140-120q-24 0-42-18t-18-42v-513q0-23 18-41.5t42-18.5h147l73-87h240l73 87h147q23 0 41.5 18.5T880-693v513q0 24-18.5 42T820-120H140Z" />
             </svg>
@@ -100,9 +121,10 @@
         <div class="block md:hidden w-[1px] h-8 bg-[#654104]"></div>
 
         <div class="flex flex-col justify-between items-center">
-          <div class="size-20 md:size-24 lg:size-32 border-[2px] border-[#654104] flex items-center justify-center rounded-full">
-            <svg class="size-12 md:size-16 lg:size-[84px]" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960"
-              width="48px" fill="#654104">
+          <div
+            class="size-20 md:size-24 lg:size-32 border-[2px] border-[#654104] flex items-center justify-center rounded-full">
+            <svg class="size-12 md:size-16 lg:size-[84px]" xmlns="http://www.w3.org/2000/svg" height="48px"
+              viewBox="0 -960 960 960" width="48px" fill="#654104">
               <path d="M378-246 154-470l43-43 181 181 384-384 43 43-427 427Z" />
             </svg>
           </div>
@@ -113,9 +135,10 @@
         <div class="block md:hidden w-[1px] h-8 bg-[#654104]"></div>
 
         <div class="flex flex-col justify-between items-center">
-          <div class="size-20 md:size-24 lg:size-32 border-[2px] border-[#654104] flex items-center justify-center rounded-full">
-            <svg class="size-12 md:size-16 lg:size-[84px]" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960"
-              width="48px" fill="#654104">
+          <div
+            class="size-20 md:size-24 lg:size-32 border-[2px] border-[#654104] flex items-center justify-center rounded-full">
+            <svg class="size-12 md:size-16 lg:size-[84px]" xmlns="http://www.w3.org/2000/svg" height="48px"
+              viewBox="0 -960 960 960" width="48px" fill="#654104">
               <path
                 d="M796-121 533-384q-30 26-69.96 40.5Q423.08-329 378-329q-108.16 0-183.08-75Q120-479 120-585t75-181q75-75 181.5-75t181 75Q632-691 632-584.85 632-542 618-502q-14 40-42 75l264 262-44 44ZM377-389q81.25 0 138.13-57.5Q572-504 572-585t-56.87-138.5Q458.25-781 377-781q-82.08 0-139.54 57.5Q180-666 180-585t57.46 138.5Q294.92-389 377-389Z" />
             </svg>
@@ -124,14 +147,16 @@
         </div>
       </div>
 
-      <div class="uppercase text-xl md:text-2xl lg:text-3xl text-center my-8 md:my-12 lg:my-[72px]">WHO IS THIS FOR?</div>
+      <div class="uppercase text-xl md:text-2xl lg:text-3xl text-center my-8 md:my-12 lg:my-[72px]">WHO IS THIS FOR?
+      </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
 
         <div class="flex flex-col justify-between items-center">
           <div class="w-16 md:w-20 lg:w-[90px]">
             <img src="assets/business-man.png" alt="" class="w-full h-auto">
           </div>
-          <div class="text-sm md:text-base lg:text-lg mt-3 md:mt-4 lg:mt-5 !leading-none text-center">FOREST <br> RANGERS</div>
+          <div class="text-sm md:text-base lg:text-lg mt-3 md:mt-4 lg:mt-5 !leading-none text-center">FOREST <br>
+            RANGERS</div>
           <div class="italic text-[8px] mt-1 md:mt-2 text-center">verify species in the field</div>
         </div>
 
@@ -139,7 +164,8 @@
           <div class="w-16 md:w-20 lg:w-[90px]">
             <img src="assets/business-man.png" alt="" class="w-full h-auto">
           </div>
-          <div class="text-sm md:text-base lg:text-lg mt-3 md:mt-4 lg:mt-5 !leading-none text-center">CUSTOMS <br>  OFFICERS</div>
+          <div class="text-sm md:text-base lg:text-lg mt-3 md:mt-4 lg:mt-5 !leading-none text-center">CUSTOMS <br>
+            OFFICERS</div>
           <div class="italic text-[8px] mt-1 md:mt-2 text-center">support customs clearance</div>
         </div>
 
@@ -147,7 +173,8 @@
           <div class="w-16 md:w-20 lg:w-[90px]">
             <img src="assets/business-man.png" alt="" class="w-full h-auto">
           </div>
-          <div class="text-sm md:text-base lg:text-lg mt-3 md:mt-4 lg:mt-5 !leading-none text-center">RESEARCH &<br>  ACADEMIA</div>
+          <div class="text-sm md:text-base lg:text-lg mt-3 md:mt-4 lg:mt-5 !leading-none text-center">RESEARCH &<br>
+            ACADEMIA</div>
           <div class="italic text-[8px] mt-1 md:mt-2 text-center">access species database</div>
         </div>
 
@@ -155,7 +182,8 @@
           <div class="w-16 md:w-20 lg:w-[90px]">
             <img src="assets/business-man.png" alt="" class="w-full h-auto">
           </div>
-          <div class="text-sm md:text-base lg:text-lg mt-3 md:mt-4 lg:mt-5 !leading-none text-center">TRADERS &<br>  ENTERPRISES</div>
+          <div class="text-sm md:text-base lg:text-lg mt-3 md:mt-4 lg:mt-5 !leading-none text-center">TRADERS &<br>
+            ENTERPRISES</div>
           <div class="italic text-[8px] mt-1 md:mt-2 text-center">reduce risks in sourcing</div>
         </div>
 
@@ -168,26 +196,46 @@
     <div class="container-2">
       <div class="text-3xl md:text-4xl lg:text-5xl xl:text-[60px] text-center mb-8 md:mb-[80px]">KEY FEATURES</div>
       <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-[14px]">
-        <div class="h-[200px] md:h-[300px] lg:h-[384px] bg-center bg-no-repeat bg-cover bg-[url(assets/width_1600.webp)] relative">
-          <div class="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.1)] z-1"></div>
-          <div class="text-white text-base md:text-lg lg:text-xl font-bold absolute bottom-4 md:bottom-[22px] left-4 md:left-7">AI-powered species ID</div>
-        </div>
-
-        <div class="h-[200px] md:h-[300px] lg:h-[384px] bg-center bg-no-repeat bg-cover bg-[url(assets/width_600.webp)] relative">
-          <div class="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.1)] z-1"></div>
-          <div class="text-white text-base md:text-lg lg:text-xl font-bold absolute bottom-4 md:bottom-[22px] left-4 md:left-7">Offline mode for field use</div>
-        </div>
-
-        <div class="h-[200px] md:h-[300px] lg:h-[384px] bg-center bg-no-repeat bg-cover bg-[url(assets/width_800.webp)] relative">
-          <div class="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.1)] z-1"></div>
-          <div class="text-white text-base md:text-lg lg:text-xl font-bold absolute bottom-4 md:bottom-[22px] left-4 md:left-7">In-depth data of 260+ species</div>
-        </div>
-
-        <div class="h-[200px] md:h-[300px] lg:h-[384px] bg-center bg-no-repeat bg-cover bg-[url(assets/width_598.jpeg)] relative">
-          <div class="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.1)] z-1"></div>
-          <div class="text-white text-base md:text-lg lg:text-xl font-bold absolute bottom-4 md:bottom-[22px] left-4 md:left-7">Enhance accuracy for traceability
+        <a href="">
+          <div
+            class="h-[200px] md:h-[300px] lg:h-[384px] bg-center bg-no-repeat bg-cover bg-[url(assets/width_1600.webp)] relative">
+            <div class="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.1)] z-1"></div>
+            <div
+              class="text-white text-base md:text-lg lg:text-xl font-bold absolute bottom-4 md:bottom-[22px] left-4 md:left-7">
+              AI-powered species ID</div>
           </div>
-        </div>
+        </a>
+
+        <a href="">
+          <div
+            class="h-[200px] md:h-[300px] lg:h-[384px] bg-center bg-no-repeat bg-cover bg-[url(assets/width_600.webp)] relative">
+            <div class="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.1)] z-1"></div>
+            <div
+              class="text-white text-base md:text-lg lg:text-xl font-bold absolute bottom-4 md:bottom-[22px] left-4 md:left-7">
+              Offline mode for field use</div>
+          </div>
+        </a>
+
+        <a href="">
+          <div
+            class="h-[200px] md:h-[300px] lg:h-[384px] bg-center bg-no-repeat bg-cover bg-[url(assets/width_800.webp)] relative">
+            <div class="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.1)] z-1"></div>
+            <div
+              class="text-white text-base md:text-lg lg:text-xl font-bold absolute bottom-4 md:bottom-[22px] left-4 md:left-7">
+              In-depth data of 260+ species</div>
+          </div>
+        </a>
+
+        <a href="">
+          <div
+            class="h-[200px] md:h-[300px] lg:h-[384px] bg-center bg-no-repeat bg-cover bg-[url(assets/width_598.jpeg)] relative">
+            <div class="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.1)] z-1"></div>
+            <div
+              class="text-white text-base md:text-lg lg:text-xl font-bold absolute bottom-4 md:bottom-[22px] left-4 md:left-7">
+              Enhance accuracy for traceability
+            </div>
+          </div>
+        </a>
 
       </div>
     </div>
@@ -199,71 +247,97 @@
         <div id="discover" class="flex-1 lg:flex-[2]">
           <div class="text-3xl md:text-4xl lg:text-[56px] !leading-none">DISCOVER WOOD <br> SPECIES</div>
           <div class="button-container mt-6 md:mt-8">
-            <button class="button-ant-style font-normal border-custom flex justify-between gap-2 items-center text-sm md:text-base">
-              <span class="uppercase">COLOR</span>
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
+            <div class="relative w-full">
+              <button
+                class="button-ant-style w-full font-normal border-custom flex justify-between gap-2 items-center text-sm md:text-base mobile-dropdown-toggle"
+                onclick="toggleMobileDropdown(this)">
+                <span class="uppercase">COLOR</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div class="mobile-submenu dark absolute left-0 top-full w-[200%] z-10">
+                <span class="px-2 cursor-pointer">Brown</span>
+                <span class="px-2 cursor-pointer">Black</span>
+                <span class="px-2 cursor-pointer">Orange</span>
+              </div>
+            </div>
 
-            <button class="button-ant-style font-normal border-custom flex justify-between gap-2 items-center text-sm md:text-base">
-              <span class="uppercase">DENSITY</span>
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
+            <div class="relative w-full">
+              <button
+                class="button-ant-style font-normal border-custom flex justify-between gap-2 items-center text-sm md:text-base mobile-dropdown-toggle"
+                onclick="toggleMobileDropdown(this)">
+                <span class="uppercase">DENSITY</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div class="mobile-submenu dark absolute left-0 top-full w-[200%] z-10">
+                <span class="px-2 cursor-pointer">High</span>
+                <span class="px-2 cursor-pointer">Low</span>
+              </div>
+            </div>
 
-            <button class="button-ant-style font-normal border-custom flex justify-between gap-2 items-center text-sm md:text-base">
+            <button
+              class="button-ant-style font-normal border-custom flex justify-between gap-2 items-center text-sm md:text-base">
               <span class="uppercase">ORIGIN</span>
             </button>
 
-            <button class="button-ant-style font-normal border-custom flex justify-between gap-2 items-center text-sm md:text-base">
+            <button
+              class="button-ant-style font-normal border-custom flex justify-between gap-2 items-center text-sm md:text-base">
               <span class="uppercase">USE-CASE</span>
             </button>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 md:mt-8">
-            <div class="discover-card">
-              <div class="img-wrapper bg-[url(assets/s.jpg)]"></div>
-              <div class="p-2 md:p-1">
-                <div class="text-sm md:text-md italic font-bold">Pericopsis elata</div>
-                <div class="text-sm md:text-md md:mb-8">Afrormosia-Assamela</div>
-                <div class="flex justify-between items-center gap-4">
-                  <div class="text-xs">Natural hardwood
-                    Commonly found in Western Africa</div>
-                  <div class="font-bold text-2xl md:text-[40px]">&#8594;</div>
+            <a href="" class="dark">
+              <div class="discover-card">
+                <div class="img-wrapper bg-[url(assets/s.jpg)]"></div>
+                <div class="p-2 md:p-1">
+                  <div class="text-sm md:text-md italic font-bold">Pericopsis elata</div>
+                  <div class="text-sm md:text-md md:mb-8">Afrormosia-Assamela</div>
+                  <div class="flex justify-between items-center gap-4">
+                    <div class="text-xs">Natural hardwood
+                      Commonly found in Western Africa</div>
+                    <div class="font-bold text-2xl md:text-[40px]">&#8594;</div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
 
-            <div class="discover-card">
-              <div class="img-wrapper bg-[url(assets/s2.jpg)]"></div>
-              <div class="p-2 md:p-1">
-                <div class="text-sm md:text-md italic font-bold">Pericopsis elata</div>
-                <div class="text-sm md:text-md md:mb-8">Afrormosia-Assamela</div>
-                <div class="flex justify-between items-center gap-4">
-                  <div class="text-xs">Natural hardwood
-                    Commonly found in Western Africa</div>
-                  <div class="font-bold text-2xl md:text-[40px]">&#8594;</div>
+            <a href="" class="dark">
+              <div class="discover-card">
+                <div class="img-wrapper bg-[url(assets/s2.jpg)]"></div>
+                <div class="p-2 md:p-1">
+                  <div class="text-sm md:text-md italic font-bold">Pericopsis elata</div>
+                  <div class="text-sm md:text-md md:mb-8">Afrormosia-Assamela</div>
+                  <div class="flex justify-between items-center gap-4">
+                    <div class="text-xs">Natural hardwood
+                      Commonly found in Western Africa</div>
+                    <div class="font-bold text-2xl md:text-[40px]">&#8594;</div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
 
-            <div class="discover-card">
-              <div class="img-wrapper bg-[url(assets/s3.jpg)]"></div>
-              <div class="p-2 md:p-1">
-                <div class="text-sm md:text-md italic font-bold">Pericopsis elata</div>
-                <div class="text-sm md:text-md md:mb-8">Afrormosia-Assamela</div>
-                <div class="flex justify-between items-center gap-4">
-                  <div class="text-xs">Natural hardwood
-                    Commonly found in Western Africa</div>
-                  <div class="font-bold text-2xl md:text-[40px]">&#8594;</div>
+            <a href="" class="dark">
+              <div class="discover-card">
+                <div class="img-wrapper bg-[url(assets/s3.jpg)]"></div>
+                <div class="p-2 md:p-1">
+                  <div class="text-sm md:text-md italic font-bold">Pericopsis elata</div>
+                  <div class="text-sm md:text-md md:mb-8">Afrormosia-Assamela</div>
+                  <div class="flex justify-between items-center gap-4">
+                    <div class="text-xs">Natural hardwood
+                      Commonly found in Western Africa</div>
+                    <div class="font-bold text-2xl md:text-[40px]">&#8594;</div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
 
           </div>
         </div>
 
         <div id="library" class="flex-1 lg:flex-2 flex flex-col">
           <div class="text-3xl md:text-4xl lg:text-[56px] !leading-none text-center">TIMBER <br> LIBRARY</div>
-          <div class="text-sm md:text-md text-center mt-4 md:mt-7 leading-[1.4]">Be one of the first to visit the physical timber library
+          <div class="text-sm md:text-md text-center mt-4 md:mt-7 leading-[1.4]">Be one of the first to visit the
+            physical timber library
             of 260+ species, samples and more.</div>
           <div class="google-map mt-6 md:mt-8">
             <iframe
@@ -390,52 +464,64 @@
       <div class="flex gap-10 lg:gap-6 flex-col lg:flex-row">
         <div id="latest-news" class="flex-[3]">
           <div class="text-3xl md:text-4xl ld:text-[56px] leading-none">LATEST <br> NEWS</div>
-          <div class="button-container mt-8">
-            <button class="button-ant-style font-normal border-custom flex justify-between gap-2 items-center">
+          <div class="button-container mt-8 relative">
+            <button
+              class="button-ant-style font-normal border-custom flex justify-between gap-2 items-center mobile-dropdown-toggle"
+              onclick="toggleMobileDropdown(this)">
               <span class="uppercase">TOPIC</span>
               <i class="fa-solid fa-chevron-down"></i>
             </button>
+            <div class="mobile-submenu dark absolute left-0 top-full w-1/2 z-10">
+              <span class="px-2 cursor-pointer">TOPIC 1</span>
+              <span class="px-2 cursor-pointer">TOPIC 2</span>
+            </div>
           </div>
 
           <div class="flex gap-4 mt-8 flex-col md:flex-row">
-            <div class="discover-card">
-              <div class="img-wrapper bg-[url(assets/u1.webp)]"></div>
-              <div class="p-1">
-                <div class="text-md italic font-bold">Recent blog posts</div>
-                <div class="text-md md:mb-8"> </div>
-                <div class="flex justify-between items-center gap-4">
-                  <div class="text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+            <a href="" class="dark">
+              <div class="discover-card">
+                <div class="img-wrapper bg-[url(assets/u1.webp)]"></div>
+                <div class="p-1">
+                  <div class="text-md italic font-bold">Recent blog posts</div>
+                  <div class="text-md md:mb-8"> </div>
+                  <div class="flex justify-between items-center gap-4">
+                    <div class="text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+                    </div>
+                    <div class="font-bold text-[40px]">&#8594;</div>
                   </div>
-                  <div class="font-bold text-[40px]">&#8594;</div>
                 </div>
               </div>
-            </div>
+            </a>
 
-            <div class="discover-card">
-              <div class="img-wrapper bg-[url(assets/u2.webp)]"></div>
-              <div class="p-1">
-                <div class="text-md italic font-bold">New app updates</div>
-                <div class="text-md md:mb-8"> </div>
-                <div class="flex justify-between items-center gap-4">
-                  <div class="text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+            <a href="" class="dark">
+              <div class="discover-card">
+                <div class="img-wrapper bg-[url(assets/u2.webp)]"></div>
+                <div class="p-1">
+                  <div class="text-md italic font-bold">New app updates</div>
+                  <div class="text-md md:mb-8"> </div>
+                  <div class="flex justify-between items-center gap-4">
+                    <div class="text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+                    </div>
+                    <div class="font-bold text-[40px]">&#8594;</div>
                   </div>
-                  <div class="font-bold text-[40px]">&#8594;</div>
                 </div>
               </div>
-            </div>
+            </a>
 
-            <div class="discover-card">
-              <div class="img-wrapper bg-[url(assets/u3.jpg)]"></div>
-              <div class="p-1">
-                <div class="text-md italic font-bold">Training & demo events</div>
-                <div class="text-md md:mb-8"> </div>
-                <div class="flex justify-between items-center gap-4">
-                  <div class="text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+            <a href="" class="dark">
+              <div class="discover-card">
+                <div class="img-wrapper bg-[url(assets/u3.jpg)]"></div>
+                <div class="p-1">
+                  <div class="text-md italic font-bold">Training & demo events</div>
+                  <div class="text-md md:mb-8"> </div>
+                  <div class="flex justify-between items-center gap-4">
+                    <div class="text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+                    </div>
+                    <div class="font-bold text-[40px]">&#8594;</div>
                   </div>
-                  <div class="font-bold text-[40px]">&#8594;</div>
                 </div>
               </div>
-            </div>
+            </a>
 
           </div>
         </div>
@@ -443,8 +529,10 @@
         <div id="download" class="flex-[2] flex flex-col">
           <div class="text-3xl md:text-4xl ld:text-[56px] leading-none text-center">DOWNLOAD <br>
             THE APP</div>
-          <div class="text-sm md:text-md text-center mt-4 md:mt-6 lg:mt-7 leading-[1.4]">Start using WoodiD today! <br />
-            Wood identification at your fingertips.</div>
+          <div class="text-sm md:text-md text-center mt-4 md:mt-6 lg:mt-7 leading-[1.4]">Start using WoodiD today!
+            <br />
+            Wood identification at your fingertips.
+          </div>
           <div class="mt-4 md:mt-6 lg:mt-8">
             <div class="px-[60px] text-center">
               <button class="h-[110px]">
@@ -453,7 +541,8 @@
               <button class="h-[110px]">
                 <img src="assets/googleplay.svg" alt="googleplay" class="h-full w-auto">
               </button>
-              <button class="button-ant-style border-custom rounded-full font-normal mt-4 md:mt-6 lg:mt-7 text-sm px-6 md:px-8 py-[10px]">
+              <button
+                class="button-ant-style border-custom rounded-full font-normal mt-4 md:mt-6 lg:mt-7 text-sm px-6 md:px-8 py-[10px]">
                 <span>DOWNLOAD INSTRUCTIONS</span>
               </button>
             </div>
@@ -470,23 +559,67 @@
       </div>
       <div class="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.4)] z-1">
       </div>
-
+      <!-- <div class="relative w-full">
+        <button
+          class="button-ant-style w-full font-normal border-custom flex justify-between gap-2 items-center text-sm md:text-base mobile-dropdown-toggle"
+          onclick="toggleMobileDropdown(this)">
+          <span class="uppercase">COLOR</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="mobile-submenu dark absolute left-0 top-full w-[200%] z-10">
+          <span class="px-2 cursor-pointer">Brown</span>
+          <span class="px-2 cursor-pointer">Black</span>
+          <span class="px-2 cursor-pointer">Orange</span>
+        </div>
+      </div> -->
       <div
         class="container-2 absolute top-0 left-0 !w-full h-full text-white py-8 md:py-16 lg:py-24 px-4 md:px-8 lg:pl-20 flex flex-col gap-12 lg:gap-20">
         <div class="text-3xl md:text-4xl ld:text-[56px] leading-none text-white">FREQUENTLY ASKED QUESTIONS</div>
         <div class="lg:flex-1 flex flex-col gap-10 items-start">
-          <button class="text-xl lg:text-2xl font-thin italic flex gap-5 md:gap-8 text-start">
-            How do I download the application? <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <button class="text-xl lg:text-2xl font-thin italic flex gap-5 md:gap-8 text-start">
-            Where can I find the physical timber library? <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <button class="text-xl lg:text-2xl font-thin italic flex gap-5 md:gap-8 text-start">
-            Where can I find the physical timber library? <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <button class="text-xl lg:text-2xl font-thin italic flex gap-5 md:gap-8 text-start">
-            How do I access the timber database? <i class="fa-solid fa-chevron-down"></i>
-          </button>
+          <div class="relative">
+            <button class="text-xl lg:text-2xl font-thin italic flex gap-5 md:gap-8 text-start mobile-dropdown-toggle"
+              onclick="toggleMobileDropdown(this)">
+              How do I download the application? <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="mobile-submenu">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+              </p>
+            </div>
+          </div>
+          <div class="relative">
+            <button class="text-xl lg:text-2xl font-thin italic flex gap-5 md:gap-8 text-start mobile-dropdown-toggle"
+              onclick="toggleMobileDropdown(this)">
+              Where can I find the physical timber library? <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="mobile-submenu">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+              </p>
+            </div>
+          </div>
+          <div class="relative">
+            <button class="text-xl lg:text-2xl font-thin italic flex gap-5 md:gap-8 text-startmobile-dropdown-toggle"
+              onclick="toggleMobileDropdown(this)">
+              Where can I find the physical timber library? <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="mobile-submenu">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+              </p>
+            </div>
+          </div>
+          <div class="relative">
+            <button class="text-xl lg:text-2xl font-thin italic flex gap-5 md:gap-8 text-start mobile-dropdown-toggle"
+              onclick="toggleMobileDropdown(this)">
+              How do I access the timber database? <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="mobile-submenu">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+              </p>
+            </div>
+          </div>
         </div>
         <div>
           <button
@@ -569,7 +702,7 @@
               </li>
             </ul>
           </div>
-  
+
           <div class="flex-1">
             <div class="half-border text-xl leading-[2]">USEFUL LINKS</div>
             <ul class="mt-12 flex flex-col divide-y-2 divide-white">
@@ -601,15 +734,19 @@
               <p>Hanoi, Viet Nam</p>
               <br>
               <br>
-              <div class="flex gap-3 items-center">
-                <img src="assets/phone.png" alt="" class="size-8"><span> Phone: +123 456 789</span>
-              </div>
-              <div class="flex gap-3 items-center mt-2">
-                <div class="size-8 rounded-full bg-white flex items-center justify-center">
-                  <i class="fa-solid fa-envelope text-xl text-[#654104]"></i>
-                </div><span> Email: loc.le@giz.de</span>
-              </div>
-  
+              <a href="tel:+123456789">
+                <div class="flex gap-3 items-center">
+                  <img src="assets/phone.png" alt="" class="size-8"><span> Phone: +123 456 789</span>
+                </div>
+              </a>
+              <a href="mailto:loc.le@giz.de">
+                <div class="flex gap-3 items-center mt-2">
+                  <div class="size-8 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-envelope text-xl text-[#654104]"></i>
+                  </div><span> Email: loc.le@giz.de</span>
+                </div>
+              </a>
+
               <div class="google-map mt-8">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0087722333154!2d105.8172483!3d21.0300516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab7793c57943%3A0x47f2bfa3df3b40f1!2sIcon4%20Tower!5e0!3m2!1sen!2s!4v1691923943659!5m2!1sen!2s"
@@ -619,7 +756,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="flex-1">
             <div class="flex gap-6">
               <button class="size-12 rounded-full bg-white flex items-center justify-center">
@@ -632,9 +769,17 @@
                 <i class="fa-solid fa-envelope text-2xl text-[#654104]"></i>
               </button>
             </div>
-  
-            <div class="flex gap-3 items-center mt-8">
-              English <i class="fa-solid fa-chevron-down"></i>
+
+            <div class="relative">
+              <button class=" mobile-dropdown-toggle" onclick="toggleMobileDropdown(this)">
+                <div class="flex gap-3 items-center mt-8">
+                  English <i class="fa-solid fa-chevron-down"></i>
+                </div>
+              </button>
+              <div class="mobile-submenu w-1/2 absolute left-0 top-full z-10 bg-[#806130]">
+                <span class="px-2 cursor-pointer">English</span>
+                <span class="px-2 cursor-pointer">Việt Nam</span>
+              </div>
             </div>
           </div>
         </div>
@@ -646,7 +791,7 @@
     <div class="bg-white text-[#654104] px-8 md:px-[80px] h-[153px] flex justify-between items-center gap-4">
       <h1 class="text-sm font-thin leading-[1.4] italic">Copyrights © 2024 AITC. All Rights Reserved.</h1>
       <div>
-        <img src="assets/footer.jpg" alt=""> 
+        <img src="assets/footer.jpg" alt="">
       </div>
     </div>
   </footer>
