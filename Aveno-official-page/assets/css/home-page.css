@@ -96,7 +96,7 @@
 }
 
 .home-main .hero .hero-mobile-intro { display:none; }
-@media(max-width:640px) { .home-main .hero .hero-mobile-intro { display:block;order:2;margin:16px 0 0;color:#b4bfd2;font-size:16px;line-height:1.7; } .home-main .hero .hero-benefits { margin-top:20px; } }
+@media(max-width:640px) { .home-main .hero .hero-mobile-intro { display:none; } .home-main .hero .hero-benefits { margin-top:20px; } }
 
 /* Aligned vendor names and scopes on Home only. */
 .home-main .home-technology-cards { align-items:stretch; }

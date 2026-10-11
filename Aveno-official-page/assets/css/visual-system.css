@@ -151,7 +151,7 @@
  .ab-main .ab-opening,.solutions-main .sp-hero,.services-main .svc-hero,.products-main .pr-hero { min-height:480px; }
 }
 @media(max-width:640px) {
-  .home-main .hero { padding:48px 0;isolation:isolate; }
+  .home-main .hero { min-height:420px;padding:48px 0;isolation:isolate;display:flex;align-items:center; }
   .home-main .hero .hero-grid { position:static;gap:0; }
   .home-main .hero .hero-visual { position:absolute;inset:0;width:100%;height:100%;z-index:-1; }
   .home-main .hero .hero-visual img { object-fit:cover;object-position:center; }
@@ -174,6 +174,9 @@
   .ab-main .ab-opening h1 { color:#fff; }
   .ab-main .ab-opening .ab-copy > p,.solutions-main .sp-hero .sp-lead,.services-main .svc-hero .svc-lead,.products-main .pr-hero .pr-lead { color:#d5deeb; }
   .ab-main .ab-opening .about-company-name { color:#c3a4ff; }
+}
+@media(max-width:359px) {
+ .home-main .hero { min-height:480px; }
 }
 .section-link.section-cta-mobile { display:none; }
 @media(max-width:640px) {
