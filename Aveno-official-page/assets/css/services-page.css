@@ -12,6 +12,15 @@ html:has(.services-main) { scroll-behavior:smooth; }
 .services-main .button { min-height:48px;border-radius:5px;margin-top:24px; }
 .svc-hero-image { display:block;width:100%;height:auto;object-fit:contain; }
 .svc-index { border-bottom:1px solid #e3e7ee;background:#fff; }
+@media(max-width:640px) {
+ .services-main .svc-index-grid { grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px;padding-block:12px; }
+ .services-main .svc-index a { grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto;align-content:center;row-gap:4px;min-width:0;min-height:76px;padding:12px 0;border-bottom:1px solid #e3e7ee; }
+ .services-main .svc-index a:nth-last-child(-n+2) { border-bottom:0; }
+ .services-main .svc-index a::after,.services-main .svc-index a:not(:last-child)::after { content:none; }
+ .services-main .svc-index .svc-index-number { font-size:12px;line-height:1.4; }
+ .services-main .svc-index .svc-index-label { font-size:14px;line-height:1.5;overflow-wrap:normal; }
+ .services-main .svc-index a:focus-visible { outline:2px solid #8054e8;outline-offset:3px; }
+}
 .svc-index-grid { display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;padding-block:24px; }
 .svc-index a { display:grid;grid-template-columns:minmax(0,max-content) minmax(12px,1fr);column-gap:16px;row-gap:8px;min-height:44px;line-height:1.5;transition:color .2s; }
 .svc-index-number { grid-row:1;grid-column:1;color:#8054e8;font-size:14px;font-weight:600; }

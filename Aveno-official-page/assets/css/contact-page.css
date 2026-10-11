@@ -35,3 +35,12 @@
 @media(max-width:640px) { .contact-main { padding:32px 0 40px; }.ct-container { width:calc(100% - 40px); }.ct-intro h1 { font-size:34px;line-height:1.2;letter-spacing:-.8px; }.ct-fields { grid-template-columns:1fr;gap:20px; }.ct-form-panel,.ct-info { padding:24px; }.ct-form-panel h2 { font-size:26px; }.ct-info h2 { font-size:26px; }.ct-field-wide { grid-column:auto; }.ct-channels { grid-template-columns:1fr;gap:16px; }.ct-channels > div+div { border-left:0;padding-left:0; }.ct-form .button { min-width:0;max-width:100%; } }
 
 .ct-field textarea::placeholder { font-size:16px;color:#637086; }
+.ct-address-heading { display:flex;align-items:center;gap:8px;min-height:24px; }
+.ct-address-heading h3 { margin:0; }
+.ct-address-heading + p { margin-top:4px; }
+.ct-map-link { position:relative;display:inline-flex;align-items:center;justify-content:center;flex:0 0 24px;width:24px;height:24px;margin:0;color:#8054e8;border-radius:5px;text-decoration:none;transition:background-color .2s,color .2s; }
+.ct-map-link::after { content:"";position:absolute;inset:-10px; }
+.ct-map-link .bi { font-size:18px;line-height:1; }
+.ct-map-link:hover { color:#663cc7;background:#e9e2fa; }
+.ct-map-link:focus-visible { outline:2px solid #8054e8;outline-offset:2px; }
+.ct-form .button:disabled { opacity:.55;cursor:not-allowed; }

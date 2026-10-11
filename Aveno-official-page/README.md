@@ -8,6 +8,6 @@ Chạy tại thư mục chứa index.html:
 python -m http.server 4173
 ```
 
-Tiếng Anh là ngôn ngữ mặc định; có thể chuyển EN / VI. Biểu mẫu tạo tệp yêu cầu .txt, chưa gửi tới AVENO. Email, tên miền và hệ thống nhận yêu cầu chờ bổ sung; số điện thoại công ty tạm ẩn.
+Tiếng Anh là ngôn ngữ mặc định; có thể chuyển EN / VI. Biểu mẫu chưa hỗ trợ gửi trực tuyến; nút gửi tạm vô hiệu hóa. Email, tên miền và hệ thống nhận yêu cầu chờ bổ sung; số điện thoại công ty tạm ẩn.
 
 Nội dung dựa trên AVENO_Website_Content_v2_Simplified.xlsx đi kèm bản bàn giao. Tài nguyên nằm trong assets; giấy phép font và Bootstrap Icons được giữ cùng tài nguyên.

@@ -1,4 +1,13 @@
 /* Scoped Home refinement; technology focus follows the approved neutral brand cards. */
+.home-main .section-link.home-section-link-mobile { display:none; }
+@media(max-width:640px) {
+ .home-main .section-link.home-section-link-desktop { display:none; }
+ .home-main .section-link.home-section-link-mobile { display:inline-flex;justify-self:start;align-self:start;margin:12px 0 0; }
+ .home-main .technology-focus .technology-focus-layout,.home-main .why-section .why-layout { row-gap:0; }
+ .home-main .home-technology-cards,.home-main .why-values { margin-top:32px; }
+ .home-main .core-solutions .core-image-heading { display:flex;flex-direction:column;align-items:flex-start;gap:0; }
+ .home-main .technology-focus-copy > p { margin-bottom:0; }
+}
 .home-main .hero { padding:32px 0;background:#0b1224;position:relative; }
 .home-main .hero .hero-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;min-height:0;align-items:center; }
 .home-main .hero .hero-copy { padding:0;min-height:0;max-width:none;align-self:center;position:relative;z-index:1;display:block; }

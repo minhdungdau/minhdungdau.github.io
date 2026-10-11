@@ -13,7 +13,6 @@
   var previousOverflow = "";
   var backgroundState = [];
   var drawerMedia = window.matchMedia("(max-width: 1100px)");
-  var draft = null;
   var fields = ["name", "company", "email", "phone", "requirement"];
   function message(vi, en) {
     return language === "vi" ? vi : en;
@@ -84,7 +83,6 @@
         var input = site.querySelector('[name="' + key + '"]');
         if (input) input.value = values.get(key) || "";
       });
-    draft = null;
     try {
       localStorage.setItem("aveno-lang", next);
     } catch (error) {
@@ -214,11 +212,6 @@
     else if (wasOpen && restoreFocus !== false && drawerMedia.matches) button.focus();
   }
   drawerMedia.addEventListener("change", function () { menu(false); placeDrawerLanguage(); });
-  function clearDraft() {
-    draft = null;
-    var result = site.querySelector(".draft-result");
-    if (result) result.remove();
-  }
   document.addEventListener("click", function (event) {
     if (event.target.closest(".language")) {
       setLanguage(language === "vi" ? "en" : "vi");
@@ -231,20 +224,6 @@
     else if (event.target.closest(".drawer-close, .drawer-backdrop")) menu(false);
     else if (event.target.closest("#main-navigation a")) menu(false);
     else if (menuOpen && !event.target.closest(".drawer-dialog")) menu(false);
-    else if (event.target.closest("[data-download-draft]") && draft) {
-      var url = URL.createObjectURL(
-        new Blob(["\ufeff" + draft], { type: "text/plain;charset=utf-8" }),
-      );
-      var link = document.createElement("a");
-      link.href = url;
-      link.download = "AVENO-infrastructure-enquiry.txt";
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-      setTimeout(function () {
-        URL.revokeObjectURL(url);
-      }, 1000);
-    }
   });
   document.addEventListener("keydown", function (event) {
     if (menuOpen && event.key === "Tab") {
@@ -265,64 +244,10 @@
       document.getElementById("menu-button").focus();
     }
   });
-  document.addEventListener("input", function (event) {
-    if (event.target.closest("form")) {
-      event.target.setCustomValidity("");
-      clearDraft();
-    }
-  });
-  document.addEventListener("change", function (event) {
-    if (event.target.closest("form")) clearDraft();
-  });
   document.addEventListener("submit", function (event) {
-    var form = event.target;
-    if (!site.contains(form) || form.tagName !== "FORM") return;
-    event.preventDefault();
-    fields.forEach(function (key) {
-      var input = form.elements.namedItem(key);
-      input.value = input.value.trim();
-      input.setCustomValidity(
-        input.required && !input.value
-          ? message(
-              "Vui lòng nhập thông tin.",
-              "Please enter this information.",
-            )
-          : "",
-      );
-    });
-    if (!form.reportValidity()) return;
-    var labels =
-      language === "vi"
-        ? ["Họ và tên", "Công ty", "Email", "Số điện thoại", "Nhu cầu"]
-        : ["Name", "Company", "Email", "Phone", "Requirement"];
-    draft = [
-      "AVENO — " + message("Yêu cầu tư vấn hạ tầng", "Infrastructure enquiry"),
-    ]
-      .concat(
-        fields.map(function (key, index) {
-          return labels[index] + ": " + form.elements.namedItem(key).value;
-        }),
-      )
-      .join("\n\n");
-    var live = form.parentElement.querySelector("[aria-live]");
-    live.replaceChildren();
-    var result = document.createElement("div");
-    result.className = "draft-result";
-    var status = document.createElement("p");
-    status.textContent = message(
-      "Bản yêu cầu đã sẵn sàng. Chưa gửi tới AVENO.",
-      "Your draft is ready. It has not been sent to AVENO.",
-    );
-    var button = document.createElement("button");
-    button.type = "button";
-    button.className = "text-link";
-    button.dataset.downloadDraft = "";
-    button.textContent = message(
-      "Tải bản yêu cầu (.txt)",
-      "Download enquiry (.txt)",
-    );
-    result.append(status, button);
-    live.appendChild(result);
+    if (site.contains(event.target) && event.target.matches(".ct-form")) {
+      event.preventDefault();
+    }
   });
   var saved = "en";
   try {

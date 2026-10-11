@@ -9,7 +9,7 @@ html:has(.products-main) { scroll-behavior:smooth; }
 .pr-lead { margin-top:24px;font-size:18px;line-height:1.75;color:#c7d2e5;max-width:540px; }
 .products-main .button { min-height:48px;border-radius:5px; }
 .pr-hero .button { margin-top:24px; }
-.pr-hero-image { display:block;width:100%;height:auto;aspect-ratio:16/7;object-fit:cover;object-position:35% 45%; }
+.pr-hero-image { display:block;width:100%;height:auto;aspect-ratio:1619/971;object-fit:contain;object-position:center; }
 .pr-catalog { padding:48px 0;background:#f4f5fa;scroll-margin-top:var(--pr-anchor-offset,112px); }
 .pr-catalog > .pr-container > h2 { font-size:44px;line-height:1.2;letter-spacing:-.8px;margin-bottom:32px; }
 .pr-card-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px; }

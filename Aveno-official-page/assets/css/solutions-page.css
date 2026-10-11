@@ -54,7 +54,10 @@ html:has(.solutions-main) { scroll-behavior:smooth; }
 @media(max-width:359px) { .sp-container { width:calc(100% - 40px); } }
 @media(prefers-reduced-motion:reduce) { html:has(.solutions-main) { scroll-behavior:auto; } }
 
-@media(max-width:640px) { #security .sp-values { grid-template-columns:repeat(3,minmax(0,1fr));column-gap:12px; } }
+@media(max-width:640px) {
+ #security .sp-values { grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px; }
+ #security .sp-values > li:nth-child(3) { grid-column:1/-1;justify-self:center;width:calc((100% - 16px)/2); }
+}
 
 #network .sp-visual img,#storage .sp-visual img { filter:saturate(.9); }
 @media(max-width:640px) { .sp-hero-image { max-height:210px;width:auto;max-width:100%;justify-self:center; } }
