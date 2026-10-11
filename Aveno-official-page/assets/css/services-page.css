@@ -115,8 +115,6 @@ html:has(.services-main) { scroll-behavior:smooth; }
 .svc-plan { align-items:stretch; }
 .svc-plan .svc-service { display:flex;flex-direction:column;padding:28px;background:#f3efff;border-top:3px solid #8054e8;border-radius:5px; }
 .svc-plan .svc-scope { margin-top:24px; }
-.svc-purpose { margin-top:auto;padding-top:24px;border-top:1px solid #dacbf7;color:#8054e8;font-size:16px;line-height:1.5;font-weight:600; }
-.svc-plan .svc-scope + .svc-purpose { margin-top:28px; }
 .svc-deployment > img { align-self:center; }
 .svc-hero .svc-lead { font-size:16px; }
 .svc-closing { background:#302448;color:#fff;padding:64px 0; }

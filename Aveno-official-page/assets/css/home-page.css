@@ -1,5 +1,13 @@
 /* Scoped Home refinement; technology focus follows the approved neutral brand cards. */
 .home-main .section-link.home-section-link-mobile { display:none; }
+.home-main .core-solutions .core-image-heading { flex-direction:column;align-items:flex-start;gap:0; }
+.home-main .core-image-heading .home-section-link-desktop,
+.home-main .why-copy .home-section-link-desktop { margin-top:12px; }
+@media(min-width:960px) {
+ .home-main .why-section .why-layout { align-items:stretch; }
+ .home-main .why-section .why-copy { display:flex;flex-direction:column;align-items:flex-start;align-self:stretch; }
+ .home-main .why-copy .why-infrastructure { width:100%;margin: auto 0 0;padding-top:24px; padding-bottom: 2px; }
+}
 @media(max-width:640px) {
  .home-main .section-link.home-section-link-desktop { display:none; }
  .home-main .section-link.home-section-link-mobile { display:inline-flex;justify-self:start;align-self:start;margin:12px 0 0; }
@@ -37,7 +45,7 @@
 .home-main .why-infrastructure { margin:24px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;padding:0;background:transparent;border:0;border-radius:0; }
 .home-main .why-infrastructure > div { display:flex;flex-direction:column;align-items:center;gap:12px;padding:0;border:0;font-size:14px;font-weight:600; }
 .home-main .why-infrastructure svg { width:36px;height:36px;color:#8054e8; }
-.home-main .why-value { padding:24px 0;border-bottom:1px solid #e3e7ee; }
+.home-main .why-value { padding:16px 0;border-bottom:1px solid #e3e7ee; }
 .home-main .why-value:first-child { padding-top:0; }.home-main .why-value:last-child { padding-bottom:0;border-bottom:0; }
 .home-main .why-value h3 { font-size:20px;line-height:1.35; }.home-main .why-value p { margin-top:10px;font-size:14px;line-height:1.7; }
 .home-main .home-closing { position:relative;overflow:hidden;background:#f1edfc;padding:32px 0;text-align:center; }

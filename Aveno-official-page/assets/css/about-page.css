@@ -30,6 +30,9 @@
 .ab-main .ab-process-heading { display:flex; align-items:center; justify-content:space-between; gap:24px; }
 .ab-main .ab-process-heading h2 { margin-bottom:0; }
 .ab-main .ab-process-intro { max-width:1000px; margin-top:24px; }
+.ab-main .ab-approach .section-cta-desktop { margin-top:24px; }
+.ab-main a.ab-brand { text-decoration:none;transition:border-color .2s,background-color .2s; }
+.ab-main a.ab-brand:hover { border-color:#a984f3;background:#1c2940; }
 .ab-main .ab-process { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:28px; list-style:none; padding:0; margin:40px 0 0; }
 .ab-main .ab-process li { position:relative; text-align:center; }
 .ab-main .ab-process li::after { content:""; position:absolute; height:1px; background:#dacbf7; left:calc(50% + 35px); right:calc(-50% + 7px); top:35px; }

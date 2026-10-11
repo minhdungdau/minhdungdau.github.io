@@ -11,6 +11,7 @@ html:has(.products-main) { scroll-behavior:smooth; }
 .pr-hero .button { margin-top:24px; }
 .pr-hero-image { display:block;width:100%;height:auto;aspect-ratio:1619/971;object-fit:contain;object-position:center; }
 .pr-catalog { padding:48px 0;background:#f4f5fa;scroll-margin-top:var(--pr-anchor-offset,112px); }
+.pr-catalog > #catalog { scroll-margin-top:var(--pr-anchor-offset,112px); }
 .pr-catalog > .pr-container > h2 { font-size:44px;line-height:1.2;letter-spacing:-.8px;margin-bottom:32px; }
 .pr-card-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px; }
 .pr-brand { display:grid;grid-template-rows:subgrid;grid-row:span 4;row-gap:20px;min-width:0;padding:28px;background:#fff;border:1px solid #e3e7ee;border-radius:6px;scroll-margin-top:var(--pr-anchor-offset,112px); }
