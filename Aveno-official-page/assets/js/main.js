@@ -1,12 +1,10 @@
 (function () {
   "use strict";
   var site = document.getElementById("site");
-  var english = document.getElementById("content-en");
-  var vietnamese = site.cloneNode(true);
-  var viTitle = document.title;
-  var viDescription = document.querySelector(
-    'meta[name="description"]',
-  ).content;
+  var english = site.cloneNode(true);
+  var vietnamese = document.getElementById("content-vi");
+  var enTitle = document.title;
+  var enDescription = document.querySelector('meta[name="description"]').content;
   var language = "en";
   var observer;
   var menuOpen = false;
@@ -70,14 +68,14 @@
     site.replaceChildren.apply(
       site,
       Array.from(
-        (next === "en" ? english.content : vietnamese).cloneNode(true)
+        (next === "en" ? english : vietnamese.content).cloneNode(true)
           .childNodes,
       ),
     );
     document.documentElement.lang = next;
-    document.title = next === "en" ? english.dataset.title : viTitle;
+    document.title = next === "en" ? enTitle : vietnamese.dataset.title;
     document.querySelector('meta[name="description"]').content =
-      next === "en" ? english.dataset.description : viDescription;
+      next === "en" ? enDescription : vietnamese.dataset.description;
     if (values)
       fields.forEach(function (key) {
         var input = site.querySelector('[name="' + key + '"]');
