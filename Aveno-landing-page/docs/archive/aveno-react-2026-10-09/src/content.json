@@ -1,0 +1,176 @@
+{
+  "01_Home": [
+    {
+      "key": "Hero",
+      "en": "DATA CENTER & ENTERPRISE INFRASTRUCTURE SOLUTIONS\nHigh-performance networking. Reliable compute and storage. Advanced cybersecurity.\nAVENO PTY LTD provides infrastructure solutions for modern enterprises and data centers, covering networking, compute, storage and cybersecurity.",
+      "vi": "GIẢI PHÁP HẠ TẦNG DATA CENTER & DOANH NGHIỆP\nMạng hiệu năng cao. Compute và Storage tin cậy. An ninh mạng toàn diện.\nAVENO PTY LTD cung cấp các giải pháp hạ tầng cho doanh nghiệp và trung tâm dữ liệu hiện đại, bao gồm Network, Compute, Storage và Cybersecurity."
+    },
+    {
+      "key": "Core Solutions",
+      "en": "Data Center Networking | Compute & Servers | Enterprise Storage | Cybersecurity",
+      "vi": "Mạng Trung tâm dữ liệu | Máy chủ & Compute | Lưu trữ doanh nghiệp | An ninh mạng"
+    },
+    {
+      "key": "Technology Focus",
+      "en": "Technology portfolio focused on Arista, Dell Technologies and Check Point.",
+      "vi": "Danh mục công nghệ tập trung vào Arista, Dell Technologies và Check Point."
+    },
+    {
+      "key": "Why AVENO",
+      "en": "An integrated infrastructure approach connecting network, compute, storage and security into a manageable and scalable technology foundation.",
+      "vi": "Cách tiếp cận hạ tầng tích hợp, kết nối Network, Compute, Storage và Security thành một nền tảng công nghệ dễ quản lý và có khả năng mở rộng."
+    }
+  ],
+  "02_Company_Intro": [
+    {
+      "key": "Company Overview",
+      "en": "AVENO PTY LTD is an Australia-based technology company focused on enterprise and data center infrastructure. We support organizations in building reliable, scalable and secure technology foundations for business applications, digital services and data-intensive workloads.",
+      "vi": "AVENO PTY LTD là doanh nghiệp công nghệ hoạt động tại Australia, tập trung vào hạ tầng doanh nghiệp và trung tâm dữ liệu. Chúng tôi hỗ trợ các tổ chức xây dựng nền tảng công nghệ tin cậy, có khả năng mở rộng và bảo mật cho các ứng dụng kinh doanh, dịch vụ số và các workload có nhu cầu xử lý dữ liệu lớn."
+    },
+    {
+      "key": "What We Do",
+      "en": "AVENO's solution portfolio covers data center networking, enterprise compute, data storage and cybersecurity. By combining these infrastructure layers, we help customers build environments that are easier to operate, expand and protect over time.",
+      "vi": "Danh mục giải pháp của AVENO bao gồm mạng trung tâm dữ liệu, hệ thống compute doanh nghiệp, lưu trữ dữ liệu và an ninh mạng. Bằng việc kết hợp các lớp hạ tầng này, chúng tôi giúp khách hàng xây dựng môi trường CNTT dễ vận hành, dễ mở rộng và dễ bảo vệ hơn trong dài hạn."
+    },
+    {
+      "key": "Technology Approach",
+      "en": "AVENO focuses on technologies from Arista, Dell Technologies and Check Point. Together, these technology areas support high-performance networking, enterprise servers and storage, infrastructure management and cybersecurity for modern data center and cloud-oriented environments.",
+      "vi": "AVENO tập trung vào các công nghệ của Arista, Dell Technologies và Check Point. Các nhóm công nghệ này hỗ trợ mạng hiệu năng cao, máy chủ và lưu trữ doanh nghiệp, quản trị hạ tầng và an ninh mạng cho các môi trường Data Center và Cloud hiện đại."
+    },
+    {
+      "key": "How We Work",
+      "en": "Our approach begins with understanding the customer's infrastructure, workload and growth requirements. We then define the target architecture, select the appropriate technology, support implementation and continue with technical assistance after deployment when required.",
+      "vi": "Cách tiếp cận của chúng tôi bắt đầu từ việc tìm hiểu hạ tầng hiện tại, workload và nhu cầu tăng trưởng của khách hàng. Sau đó, AVENO xác định kiến trúc mục tiêu, lựa chọn công nghệ phù hợp, hỗ trợ triển khai và tiếp tục hỗ trợ kỹ thuật sau khi hệ thống đi vào vận hành khi cần thiết."
+    },
+    {
+      "key": "Value Proposition",
+      "en": "AVENO aims to simplify infrastructure modernization by providing a coordinated view across networking, compute, storage and security. This helps customers avoid fragmented technology decisions and create a more consistent foundation for future expansion.",
+      "vi": "AVENO hướng tới việc đơn giản hóa quá trình hiện đại hóa hạ tầng bằng cách tiếp cận đồng bộ giữa Network, Compute, Storage và Security. Điều này giúp khách hàng hạn chế các quyết định công nghệ rời rạc và xây dựng nền tảng nhất quán hơn cho việc mở rộng trong tương lai."
+    }
+  ],
+  "03_Solutions": [
+    {
+      "key": "Data Center Networking",
+      "en": "AVENO provides high-performance networking solutions for data center and cloud-oriented environments. The solution can cover switching, routing, network fabric, segmentation, automation and centralized visibility, with emphasis on availability, scalability and simplified operations.",
+      "vi": "AVENO cung cấp giải pháp mạng hiệu năng cao cho môi trường Data Center và các kiến trúc định hướng Cloud. Giải pháp có thể bao gồm switching, routing, network fabric, phân đoạn mạng, tự động hóa và giám sát tập trung, tập trung vào tính sẵn sàng, khả năng mở rộng và đơn giản hóa vận hành."
+    },
+    {
+      "key": "Compute & Servers",
+      "en": "AVENO provides enterprise server platforms for virtualization, databases, business applications, private cloud and data-intensive workloads. Solution design considers performance, redundancy, expansion capacity and lifecycle requirements.",
+      "vi": "AVENO cung cấp nền tảng máy chủ doanh nghiệp cho ảo hóa, cơ sở dữ liệu, ứng dụng kinh doanh, Private Cloud và các workload xử lý dữ liệu lớn. Thiết kế giải pháp xem xét đồng thời hiệu năng, dự phòng, khả năng mở rộng và yêu cầu vòng đời hệ thống."
+    },
+    {
+      "key": "Enterprise Storage",
+      "en": "AVENO supports enterprise storage solutions for structured and unstructured data, virtualized environments, databases and mission-critical applications. The objective is to provide reliable capacity, performance and data availability while allowing future expansion.",
+      "vi": "AVENO cung cấp giải pháp lưu trữ doanh nghiệp cho dữ liệu có cấu trúc và phi cấu trúc, môi trường ảo hóa, cơ sở dữ liệu và các ứng dụng trọng yếu. Mục tiêu là đảm bảo dung lượng, hiệu năng và tính sẵn sàng của dữ liệu đồng thời duy trì khả năng mở rộng trong tương lai."
+    },
+    {
+      "key": "Cybersecurity",
+      "en": "AVENO provides cybersecurity solutions to protect networks, cloud environments, endpoints and user access. The solution approach can combine firewall, threat prevention, remote access, cloud protection and endpoint security according to the customer's risk profile and infrastructure.",
+      "vi": "AVENO cung cấp các giải pháp an ninh mạng nhằm bảo vệ hệ thống mạng, môi trường Cloud, endpoint và truy cập người dùng. Tùy theo mức độ rủi ro và hạ tầng của khách hàng, giải pháp có thể kết hợp firewall, threat prevention, truy cập từ xa, bảo mật Cloud và Endpoint Security."
+    }
+  ],
+  "04_Services": [
+    {
+      "key": "Infrastructure Assessment",
+      "en": "We review the customer's current network, server, storage and security environment to identify technical constraints, performance concerns and areas for improvement. The output provides a practical basis for the next-stage architecture and investment plan.",
+      "vi": "Chúng tôi rà soát môi trường mạng, máy chủ, lưu trữ và bảo mật hiện tại của khách hàng nhằm xác định các giới hạn kỹ thuật, vấn đề hiệu năng và các khu vực cần cải thiện. Kết quả khảo sát tạo cơ sở thực tế cho kiến trúc mục tiêu và kế hoạch đầu tư tiếp theo."
+    },
+    {
+      "key": "Architecture Design",
+      "en": "AVENO develops infrastructure architecture based on workload requirements, expected growth, availability targets and security needs. The design coordinates network, compute, storage and security components so the overall environment can operate as a consistent platform.",
+      "vi": "AVENO xây dựng kiến trúc hạ tầng dựa trên yêu cầu workload, dự báo tăng trưởng, mục tiêu sẵn sàng và nhu cầu bảo mật. Thiết kế phối hợp các thành phần Network, Compute, Storage và Security để toàn bộ môi trường vận hành như một nền tảng thống nhất."
+    },
+    {
+      "key": "Equipment & License Supply",
+      "en": "AVENO supplies infrastructure hardware, software licenses and subscriptions according to the approved technical configuration and project scope. Procurement can be organized on a project basis to match deployment milestones.",
+      "vi": "AVENO cung cấp thiết bị hạ tầng, bản quyền phần mềm và subscription theo cấu hình kỹ thuật và phạm vi dự án đã được phê duyệt. Hoạt động mua sắm có thể được tổ chức theo từng dự án để phù hợp với các mốc triển khai."
+    },
+    {
+      "key": "Installation & Integration",
+      "en": "Implementation services may include equipment installation, rack & stack, cabling coordination, configuration, system integration and interoperability checks with the customer's existing environment.",
+      "vi": "Dịch vụ triển khai có thể bao gồm lắp đặt thiết bị, rack & stack, phối hợp đấu nối, cấu hình, tích hợp hệ thống và kiểm tra khả năng tương thích với môi trường hiện hữu của khách hàng."
+    },
+    {
+      "key": "Testing & Commissioning",
+      "en": "Before handover, AVENO supports technical testing and commissioning to verify connectivity, performance, redundancy and key security functions against the agreed design and acceptance criteria.",
+      "vi": "Trước khi bàn giao, AVENO hỗ trợ kiểm thử kỹ thuật và nghiệm thu nhằm xác nhận khả năng kết nối, hiệu năng, cơ chế dự phòng và các chức năng bảo mật chính theo thiết kế và tiêu chí nghiệm thu đã thống nhất."
+    },
+    {
+      "key": "Maintenance & Technical Support",
+      "en": "After deployment, AVENO can provide troubleshooting, configuration review, upgrade assistance, performance optimization and coordination with technology vendors based on the support scope agreed for each project.",
+      "vi": "Sau khi triển khai, AVENO có thể cung cấp hỗ trợ xử lý sự cố, rà soát cấu hình, hỗ trợ nâng cấp, tối ưu hiệu năng và phối hợp với hãng công nghệ theo phạm vi hỗ trợ được thống nhất cho từng dự án."
+    }
+  ],
+  "05_Products_Tech": [
+    {
+      "key": "Arista",
+      "en": "Data center and cloud networking technologies including high-performance switching, routing, EOS and CloudVision for automation, telemetry and network operations.",
+      "vi": "Các công nghệ mạng Data Center và Cloud bao gồm switching hiệu năng cao, routing, EOS và CloudVision phục vụ tự động hóa, telemetry và vận hành mạng."
+    },
+    {
+      "key": "Dell Technologies",
+      "en": "Enterprise compute, storage and networking technologies including PowerEdge servers, enterprise storage platforms and PowerSwitch networking.",
+      "vi": "Các công nghệ Compute, Storage và Networking doanh nghiệp, bao gồm máy chủ PowerEdge, nền tảng lưu trữ doanh nghiệp và PowerSwitch."
+    },
+    {
+      "key": "Check Point",
+      "en": "Network security, cloud security and endpoint protection technologies for enterprise and hybrid environments.",
+      "vi": "Các công nghệ Network Security, Cloud Security và Endpoint Protection cho môi trường doanh nghiệp và Hybrid."
+    }
+  ],
+  "06_Contact": [
+    {
+      "key": "Company",
+      "en": "AVENO PTY LTD",
+      "vi": "AVENO PTY LTD"
+    },
+    {
+      "key": "Representative",
+      "en": "Mr. David Tran – Chief Executive Officer",
+      "vi": "Ông David Tran – Giám đốc điều hành"
+    },
+    {
+      "key": "Address",
+      "en": "9 Windsor Avenue, Springvale VIC 3171, Australia",
+      "vi": "9 Windsor Avenue, Springvale VIC 3171, Australia"
+    },
+    {
+      "key": "Phone",
+      "en": "[To be updated]",
+      "vi": "[Cập nhật sau]"
+    },
+    {
+      "key": "Email",
+      "en": "[To be updated]",
+      "vi": "[Cập nhật sau]"
+    },
+    {
+      "key": "Contact CTA",
+      "en": "Tell us about your data center or enterprise infrastructure requirements. Our team will contact you to discuss the appropriate architecture and technology options.",
+      "vi": "Hãy chia sẻ nhu cầu về Data Center hoặc hạ tầng doanh nghiệp. Đội ngũ của chúng tôi sẽ liên hệ để trao đổi kiến trúc và phương án công nghệ phù hợp."
+    }
+  ],
+  "07_SEO_Dev_Notes": [
+    {
+      "key": "SEO Title",
+      "en": "AVENO | Data Center & Enterprise Infrastructure Solutions",
+      "vi": "AVENO | Giải pháp Data Center & Hạ tầng Doanh nghiệp"
+    },
+    {
+      "key": "Meta Description",
+      "en": "AVENO provides data center networking, enterprise compute, storage and cybersecurity solutions with a focus on Arista, Dell Technologies and Check Point technologies.",
+      "vi": "AVENO cung cấp giải pháp mạng Data Center, Compute, Storage và Cybersecurity, tập trung vào các công nghệ của Arista, Dell Technologies và Check Point."
+    },
+    {
+      "key": "Footer Disclaimer",
+      "en": "Arista Networks, Dell Technologies, Check Point and other trademarks mentioned on this website are the property of their respective owners. Product names are used for identification and solution-reference purposes.",
+      "vi": "Arista Networks, Dell Technologies, Check Point và các nhãn hiệu khác được đề cập trên website thuộc quyền sở hữu của các chủ sở hữu tương ứng. Tên sản phẩm được sử dụng nhằm mục đích nhận diện và giới thiệu giải pháp."
+    },
+    {
+      "key": "Partner Claim Rule",
+      "en": "Do not use Authorized Distributor, Official Partner, Gold Partner or similar claims unless formally documented.",
+      "vi": "Không sử dụng các tuyên bố Nhà phân phối ủy quyền, Đối tác chính thức, Gold Partner hoặc tương tự nếu chưa có tài liệu xác nhận."
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+/* Scoped Home refinement; technology focus follows the approved neutral brand cards. */
+.home-main .hero { padding:32px 0;background:#0b1224;position:relative; }
+.home-main .hero .hero-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;min-height:0;align-items:center; }
+.home-main .hero .hero-copy { padding:0;min-height:0;max-width:none;align-self:center;position:relative;z-index:1;display:block; }
+.home-main .hero h1 { max-width:none;font-size:clamp(36px,3.25vw,48px);font-weight:700;line-height:1.24;letter-spacing:-1.5px; }
+.home-main .hero .eyebrow { font-size:12px;font-weight:700;line-height:1.8;letter-spacing:1.8px;color:#b69aef;margin-bottom:16px; }
+.home-main .hero .hero-title-line { display:inline; }
+.home-main .hero .hero-title-line + .hero-title-line::before { content:" "; }
+.home-main .hero .hero-benefits { display:none; }
+.home-main .hero .hero-description { display:block;margin:16px 0 24px;max-width:540px;font-size:13px;font-weight:400;line-height:1.7;color:#b4bfd2; }
+.home-main .hero .actions { margin:0; }
+.home-main .hero .hero-visual { position:relative;inset:auto;left:auto;width:100%;height:510px;min-height:0;margin:0;transform:none;translate:none;overflow:hidden;z-index:0; }
+.home-main .hero .hero-visual img { position:static;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;filter:none; }
+.home-main .hero .hero-visual::before,.home-main .hero .hero-visual::after { content:none; }
+.home-main > .core-solutions { padding:64px 0; }
+.home-main .core-image-heading { margin-bottom:32px; }
+.home-main .core-image-grid { gap:24px; }
+.home-main .core-image-card { border-radius:6px; }
+.home-main .core-image-card > img { height:194px;object-fit:contain;background:#b7c9da; }
+.home-main .core-image-card:nth-child(2) > img { object-fit:cover; }
+.home-main .core-image-card:nth-child(4) > img { background:#08152a; }
+.home-main .core-image-content { padding:24px 20px; }
+.home-main .core-image-content h3 { font-size:20px;line-height:1.35; }
+.home-main .core-image-content p { font-size:14px;line-height:1.7; }
+.home-main > .why-section { padding:64px 0;background:#fff; }
+.home-main .why-layout { display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:80px;align-items:start; }
+.home-main .why-copy > p { font-size:14px;line-height:1.7;margin:24px 0 0; }
+.home-main .why-infrastructure { margin:24px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;padding:0;background:transparent;border:0;border-radius:0; }
+.home-main .why-infrastructure > div { display:flex;flex-direction:column;align-items:center;gap:12px;padding:0;border:0;font-size:14px;font-weight:600; }
+.home-main .why-infrastructure svg { width:36px;height:36px;color:#8054e8; }
+.home-main .why-value { padding:24px 0;border-bottom:1px solid #e3e7ee; }
+.home-main .why-value:first-child { padding-top:0; }.home-main .why-value:last-child { padding-bottom:0;border-bottom:0; }
+.home-main .why-value h3 { font-size:20px;line-height:1.35; }.home-main .why-value p { margin-top:10px;font-size:14px;line-height:1.7; }
+.home-main .home-closing { position:relative;overflow:hidden;background:#f1edfc;padding:32px 0;text-align:center; }
+.home-main .home-closing .container { position:relative;z-index:1; }
+.home-main .home-closing h2 { font-size:34px;line-height:1.3;letter-spacing:-.5px; }
+.home-main .home-closing p { max-width:850px;margin:16px auto 0;color:#526078;font-size:16px;line-height:1.75; }
+.home-main .home-closing .button { margin-top:24px;min-height:48px; }
+.home-main .home-closing::before,.home-main .home-closing::after { content:"";position:absolute;top:0;bottom:0;width:30%;background-repeat:no-repeat;background-size:100% auto;background-position:center;pointer-events:none; }
+.home-main .home-closing::before { left:0;background-image:url('../images/shared-design/cta-wave-left.webp'); }.home-main .home-closing::after { right:0;background-image:url('../images/shared-design/cta-wave-right.webp'); }
+@media(max-width:1100px) { .home-main .hero h1 { font-size:36px; }.home-main .hero .hero-grid { gap:32px; } }
+@media(max-width:959px) { .home-main .hero .hero-grid { grid-template-columns:1fr;gap:32px; }.home-main .hero .hero-visual { height:300px; }.home-main .why-layout { grid-template-columns:1fr;gap:32px; }.home-main .core-image-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:900px) { .home-main .hero h1 { font-size:34px; }.home-main .hero .hero-description { font-size:12px; } }
+@media(max-width:640px) {
+ .home-main .hero { padding:32px 0 0; }
+ .home-main .hero .hero-grid { gap:24px; }
+ .home-main .hero .hero-copy { padding:0;display:flex;flex-direction:column;justify-content:center; }
+ .home-main .hero h1 { font-size:clamp(28px,7.4vw,34px);line-height:1.2;letter-spacing:-.7px;order:1; }
+ .home-main .hero .eyebrow { font-size:10px;letter-spacing:1.1px;margin-bottom:10px;order:0; }
+ .home-main .hero .hero-benefits { display:flex;flex-direction:column;align-items:start;order:2;margin:24px 0 0;border-left:2px solid #b894ff;padding-left:14px;gap:8px; }
+ .home-main .hero .hero-benefits li { font-size:13px;line-height:1.55;font-weight:500; }.home-main .hero .hero-benefits li::before { content:none; }
+ .home-main .hero .hero-description { display:none; }
+ .home-main .hero .actions { order:3;margin-top:24px; }
+ .home-main .hero .hero-visual { height:180px;min-height:0; }
+ .home-main > .core-solutions,.home-main > .why-section { padding:48px 0; }
+ .home-main .core-image-heading { margin-bottom:24px; }
+ .home-main .core-image-grid { grid-template-columns:1fr; }
+ .home-main .core-image-card > img { height:auto;aspect-ratio:288/194; }
+ .home-main .why-infrastructure { grid-template-columns:repeat(2,minmax(0,1fr));gap:20px; }
+ .home-main .home-closing { padding:48px 0; }.home-main .home-closing h2 { font-size:28px; }.home-main .home-closing p { font-size:15px; }
+ .home-main .home-closing::before,.home-main .home-closing::after { width:24%;opacity:.65; }
+}
+
+/* Improve readability without changing the approved hero or technology module. */
+.home-main .core-image-content p,.home-main .why-copy > p,.home-main .why-value p { font-size:16px; }
+
+/* Neutral technology portfolio; scoped to Home. */
+.home-main > .technology-focus { padding:64px 0;background:#f3f5f9; }
+.home-main .technology-focus-layout { display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:48px;align-items:center; }
+.home-main .technology-focus-copy h2 { color:#192438; }
+.home-main .technology-focus-copy p { color:#637086;font-size:16px;line-height:1.7; }
+.home-main .technology-focus-link { color:#8054e8;margin-top:24px; }
+.home-main .technology-focus-link:hover { color:#663cc7; }
+.home-main .home-technology-cards { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;min-width:0; }
+.home-main .home-technology-card { display:flex;flex-direction:column;align-items:flex-start;padding:28px 20px;background:white;border:1px solid #e3e7ee;border-radius:6px;transition:border-color .2s; }
+.home-main .home-technology-card:hover { border-color:#b69aef; }
+.home-main .home-technology-card svg { width:48px;height:48px;color:#8054e8;align-self:center;margin:8px 0 32px; }
+.home-main .home-technology-card h3 { font-size:18px;line-height:1.4;color:#192438;margin:0 0 8px; }
+.home-main .home-technology-card p { font-size:14px;line-height:1.65;color:#637086;margin:0; }
+@media(max-width:1100px) { .home-main .technology-focus-layout { grid-template-columns:1fr;gap:32px; } }
+@media(max-width:640px) {
+ .home-main > .technology-focus { padding:48px 0; }
+ .home-main .home-technology-cards { grid-template-columns:1fr;gap:12px; }
+ .home-main .home-technology-card { display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 20px;padding:20px; }
+ .home-main .home-technology-card svg { width:36px;height:36px;grid-row:1/3;margin:0; }
+ .home-main .home-technology-card h3 { margin:0; }
+}
+
+.home-main .hero .hero-mobile-intro { display:none; }
+@media(max-width:640px) { .home-main .hero .hero-mobile-intro { display:block;order:2;margin:16px 0 0;color:#b4bfd2;font-size:16px;line-height:1.7; } .home-main .hero .hero-benefits { margin-top:20px; } }
+
+/* Aligned vendor names and scopes on Home only. */
+.home-main .home-technology-cards { align-items:stretch; }
+.home-main .home-technology-card { display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px 20px;min-height:124px; }
+.home-main .home-technology-card h3 { display:flex;align-items:center;justify-content:center;min-height:0;width:100%;margin:0 0 8px;font-size:20px;line-height:1.4; }
+.home-main .home-technology-card p { min-height:0;width:100%;margin:0;font-size:13px;line-height:1.6; }
+@media(max-width:640px) {
+ .home-main .home-technology-card { padding:24px;gap:0;min-height:104px; }
+ .home-main .home-technology-card h3 { min-height:0;font-size:18px;margin-bottom:8px; }
+ .home-main .home-technology-card p { min-height:0; }
+}
+
+/* Vendor titles share the middle row regardless of scope wrapping. */
+.home-main .home-technology-cards > .home-technology-card { display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto minmax(0,1fr);align-items:stretch;justify-items:center;min-height:164px;padding:16px 20px;gap:0;text-align:center; }
+.home-main .home-technology-cards > .home-technology-card h3 { grid-row:2;display:block;min-height:0;margin:0;align-self:center; }
+.home-main .home-technology-cards > .home-technology-card p { grid-row:3;min-height:0;align-self:start;margin:8px 0 0; }
+@media(max-width:640px) { .home-main .home-technology-cards > .home-technology-card { min-height:144px;padding:12px 20px; } }
+
+/* Lift the text group slightly while keeping vendor names aligned. */
+.home-main .home-technology-cards > .home-technology-card h3,
+.home-main .home-technology-cards > .home-technology-card p { position:relative;top:-12px; }
+@media(max-width:640px) {
+ .home-main .home-technology-cards > .home-technology-card h3,
+ .home-main .home-technology-cards > .home-technology-card p { top:-8px; }
+}
+
+/* Compact vendor cards while preserving aligned names. */
+.home-main .home-technology-cards > .home-technology-card { padding-inline:10px; }
+@media(max-width:640px) {
+ .home-main .home-technology-cards > .home-technology-card { min-height:120px;padding-inline:20px; }
+}

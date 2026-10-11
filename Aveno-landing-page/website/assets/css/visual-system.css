@@ -1,0 +1,135 @@
+/* Shared canonical infrastructure icons; decorative and layout-neutral. */
+.system-icon { display:block;object-fit:contain;flex-shrink:0; }
+.products-main .pr-technology .system-icon { width:36px;height:36px;justify-self:center; }
+.home-main .why-infrastructure .system-icon { width:36px;height:36px; }
+.ab-main .ab-infra-card .system-icon { width:28px;height:34px; }
+.solutions-main .sp-values .system-icon { width:56px;height:56px;margin:0 auto 12px; }
+@media(max-width:640px) {
+ .products-main .pr-technology .system-icon { width:32px;height:32px; }
+ .solutions-main .sp-values .system-icon { width:44px;height:44px; }
+}
+
+/* Vendor logos retain original colors and proportions on a common light surface. */
+.brand-logo-frame { display:flex;align-items:center;justify-content:center;width:100%;height:76px;padding:14px;background:#fff;border-radius:4px; }
+.brand-logo { display:block;width:100%;max-width:180px;height:48px;object-fit:contain; }
+.brand-logo--arista { max-width:160px; }
+.brand-logo--checkpoint { max-width:150px; }
+.home-main .home-technology-card { display:flex;flex-direction:column;align-items:center;text-align:center; }
+.home-main .home-technology-card .brand-logo-frame { margin-bottom:20px; }
+.ab-main .ab-brand { display:flex;flex-direction:column;align-items:center;text-align:center; }
+.ab-main .ab-brand .brand-logo-frame { margin-bottom:20px; }
+.products-main .pr-brand { grid-row:span 4;grid-template-rows:subgrid; }
+@media(max-width:959px) { .home-main .home-technology-card,.ab-main .ab-brand { display:flex;flex-direction:column;align-items:center;text-align:center; } }
+.ab-main .ab-step-icon svg { width:28px;height:28px; }
+@media(max-width:640px) { .ab-main .ab-step-icon svg { width:24px;height:24px; } }
+
+/* Brand name remains available to assistive technology without duplicating the logo. */
+.home-technology-card .brand-name,.ab-brand .brand-name,.pr-brand .brand-name { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0; }
+
+/* Local icon font: shared technology meanings, without SVG content icons. */
+.system-font-icon { display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;color:#8054e8;font-style:normal;line-height:1; }
+.system-font-icon::before { display:block;line-height:1; }
+.home-main .home-infra-icon { width:36px;height:36px;font-size:32px; }
+.ab-main .about-infra-icon { width:28px;height:34px;font-size:28px; }
+.ab-main .ab-step-icon .system-font-icon { width:28px;height:28px;font-size:28px; }
+.products-main .pr-brand { grid-row:span 4; }
+.products-main .pr-brand > h3 { text-align:center; }
+.products-main .pr-technology .pr-tech-icon { display:inline-flex;width:40px;height:40px;font-size:36px; }
+.solutions-main .sp-values .system-font-icon { display:flex;width:56px;height:56px;font-size:48px;margin:0 auto 12px; }
+.services-main .system-font-icon.svc-icon { width:56px;height:56px;font-size:48px; }
+@media(max-width:640px) {
+ .products-main .pr-technology .pr-tech-icon { width:36px;height:36px;font-size:32px; }
+ .solutions-main .sp-values .system-font-icon { width:44px;height:44px;font-size:36px; }
+ .services-main .system-font-icon.svc-icon { width:36px;height:36px;font-size:32px; }
+}
+
+.pending-company-phone { display:none!important; }
+.ct-channels { grid-template-columns:minmax(0,1fr); }
+
+/* Closing CTA: one layout with contextual colors across the approved four pages. */
+:is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta {
+  --closing-background:#f1edfc;
+  --closing-heading:#192438;
+  --closing-description:#637086;
+  --closing-button:#8054e8;
+  --closing-button-hover:#7043d5;
+  padding:64px 0;
+  margin:0;
+  height:auto;
+  min-height:0;
+  background:var(--closing-background);
+  color:var(--closing-heading);
+  text-align:center;
+}
+:is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta--about {
+  --closing-background:#edf2f7;
+  --closing-button:#111b30;
+  --closing-button-hover:#263650;
+}
+:is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta--solutions {
+  --closing-background:#111b30;
+  --closing-heading:#fff;
+  --closing-description:#cbd5e1;
+}
+:is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta--products {
+  --closing-background:#e8edf9;
+  --closing-button:#111b30;
+  --closing-button-hover:#263650;
+}
+:is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta::before,
+:is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta::after {
+  content:none;
+}
+:is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta > div {
+  width:min(1220px,calc(100% - 48px));
+  max-width:1220px;
+  margin:0 auto;
+  padding:0;
+}
+:is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta h2 {
+  max-width:1120px;
+  margin:0 auto;
+  color:var(--closing-heading);
+  font-size:32px;
+  line-height:1.3;
+  letter-spacing:normal;
+}
+:is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta p {
+  max-width:1120px;
+  margin:16px auto 0;
+  color:var(--closing-description);
+  font-size:16px;
+  line-height:1.65;
+}
+:is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta .button {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  margin:24px 0 0;
+  padding:12px 24px;
+  border:1px solid transparent;
+  border-radius:5px;
+  background:var(--closing-button);
+  color:#fff;
+  font-family:inherit;
+  font-size:16px;
+  font-weight:600;
+  line-height:1.25;
+  text-decoration:none;
+}
+:is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta .button:hover {
+  background:var(--closing-button-hover);
+}
+:is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta .button:focus-visible {
+  outline:3px solid var(--closing-heading);
+  outline-offset:4px;
+}
+@media(max-width:640px) {
+  :is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta { padding:40px 0; }
+  :is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta h2 { font-size:26px; }
+  :is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta p { margin-top:12px;font-size:15px; }
+}
+@media(max-width:359px) {
+  :is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta > div { width:calc(100% - 40px); }
+}
