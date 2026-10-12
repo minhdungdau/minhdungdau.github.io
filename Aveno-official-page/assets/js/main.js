@@ -1,38 +1,14 @@
 (function () {
   "use strict";
   var site = document.getElementById("site");
-  var english = site.cloneNode(true);
-  var vietnamese = document.getElementById("content-vi");
-  var enTitle = document.title;
-  var enDescription = document.querySelector('meta[name="description"]').content;
-  var language = "en";
   var observer;
   var menuOpen = false;
   var previousOverflow = "";
   var backgroundState = [];
   var drawerMedia = window.matchMedia("(max-width: 1100px)");
-  var fields = ["name", "company", "email", "phone", "requirement"];
-  function message(vi, en) {
-    return language === "vi" ? vi : en;
-  }
   function enhance() {
     if (observer) observer.disconnect();
     setupDrawer();
-    site.querySelectorAll("a[href]").forEach(function (a) {
-      var href = a.getAttribute("href");
-      if (
-        !/^(index|about|solutions|services|products|contact)\.html(?:[?#]|$)/.test(
-          href,
-        )
-      )
-        return;
-      var url = new URL(href, location.href);
-      url.searchParams.set("lang", language);
-      a.setAttribute(
-        "href",
-        url.pathname.split("/").pop() + url.search + url.hash,
-      );
-    });
     if (
       !("IntersectionObserver" in window) ||
       window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -59,43 +35,6 @@
         observer.observe(el);
       });
   }
-  function setLanguage(next) {
-    var reopenDrawer = menuOpen && drawerMedia.matches;
-    menu(false, false);
-    var currentForm = site.querySelector("form");
-    var values = currentForm ? new FormData(currentForm) : null;
-    language = next;
-    site.replaceChildren.apply(
-      site,
-      Array.from(
-        (next === "en" ? english : vietnamese.content).cloneNode(true)
-          .childNodes,
-      ),
-    );
-    document.documentElement.lang = next;
-    document.title = next === "en" ? enTitle : vietnamese.dataset.title;
-    document.querySelector('meta[name="description"]').content =
-      next === "en" ? enDescription : vietnamese.dataset.description;
-    if (values)
-      fields.forEach(function (key) {
-        var input = site.querySelector('[name="' + key + '"]');
-        if (input) input.value = values.get(key) || "";
-      });
-    try {
-      localStorage.setItem("aveno-lang", next);
-    } catch (error) {
-      /* Preferences are optional. */
-    }
-    try {
-      var url = new URL(location.href);
-      url.searchParams.set("lang", next);
-      history.replaceState(null, "", url.href);
-    } catch (error) {
-      /* file:// navigation works without History API. */
-    }
-    enhance();
-    if (reopenDrawer) menu(true);
-  }
   function setupDrawer() {
     var nav = site.querySelector("#main-navigation");
     nav.classList.add("drawer-nav");
@@ -111,38 +50,27 @@
     var close = document.createElement("button");
     close.type = "button";
     close.className = "drawer-close";
-    close.setAttribute("aria-label", message("Đóng menu", "Close menu"));
+    close.setAttribute("aria-label", "Close menu");
     close.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18" /></svg>';
     controls.append(close);
-    var languageRow = document.createElement("div");
-    languageRow.className = "drawer-language";
-    dialog.append(controls, languageRow);
+    dialog.append(controls);
     site.append(dialog);
-    var languageButton = site.querySelector(".language");
-    var slot = document.createElement("span");
-    slot.className = "drawer-language-slot";
-    languageButton.before(slot);
     var backdrop = document.createElement("div");
     backdrop.className = "drawer-backdrop";
     backdrop.setAttribute("aria-hidden", "true");
     site.append(backdrop);
-    placeDrawerLanguage();
+    placeDrawerNavigation();
     nav.inert = drawerMedia.matches;
     nav.setAttribute("aria-hidden", String(drawerMedia.matches));
   }
-  function placeDrawerLanguage() {
-    var languageButton = site.querySelector(".language");
-    var slot = site.querySelector(".drawer-language-slot");
+  function placeDrawerNavigation() {
     var nav = site.querySelector("#main-navigation");
     var navSlot = site.querySelector(".drawer-nav-slot");
     var dialog = site.querySelector(".drawer-dialog");
-    if (!languageButton || !slot || !dialog) return;
     if (drawerMedia.matches) {
-      dialog.insertBefore(nav, dialog.querySelector(".drawer-language"));
-      dialog.querySelector(".drawer-language").append(languageButton);
+      dialog.append(nav);
     } else {
       navSlot.before(nav);
-      slot.before(languageButton);
       dialog.removeAttribute("role");
       dialog.removeAttribute("aria-modal");
     }
@@ -195,26 +123,23 @@
     if (open) {
       dialog.setAttribute("role", "dialog");
       dialog.setAttribute("aria-modal", "true");
-      dialog.setAttribute("aria-label", message("Menu điều hướng", "Navigation menu"));
+      dialog.setAttribute("aria-label", "Navigation menu");
     } else {
       dialog.removeAttribute("role");
       dialog.removeAttribute("aria-modal");
     }
     site.classList.toggle("drawer-open", open);
     button.setAttribute("aria-expanded", String(open));
-    button.setAttribute("aria-label", open ? message("Đóng menu", "Close menu") : message("Mở menu", "Open menu"));
+    button.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     if (open) {
       dialog.querySelector(".drawer-close").focus();
       backgroundState.forEach(function (state) { state.el.setAttribute("aria-hidden", "true"); });
     }
     else if (wasOpen && restoreFocus !== false && drawerMedia.matches) button.focus();
   }
-  drawerMedia.addEventListener("change", function () { menu(false); placeDrawerLanguage(); });
+  drawerMedia.addEventListener("change", function () { menu(false); placeDrawerNavigation(); });
   document.addEventListener("click", function (event) {
-    if (event.target.closest(".language")) {
-      setLanguage(language === "vi" ? "en" : "vi");
-      site.querySelector(".language").focus();
-    } else if (event.target.closest("#menu-button"))
+    if (event.target.closest("#menu-button"))
       menu(
         document.getElementById("menu-button").getAttribute("aria-expanded") !==
           "true",
@@ -247,13 +172,10 @@
       event.preventDefault();
     }
   });
-  var saved = "en";
-  try {
-    saved = localStorage.getItem("aveno-lang") || "en";
-  } catch (error) {
-    /* No personal information is stored. */
+  var url = new URL(location.href);
+  if (url.searchParams.has("lang")) {
+    url.searchParams.delete("lang");
+    history.replaceState(null, "", url.pathname + url.search + url.hash);
   }
-  var requested = new URLSearchParams(location.search).get("lang");
-  var initial = requested === "vi" || requested === "en" ? requested : saved;
-  setLanguage(initial === "vi" ? "vi" : "en");
+  enhance();
 })();
