@@ -1,33 +1,34 @@
 html:has(.products-main) { scroll-behavior:smooth; }
-.products-main { color:#192438; }
+.products-main { color:#19372D; }
 .pr-container { width:min(1220px,90%);margin-inline:auto; }
-.pr-eyebrow { margin:0 0 16px;color:#8054e8;font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.3px; }
-.pr-hero { background:#0b1224;color:#fff;padding:32px 0; }
+.pr-eyebrow { margin:0 0 16px;color:#0D7A50;font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.3px; }
+.pr-hero { background:#0B211B;color:#fff;padding:32px 0; }
+.pr-hero a:focus-visible { outline-color:#8FE3BB; }
 .pr-hero-layout { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;align-items:center; }
-.pr-hero .pr-eyebrow { color:#ae8aff; }
+.pr-hero .pr-eyebrow { color:#8FE3BB; }
 .products-main h1 { font-family:inherit;font-size:48px;line-height:1.2;font-weight:700;letter-spacing:-1px; }
-.pr-lead { margin-top:24px;font-size:18px;line-height:1.75;color:#c7d2e5;max-width:540px; }
+.pr-lead { margin-top:24px;font-size:18px;line-height:1.75;color:#C4D7CD;max-width:540px; }
 .products-main .button { min-height:48px;border-radius:5px; }
 .pr-hero .button { margin-top:24px; }
 .pr-hero-image { display:block;width:100%;height:auto;aspect-ratio:1619/971;object-fit:contain;object-position:center; }
-.pr-catalog { padding:48px 0;background:#f4f5fa;scroll-margin-top:var(--pr-anchor-offset,112px); }
+.pr-catalog { padding:48px 0;background:#EEF7F1;scroll-margin-top:var(--pr-anchor-offset,112px); }
 .pr-catalog > #catalog { scroll-margin-top:var(--pr-anchor-offset,112px); }
 .pr-catalog > .pr-container > h2 { font-size:44px;line-height:1.2;letter-spacing:-.8px;margin-bottom:32px; }
 .pr-card-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px; }
-.pr-brand { display:grid;grid-template-rows:subgrid;grid-row:span 4;row-gap:20px;min-width:0;padding:28px;background:#fff;border:1px solid #e3e7ee;border-radius:6px;scroll-margin-top:var(--pr-anchor-offset,112px); }
+.pr-brand { display:grid;grid-template-rows:subgrid;grid-row:span 4;row-gap:20px;min-width:0;padding:28px;background:#fff;border:1px solid #DCE9E1;border-radius:6px;scroll-margin-top:var(--pr-anchor-offset,112px); }
 .pr-brand h3 { font-size:28px;line-height:1.25;letter-spacing:-.7px;font-weight:600; }
-.pr-intro { color:#526078;font-size:16px;line-height:1.75; }
+.pr-intro { color:#5C7068;font-size:16px;line-height:1.75; }
 .pr-technologies { min-width:0; }
-.pr-technology { display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px;align-items:center;padding:20px 0;border-top:1px solid #e1d8f5;color:#192438;transition:color .2s; }
-.pr-technology:last-child { border-bottom:1px solid #e1d8f5; }
-.pr-technology .pr-tech-icon { display:block;width:36px;height:36px;justify-self:center;color:#8054e8; }
+.pr-technology { display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px;align-items:center;padding:20px 0;border-top:1px solid #DCE9E1;color:#19372D;transition:color .2s; }
+.pr-technology:last-child { border-bottom:1px solid #DCE9E1; }
+.pr-technology .pr-tech-icon { display:block;width:36px;height:36px;justify-self:center;color:#0D7A50; }
 .pr-technology > span { font-size:16px;line-height:1.5;font-weight:600; }
-a.pr-technology:hover { color:#8054e8; }
+a.pr-technology:hover { color:#0D7A50; }
 .pr-solution-link { align-self:end;justify-self:start;gap:8px;font-size:15px; }
-.pr-closing { position:relative;overflow:hidden;background:#f1edfc;padding:32px 0;text-align:center; }
+.pr-closing { position:relative;overflow:hidden;background:#EEF7F1;padding:32px 0;text-align:center; }
 .pr-closing .pr-container { position:relative;z-index:1; }
 .pr-closing h2 { font-size:34px;line-height:1.3;letter-spacing:-.5px; }
-.pr-closing p { max-width:850px;margin:16px auto 0;color:#526078;font-size:16px;line-height:1.75; }
+.pr-closing p { max-width:850px;margin:16px auto 0;color:#5C7068;font-size:16px;line-height:1.75; }
 .pr-closing .button { margin-top:24px; }
 @media(min-width:960px) and (max-width:1279px) { .pr-hero-layout { gap:32px; }.products-main h1 { font-size:44px; }.pr-brand { padding:24px; }.pr-brand h3 { font-size:25px; }.pr-technology { gap:12px;grid-template-columns:36px minmax(0,1fr); }.pr-technology > span { font-size:15px; } }
 @media(max-width:959px) { .pr-hero-layout { grid-template-columns:1fr;gap:32px; }.pr-hero-image { max-width:586px;justify-self:center; }.products-main h1 { font-size:44px; }.pr-card-grid { grid-template-columns:1fr; }.pr-brand { grid-row:auto;grid-template-rows:auto; } }
@@ -35,13 +36,13 @@ a.pr-technology:hover { color:#8054e8; }
 @media(max-width:359px) { .pr-container { width:calc(100% - 40px); } }
 @media(prefers-reduced-motion:reduce) { html:has(.products-main) { scroll-behavior:auto; } }
 
-.pr-hero .pr-eyebrow { margin-bottom:16px;font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.7px;color:#ae8aff; }
-.pr-hero .pr-lead { margin-top:24px;max-width:540px;font-size:18px;line-height:1.75;font-weight:400;color:#c7d2e5; }
+.pr-hero .pr-eyebrow { margin-bottom:16px;font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.7px;color:#8FE3BB; }
+.pr-hero .pr-lead { margin-top:24px;max-width:540px;font-size:18px;line-height:1.75;font-weight:400;color:#C4D7CD; }
 @media(max-width:640px) { .pr-hero .pr-lead { font-size:15px; } }
 
 .pr-hero h1 { font-family:inherit;font-size:clamp(36px,3.25vw,48px);font-weight:700;line-height:1.24;letter-spacing:-1.5px; }
-.pr-hero .pr-eyebrow { font-size:12px;font-weight:700;line-height:1.8;letter-spacing:1.8px;color:#b69aef;margin-bottom:16px; }
-.pr-hero .pr-lead { font-size:13px;font-weight:400;line-height:1.7;color:#b4bfd2;margin-top:16px; }
+.pr-hero .pr-eyebrow { font-size:12px;font-weight:700;line-height:1.8;letter-spacing:1.8px;color:#8FE3BB;margin-bottom:16px; }
+.pr-hero .pr-lead { font-size:13px;font-weight:400;line-height:1.7;color:#C4D7CD;margin-top:16px; }
 @media(max-width:1100px) { .pr-hero h1 { font-size:36px; } }
 @media(max-width:900px) { .pr-hero h1 { font-size:34px; }.pr-hero .pr-lead { font-size:12px; } }
 @media(max-width:640px) {
@@ -49,7 +50,7 @@ a.pr-technology:hover { color:#8054e8; }
  .pr-hero .pr-eyebrow { font-size:10px;font-weight:700;line-height:1.8;letter-spacing:1.1px;margin-bottom:10px; }
 }
 
-.pr-closing::before,.pr-closing::after { content:"";position:absolute;top:0;bottom:0;width:25%;opacity:.35;background-image:radial-gradient(#a187df 1px,transparent 1.5px);background-size:9px 9px;border-radius:50%;mask-image:radial-gradient(ellipse at 0 50%,#000 25%,transparent 75%);transform:perspective(360px) rotateY(35deg) rotateZ(-18deg) scale(1.4);pointer-events:none; }
+.pr-closing::before,.pr-closing::after { content:"";position:absolute;top:0;bottom:0;width:25%;opacity:.35;background-image:radial-gradient(#0D7A50 1px,transparent 1.5px);background-size:9px 9px;border-radius:50%;mask-image:radial-gradient(ellipse at 0 50%,#000 25%,transparent 75%);transform:perspective(360px) rotateY(35deg) rotateZ(-18deg) scale(1.4);pointer-events:none; }
 .pr-closing::before { left:0; }.pr-closing::after { right:0;transform:perspective(360px) rotateY(-35deg) rotateZ(18deg) scale(-1.4,1.4); }
 
 /* Các nhóm công nghệ là thông tin; mỗi hãng có một liên kết giải pháp. */
@@ -57,7 +58,7 @@ a.pr-technology:hover { color:#8054e8; }
 @media(max-width:640px) { .pr-hero .pr-lead { font-size:15px; } }
 
 /* Arista: wired routing and cloud management use font icons only. */
-.products-main .pr-technology .pr-icon-composite { position:relative;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;color:#8054e8; }
+.products-main .pr-technology .pr-icon-composite { position:relative;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;color:#0D7A50; }
 .products-main .pr-icon-composite > .bi { width:36px;height:36px;font-size:34px; }
 .products-main .pr-icon-composite > .pr-icon-badge { position:absolute;right:-2px;bottom:-1px;width:20px;height:20px;font-size:17px;border-radius:3px;background:#fff; }
 @media(max-width:640px) {

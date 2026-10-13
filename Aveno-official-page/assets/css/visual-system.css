@@ -27,7 +27,7 @@
 .home-technology-card .brand-name,.ab-brand .brand-name,.pr-brand .brand-name { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0; }
 
 /* Local icon font: shared technology meanings, without SVG content icons. */
-.system-font-icon { display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;color:#8054e8;font-style:normal;line-height:1; }
+.system-font-icon { display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;color:#0D7A50;font-style:normal;line-height:1; }
 .system-font-icon::before { display:block;line-height:1; }
 .home-main .home-infra-icon { width:36px;height:36px;font-size:32px; }
 .ab-main .about-infra-icon { width:28px;height:34px;font-size:28px; }
@@ -48,11 +48,11 @@
 
 /* Closing CTA: one layout with contextual colors across the approved four pages. */
 :is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta {
-  --closing-background:#f1edfc;
-  --closing-heading:#192438;
-  --closing-description:#637086;
-  --closing-button:#8054e8;
-  --closing-button-hover:#7043d5;
+  --closing-background:#EEF7F1;
+  --closing-heading:#19372D;
+  --closing-description:#5C7068;
+  --closing-button:#0D7A50;
+  --closing-button-hover:#09633F;
   padding:64px 0;
   margin:0;
   height:auto;
@@ -62,19 +62,19 @@
   text-align:center;
 }
 :is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta--about {
-  --closing-background:#edf2f7;
-  --closing-button:#111b30;
-  --closing-button-hover:#263650;
+  --closing-background:#EEF7F1;
+  --closing-button:#0B211B;
+  --closing-button-hover:#14372B;
 }
 :is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta--solutions {
-  --closing-background:#111b30;
+  --closing-background:#0B211B;
   --closing-heading:#fff;
-  --closing-description:#cbd5e1;
+  --closing-description:#C4D7CD;
 }
 :is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta--products {
-  --closing-background:#e8edf9;
-  --closing-button:#111b30;
-  --closing-button-hover:#263650;
+  --closing-background:#EEF7F1;
+  --closing-button:#0B211B;
+  --closing-button-hover:#14372B;
 }
 :is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta::before,
 :is(.home-main,.ab-main,.solutions-main,.products-main) .page-closing-cta::after {
@@ -155,25 +155,25 @@
   .home-main .hero .hero-grid { position:static;gap:0; }
   .home-main .hero .hero-visual { position:absolute;inset:0;width:100%;height:100%;z-index:-1; }
   .home-main .hero .hero-visual img { object-fit:cover;object-position:center; }
-  .home-main .hero .hero-visual::after { content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,15,31,.94),rgba(7,15,31,.76)); }
-  .home-main .hero .hero-mobile-intro { color:#d5deeb; }
+  .home-main .hero .hero-visual::after { content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,26,20,.94),rgba(7,26,20,.76)); }
+  .home-main .hero .hero-mobile-intro { color:#C4D7CD; }
   .ab-main .ab-opening .ab-opening-photo,.sp-hero-image,.svc-hero-image,.pr-hero-image { display:none; }
   .sp-hero-layout,.svc-hero .svc-pair,.pr-hero-layout,.ab-opening .ab-layout { gap:0; }
   .ab-main .ab-opening,.solutions-main .sp-hero,.services-main .svc-hero,.products-main .pr-hero {
-    background-color:#0b1224;
-    background-image:linear-gradient(90deg,rgba(7,15,31,.94),rgba(7,15,31,.78)),var(--mobile-hero-image);
+    background-color:#0B211B;
+    background-image:linear-gradient(90deg,rgba(7,26,20,.94),rgba(7,26,20,.78)),var(--mobile-hero-image);
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
     color:#fff;
   }
-  .ab-main .ab-opening { --mobile-hero-image:url('../images/about-design/about-hero.webp'); }
-  .products-main .pr-hero { --mobile-hero-image:url('../images/products-design/products-hero.webp');background-position:65% center; }
-  .solutions-main .sp-hero { --mobile-hero-image:url('../images/solutions-design/hero-infrastructure.webp'); }
-  .services-main .svc-hero { --mobile-hero-image:url('../images/services-design/services-engineer.webp'); }
+  .ab-main .ab-opening { --mobile-hero-image:url('../images/green-theme/about-hero-green.webp'); }
+  .products-main .pr-hero { --mobile-hero-image:url('../images/green-theme/products-hero-green.webp');background-position:65% center; }
+  .solutions-main .sp-hero { --mobile-hero-image:url('../images/green-theme/hero-infrastructure-green.webp'); }
+  .services-main .svc-hero { --mobile-hero-image:url('../images/green-theme/services-engineer-green.webp'); }
   .ab-main .ab-opening h1 { color:#fff; }
-  .ab-main .ab-opening .ab-copy > p,.solutions-main .sp-hero .sp-lead,.services-main .svc-hero .svc-lead,.products-main .pr-hero .pr-lead { color:#d5deeb; }
-  .ab-main .ab-opening .about-company-name { color:#c3a4ff; }
+  .ab-main .ab-opening .ab-copy > p,.solutions-main .sp-hero .sp-lead,.services-main .svc-hero .svc-lead,.products-main .pr-hero .pr-lead { color:#C4D7CD; }
+  .ab-main .ab-opening .about-company-name { color:#8FE3BB; }
 }
 @media(max-width:359px) {
  .home-main .hero { min-height:480px; }

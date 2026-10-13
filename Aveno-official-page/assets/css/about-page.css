@@ -1,54 +1,52 @@
 /* Giới thiệu: bố cục theo bản bàn giao 11/10/2026. */
-.ab-main { color:#192438; }
+.ab-main { color:#19372D; }
 .ab-main .ab-section { padding:80px 0; }
 .ab-main .ab-layout { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:80px; }
 .ab-main .ab-copy { min-width:0; }
 .ab-main h1,.ab-main h2 { margin:0 0 24px; font-weight:700; letter-spacing:-1px; line-height:1.25; }
 .ab-main h1 { font-size:clamp(36px,3.25vw,48px); }
 .ab-main h2 { font-size:36px; }
-.ab-main .ab-copy > p,.ab-main .ab-process-intro { color:#637086; font-size:16px; line-height:1.7; margin:0; }
+.ab-main .ab-copy > p,.ab-main .ab-process-intro { color:#5C7068; font-size:16px; line-height:1.7; margin:0; }
 .ab-main .ab-copy > p + p { margin-top:18px; }
 .ab-main .about-company-name { color:var(--purple); font-weight:700; }
 .ab-main .ab-opening-photo { display:block; width:100%; height:auto; aspect-ratio:1624/969; object-fit:cover; }
-.ab-main .ab-capabilities,.ab-main .ab-value { background:#f5f6fa; }
+.ab-main .ab-capabilities,.ab-main .ab-value { background:#EEF7F1; }
 .ab-main .ab-infrastructure { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-.ab-main .ab-infra-card { display:flex; align-items:flex-start; gap:14px; padding:24px 20px; background:white; border:1px solid #e3e7ee; border-radius:6px; color:#192438; transition:border-color .2s,background .2s; }
-.ab-main .ab-infra-card:hover { border-color:#b69aef; background:#fcfaff; }
-.ab-main .ab-infra-card .bi { color:#8054e8; font-size:28px; line-height:1.2; }
+.ab-main .ab-infra-card { display:flex; align-items:flex-start; gap:14px; padding:24px 20px; background:white; border:1px solid #DCE9E1; border-radius:6px; color:#19372D; transition:border-color .2s,background .2s; }
+.ab-main .ab-infra-card:hover { border-color:#0D7A50; background:#EEF7F1; }
+.ab-main .ab-infra-card .bi { color:#0D7A50; font-size:28px; line-height:1.2; }
 .ab-main .ab-infra-card h3 { margin:0 0 8px; font-size:18px; line-height:1.3; }
-.ab-main .ab-infra-card p { margin:0; font-size:14px; line-height:1.6; color:#637086; }
-.ab-main .ab-technology { background:#0b1224; }
+.ab-main .ab-infra-card p { margin:0; font-size:14px; line-height:1.6; color:#5C7068; }
+.ab-main .ab-technology { background:#0B211B; }
 .ab-main .ab-technology h2 { color:white; }
-.ab-main .ab-technology .ab-copy > p { color:#b4bfd2; }
-.ab-main .ab-technology .section-link { margin-top:24px; color:#b69aef; }
+.ab-main .ab-technology .ab-copy > p { color:#C4D7CD; }
+.ab-main .ab-technology .section-link { margin-top:24px; color:#8FE3BB; }
+.ab-main .ab-technology a:focus-visible { outline-color:#8FE3BB; }
 .ab-main .ab-technology .ab-layout { grid-template-columns:.95fr 1.05fr; gap:48px; }
 .ab-main .ab-brands { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
-.ab-main .ab-brand { background:#141e30; border:1px solid #344057; border-radius:6px; padding:28px 12px; text-align:center; }
-.ab-main .ab-brand .bi { display:block; color:#a984f3; font-size:44px; line-height:1.2; margin-bottom:24px; }
+.ab-main .ab-brand { background:#14372B; border:1px solid #28483A; border-radius:6px; padding:28px 12px; text-align:center; }
+.ab-main .ab-brand .bi { display:block; color:#8FE3BB; font-size:44px; line-height:1.2; margin-bottom:24px; }
 .ab-main .ab-brand h3 { color:white; font-size:17px; line-height:1.4; margin:0 0 10px; }
-.ab-main .ab-brand p { color:#b4bfd2; font-size:14px; line-height:1.65; margin:0; }
+.ab-main .ab-brand p { color:#C4D7CD; font-size:14px; line-height:1.65; margin:0; }
 .ab-main .ab-process-heading { display:flex; align-items:center; justify-content:space-between; gap:24px; }
 .ab-main .ab-process-heading h2 { margin-bottom:0; }
 .ab-main .ab-process-intro { max-width:1000px; margin-top:24px; }
 .ab-main .ab-approach .section-cta-desktop { margin-top:24px; }
 .ab-main a.ab-brand { text-decoration:none;transition:border-color .2s,background-color .2s; }
-.ab-main a.ab-brand:hover { border-color:#a984f3;background:#1c2940; }
+.ab-main a.ab-brand:hover { border-color:#8FE3BB;background:#14372B; }
 .ab-main .ab-process { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:28px; list-style:none; padding:0; margin:40px 0 0; }
 .ab-main .ab-process li { position:relative; text-align:center; }
-.ab-main .ab-process li::after { content:""; position:absolute; height:1px; background:#dacbf7; left:calc(50% + 35px); right:calc(-50% + 7px); top:35px; }
+.ab-main .ab-process li::after { content:""; position:absolute; height:1px; background:#DCE9E1; left:calc(50% + 35px); right:calc(-50% + 7px); top:35px; }
 .ab-main .ab-process li:last-child::after { display:none; }
-.ab-main .ab-step-icon { display:flex; align-items:center; justify-content:center; position:relative; margin:0 auto 18px; width:70px; height:70px; border:1px solid #e7ddfa; border-radius:50%; color:#8054e8; background:white; font-size:28px; }
+.ab-main .ab-step-icon { display:flex; align-items:center; justify-content:center; position:relative; margin:0 auto 18px; width:70px; height:70px; border:1px solid #DCE9E1; border-radius:50%; color:#0D7A50; background:white; font-size:28px; }
 .ab-main .ab-process h3 { font-size:18px; line-height:1.4; margin:0 0 8px; }
-.ab-main .ab-process li p { font-size:14px; line-height:1.65; color:#637086; margin:0; }
+.ab-main .ab-process li p { font-size:14px; line-height:1.65; color:#5C7068; margin:0; }
 .ab-main .ab-value .ab-copy { max-width:800px; }
-.ab-main .ab-copy strong { color:#192438; font-weight:600; }
-.ab-main .ab-closing { position:relative; background:#f1edfc; padding:40px 0; text-align:center; isolation:isolate; overflow:hidden; }
-.ab-main .ab-closing::before,.ab-main .ab-closing::after { content:""; position:absolute; z-index:-1; width:280px; height:152px; bottom:0; background-repeat:no-repeat; background-size:contain; }
-.ab-main .ab-closing::before { left:0; background-image:url('../images/shared-design/cta-wave-left.webp'); }
-.ab-main .ab-closing::after { right:0; background-image:url('../images/shared-design/cta-wave-right.webp'); }
+.ab-main .ab-copy strong { color:#19372D; font-weight:600; }
+.ab-main .ab-closing { position:relative; background:#EEF7F1; padding:40px 0; text-align:center; isolation:isolate; overflow:hidden; }
 .ab-main .ab-closing h2 { margin-bottom:12px; font-size:32px; }
 .ab-main .ab-closing p { font-size:16px; line-height:1.7; margin:0 0 20px; }
-.ab-main a:focus-visible { outline:2px solid #8054e8; outline-offset:4px; }
+.ab-main a:focus-visible { outline:2px solid #0D7A50; outline-offset:4px; }
 @media(max-width:1100px) { .ab-main .ab-layout { gap:40px; } .ab-main .ab-technology .ab-layout { grid-template-columns:1fr; } }
 @media(max-width:959px) { .ab-main .ab-layout { grid-template-columns:1fr; gap:32px; } .ab-main .ab-capabilities .ab-copy { grid-row:1; } .ab-main .ab-opening-photo { max-height:400px; } .ab-main .ab-process { gap:16px; } }
 @media(max-width:640px) {
@@ -70,7 +68,6 @@
  .ab-main .ab-process li p { font-size:15px; }
  .ab-main .ab-closing { padding:40px 0; }
  .ab-main .ab-closing h2 { font-size:28px; }
- .ab-main .ab-closing::before,.ab-main .ab-closing::after { width:130px; height:70px; opacity:.55; }
 }
 
 /* Compact value section without altering its copy. */
