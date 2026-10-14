@@ -140,25 +140,16 @@ main:focus {
   align-items: center;
 }
 .logo {
-  font-size: 32px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  line-height: 1.2;
   display: inline-block;
+  width: 200px;
+  max-width: 100%;
+  flex-shrink: 0;
+  line-height: 0;
 }
-.logo span {
-  display: block;
-  font-size: 7px;
-  font-weight: 600;
-  letter-spacing: 1.6px;
-  margin-top: 5px;
-}
-.header .logo {
-  color: var(--purple);
-}
-.header .logo span {
-  color: #0D7A50;
-  font-size: 9px;
+.logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 .nav {
   display: flex;
@@ -1021,12 +1012,6 @@ main:focus {
   color: #B9CEC4;
   padding: 48px 0 24px;
 }
-.footer .logo {
-  color: #8FE3BB;
-}
-.footer .logo span {
-  color: #8FE3BB;
-}
 .footer a:focus-visible {
   outline-color: #8FE3BB;
 }
@@ -1485,9 +1470,6 @@ textarea::placeholder {
   .header-inner {
     gap: 15px;
   }
-  .logo {
-    font-size: 28px;
-  }
   .hero h1 {
     font-size: 36px;
   }
@@ -1727,7 +1709,7 @@ textarea::placeholder {
     padding-right: 6%;
   }
   .logo {
-    font-size: 28px;
+    width: 172px;
   }
   .hero-grid {
     display: flex;
